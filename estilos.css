@@ -135,6 +135,45 @@ body {
 }
 
 
+/* Estilos para pantallas menores de 768px */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px; /* Reduce el padding para pantallas más pequeñas */
+  }
+
+  .navbar-container {
+    flex-direction: column; /* Apila los elementos verticalmente */
+    align-items: stretch; /* Alinea los elementos a lo ancho */
+  }
+
+  .nav-menu {
+    flex-direction: column; /* Organiza los elementos del menú en columna */
+    align-items: center; /* Centra los elementos del menú */
+    margin-top: 10px; /* Agrega espacio entre el logo y el menú */
+  }
+
+  .nav-item,
+  .nav-link {
+    width: 100%; /* Los elementos del menú toman el ancho completo */
+    text-align: center; /* Centra el texto de los enlaces */
+  }
+
+  .nav-icon {
+    order: -1; /* Coloca los iconos arriba del menú */
+    width: 100%; /* Toma el ancho completo */
+    justify-content: center; /* Centra los iconos si es necesario */
+  }
+
+  .nav-icon .icon-link {
+    margin: 10px 0; /* Espacio alrededor de los iconos */
+  }
+
+  .code-btn {
+    width: 80%; /* Botones más pequeños en dispositivos móviles */
+    margin: 10px auto; /* Centra los botones y agrega margen */
+  }
+}
+
 .services-section {
   text-align: center;
   padding: 50px 0;
