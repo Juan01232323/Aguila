@@ -499,12 +499,12 @@ body {
 .contact-section {
   text-align: center;
   padding: 40px 0;
-  background-color: #f7f7f7; /* Un color de fondo suave */
+  background-color: #f7f7f7;
 }
 
 .contact-title {
   font-size: 32px;
-  color: #6A3E72; /* Utiliza un color que coincida con tu esquema de color */
+  color: #6A3E72;
   margin-bottom: 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -512,51 +512,81 @@ body {
 .contact-icons {
   display: flex;
   justify-content: center;
-  gap: 20px; /* Ajusta el espacio entre los íconos */
+  gap: 20px;
 }
 
 .contact-icon-link {
-  color: #6A3E72; /* Color de los íconos */
-  font-size: 24px; /* Tamaño de los íconos */
+  color: #6A3E72;
+  font-size: 24px;
   transition: color 0.3s ease;
 }
 
 .contact-icon-link:hover {
-  color: #583063; /* Color al pasar el ratón */
+  color: #583063;
 }
 
 .contact-icons a {
   display: inline-block;
-  margin: 0 10px; /* Ajusta según sea necesario para el espaciado */
-  color: #6A3E72; /* Color inicial de los íconos */
-  transition: transform 0.3s ease, color 0.3s ease; /* Transición suave para transform y color */
+  margin: 0 10px;
+  color: #6A3E72;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .contact-icons a:hover {
-  color: #583063; /* Color de los íconos al hacer hover */
-  transform: translateY(-3px); /* Eleva ligeramente el ícono */
+  color: #583063;
+  transform: translateY(-3px);
 }
 
 .contact-icons i {
-  font-size: 2rem; /* Tamaño del ícono */
-  transition: all 0.3s ease; /* Transición suave para todos los cambios */
+  font-size: 2rem;
+  transition: all 0.3s ease;
 }
 
 .contact-icons i:hover {
-  color: #583063; /* Color del ícono al pasar el ratón por encima */
-  transform: scale(1.1); /* Aumenta ligeramente el tamaño del ícono */
+  color: #583063;
+  transform: scale(1.1);
 }
 
-/* Agrega un contenedor alrededor de los íconos para el efecto de fondo al hacer hover */
 .contact-icon-container {
   display: inline-block;
-  border-radius: 50%; /* Hace que el fondo sea circular */
-  padding: 10px; /* Espacio alrededor del ícono */
-  transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
+  border-radius: 50%;
+  padding: 10px;
+  transition: background-color 0.3s ease;
 }
 
 .contact-icon-container:hover {
-  background-color: rgba(88, 48, 99, 0.1); /* Color de fondo suave al hacer hover */
+  background-color: rgba(88, 48, 99, 0.1);
+}
+
+/* Media Queries para ajustes en dispositivos móviles */
+@media (max-width: 768px) {
+  .contact-title {
+    font-size: 24px; /* Reducir el tamaño de la fuente del título para dispositivos más pequeños */
+    margin-bottom: 15px;
+  }
+
+  .contact-icons {
+    flex-direction: column; /* Cambiar la disposición de los íconos a vertical */
+    gap: 15px; /* Ajustar el espacio entre íconos */
+  }
+
+  .contact-icon-link {
+    font-size: 20px; /* Reducir el tamaño de los íconos para dispositivos más pequeños */
+  }
+
+  .contact-icon-container {
+    margin: 0 auto; /* Centrar los contenedores de íconos */
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-section {
+    padding: 30px 10px; /* Reducir el padding para pantallas muy pequeñas */
+  }
+
+  .contact-icons i {
+    font-size: 1.5rem; /* Ajustar el tamaño de los íconos para pantallas muy pequeñas */
+  }
 }
 
 .gallery-section {
