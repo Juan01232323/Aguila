@@ -627,6 +627,51 @@ body {
   transform: translateY(-2px); /* Eleva ligeramente el botón al pasar el ratón */
 }
 
+@media (max-width: 768px) {
+  .gallery-section {
+    padding: 30px 0; /* Reducir el padding para dispositivos más pequeños */
+  }
+
+  .gallery-title {
+    font-size: 30px; /* Reducir el tamaño de la fuente para dispositivos más pequeños */
+    margin-bottom: 30px; /* Reducir el espacio debajo del título */
+  }
+
+  .gallery-container {
+    grid-template-columns: repeat(2, 1fr); /* Cambiar a 2 columnas para vistas más estrechas */
+    gap: 15px; /* Reducir el espacio entre imágenes */
+    padding: 0 20px; /* Reducir el espacio a los lados */
+  }
+
+  .gallery-image {
+    /* Las imágenes pueden mantenerse sin cambios si se ajustan bien */
+  }
+
+  .gallery-view-more {
+    padding: 10px 20px; /* Ajustar el padding del botón */
+    font-size: 14px; /* Ajustar el tamaño de la fuente del botón */
+    /* El resto de los estilos del botón pueden mantenerse igual */
+  }
+
+  /* Si los botones de navegación o cualquier otro elemento necesitan ajustes adicionales, incluirlos aquí */
+}
+
+@media (max-width: 480px) {
+  .gallery-container {
+    grid-template-columns: 1fr; /* Cambiar a 1 columna para teléfonos móviles */
+  }
+
+  .gallery-navigation {
+    padding-top: 10px; /* Reducir el espacio sobre el botón de navegación */
+  }
+
+  .gallery-view-more {
+    width: 80%; /* Hacer que el botón sea más ancho en dispositivos muy estrechos */
+    margin: 0 auto; /* Centrar el botón si se hace más ancho */
+  }
+}
+
+
 
 .visit-section {
   display: flex;
@@ -799,3 +844,4 @@ body {
     padding: 1em 0;
   }
 }
+
