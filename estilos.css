@@ -214,6 +214,41 @@ body {
   border-color: #999999; /* Borde más oscuro al pasar el ratón */
 }
 
+
+/* Estilos para pantallas de hasta 768px de ancho */
+@media (max-width: 768px) {
+  .services-section {
+    padding: 30px 10px; /* Reduces padding for smaller screens */
+  }
+
+  .services-title {
+    font-size: 32px; /* Reduce the font size for smaller screens */
+    margin-bottom: 30px; /* Reduce bottom margin */
+  }
+
+  .services-container {
+    gap: 20px; /* Reduce space between service items */
+  }
+
+  .service-item {
+    width: 100%; /* Make service items take full width */
+    margin-bottom: 15px; /* Reduce space between service items */
+    /* You may want to adjust positioning for service-description or remove the absolute positioning on smaller screens if it causes overlap */
+  }
+
+  .services-navigation {
+    flex-direction: column; /* Stack navigation buttons vertically */
+    gap: 10px; /* Adds a gap between stacked items */
+  }
+
+  .services-prev,
+  .services-next,
+  .services-all {
+    width: 100%; /* Full width buttons */
+    margin: 10px 0; /* Adds margin between the buttons when stacked */
+  }
+}
+
 /* Media queries para responsividad no incluidos, pero recomendados */
 
 
@@ -316,8 +351,6 @@ body {
 .product-add:hover {
   background-color: #583063;
 }
-
-
 
 /* Estilos para pantallas de hasta 768px de ancho */
 @media (max-width: 768px) {
