@@ -773,8 +773,6 @@ body {
     flex-basis: auto; /* Permite que cada elemento tome el tamaño necesario */
     width: 100%; /* Los elementos toman el ancho completo */
     margin: 0 0 20px; /* Agrega margen inferior entre los elementos */
-    height: 200px; /* O la altura que prefieras para que el mapa se vea bien sin ser demasiado grande */
-
   }
 
   .visit-map {
@@ -906,6 +904,15 @@ body {
     flex-direction: column;
     text-align: center;
   }
+
+  /* Estilo para la sección general del pie de página */
+.footer-section {
+  background-color: #8C5E99; /* El color de fondo general del footer */
+  padding: 2em 0;
+  color: white; /* Esto establecerá el color del texto para todos los elementos dentro del footer, excepto aquellos que se sobrescriban específicamente */
+
+}
+
 
   .link-column {
     flex-basis: auto;
