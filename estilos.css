@@ -317,6 +317,41 @@ body {
   background-color: #583063;
 }
 
+
+
+/* Estilos para pantallas de hasta 768px de ancho */
+@media (max-width: 768px) {
+  .products-section {
+    padding: 30px 10px; /* Reduces padding for smaller screens */
+  }
+
+  .products-title {
+    font-size: 32px; /* Reduce the font size for smaller screens */
+    margin-bottom: 30px; /* Reduce bottom margin */
+  }
+
+  .products-container {
+    flex-direction: column; /* Stack product items vertically */
+    align-items: center; /* Center items when they stack */
+  }
+
+  .product-item {
+    width: 100%; /* Make product items take full width */
+    margin-bottom: 15px; /* Reduce space between product items */
+  }
+
+  .products-navigation {
+    flex-direction: column; /* Stack navigation buttons vertically */
+    margin-top: 15px;
+  }
+
+  .products-prev,
+  .products-next {
+    padding: 10px; /* Adjust padding */
+    margin: 10px 0; /* Add space between buttons */
+  }
+}
+
 /* Considera agregar media queries para responsividad */
 
 
@@ -674,3 +709,4 @@ body {
     padding: 1em 0;
   }
 }
+
