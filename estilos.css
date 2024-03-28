@@ -868,19 +868,30 @@ body {
   font-size: 1.1em; /* Aumenta un poco el tamaño de la fuente */
 }
 
+/* Media Queries para ajustes en dispositivos móviles */
 @media (max-width: 768px) {
-  .footer-links {
-    justify-content: center;
+  .footer-links, .container {
+    flex-direction: column;
+    text-align: center;
   }
 
   .link-column {
-    flex-basis: 50%;
-    padding: 0.5em;
+    flex-basis: auto;
+    width: 100%;
+    margin-bottom: 20px;
   }
 
-  /* Adaptaciones para la responsividad */
-  .footer-section, .footer-bottom {
-    padding: 1em 0;
+  .footer-logo img {
+    margin: 0 auto; /* Centra el logo en dispositivos móviles */
+  }
+
+  .footer-bottom {
+    margin-top: 20px; /* Ajusta el margen superior del área de derechos de autor */
   }
 }
 
+@media (max-width: 480px) {
+  .footer-bottom p {
+    font-size: 0.9em; /* Reduce el tamaño de la fuente para los derechos de autor en dispositivos muy pequeños */
+  }
+}
