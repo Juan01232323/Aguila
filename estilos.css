@@ -746,7 +746,8 @@ body {
   }
 
   .visit-map {
-    margin-bottom: 10px; /* Espacio después del mapa antes de la información */
+      height: 250px; /* Ajusta la altura del mapa para que no sea demasiado grande */
+      order: -1; /* Coloca el mapa antes de la información en dispositivos móviles */
   }
 
   .visit-info {
@@ -775,6 +776,10 @@ body {
 @media (max-width: 480px) {
   .visit-title {
     font-size: 1.5rem; /* Reduce aún más para teléfonos móviles */
+  }
+
+  .visit-map {
+    height: 200px; /* Reduce aún más la altura del mapa para dispositivos muy pequeños */
   }
 
   .visit-text,
