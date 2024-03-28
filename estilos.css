@@ -687,10 +687,10 @@ body {
 }
 
 .visit-map {
-  flex-basis: 60%; /* Adjust the width of the map container */
-  margin-right: 2%; /* Space between the map and the information */
-  overflow: hidden; /* Ensures nothing overflows from the container */
-  /* Assuming you will embed a map here */
+  flex-basis: 100%; /* Ajusta la base flexible para ocupar el ancho completo en móviles */
+  margin-right: 0; /* Elimina el margen derecho en móviles */
+  height: auto; /* Ajusta la altura automáticamente o establece una altura específica */
+  overflow: hidden; /* Mantiene todo el contenido dentro del contenedor */
 }
 
 .visit-info {
@@ -743,10 +743,12 @@ body {
     flex-basis: auto; /* Permite que cada elemento tome el tamaño necesario */
     width: 100%; /* Los elementos toman el ancho completo */
     margin: 0 0 20px; /* Agrega margen inferior entre los elementos */
+    height: 200px; /* O la altura que prefieras para que el mapa se vea bien sin ser demasiado grande */
+
   }
 
   .visit-map {
-      height: 250px; /* Ajusta la altura del mapa para que no sea demasiado grande */
+    height: 200px; /* O la altura que prefieras para que el mapa se vea bien sin ser demasiado grande */
       order: -1; /* Coloca el mapa antes de la información en dispositivos móviles */
   }
 
