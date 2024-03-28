@@ -135,42 +135,60 @@ body {
 }
 
 
-/* Estilos para pantallas menores de 768px */
 @media (max-width: 768px) {
   .navbar {
-    padding: 10px; /* Reduce el padding para pantallas más pequeñas */
+    /* Disminuye el padding para dar más espacio en pantallas pequeñas */
+    padding: 5px 10px;
   }
 
   .navbar-container {
-    flex-direction: column; /* Apila los elementos verticalmente */
-    align-items: stretch; /* Alinea los elementos a lo ancho */
+    /* Cambia la dirección de los items a columna en pantallas pequeñas */
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-logo,
+  .nav-menu,
+  .nav-icon {
+    /* Centra todos los elementos */
+    justify-content: center;
+    width: 100%;
   }
 
   .nav-menu {
-    flex-direction: column; /* Organiza los elementos del menú en columna */
-    align-items: center; /* Centra los elementos del menú */
-    margin-top: 10px; /* Agrega espacio entre el logo y el menú */
+    /* Apila los elementos del menú verticalmente */
+    flex-direction: column;
+    align-items: center;
   }
 
-  .nav-item,
+  .nav-item {
+    /* Elimina el margen izquierdo y agrega margen superior e inferior para espaciar los elementos */
+    margin-left: 0;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
   .nav-link {
-    width: 100%; /* Los elementos del menú toman el ancho completo */
-    text-align: center; /* Centra el texto de los enlaces */
+    /* Ajusta el tamaño del texto para que se vea bien en pantallas pequeñas */
+    font-size: 16px;
+    padding: 8px 15px;
   }
 
   .nav-icon {
-    order: -1; /* Coloca los iconos arriba del menú */
-    width: 100%; /* Toma el ancho completo */
-    justify-content: center; /* Centra los iconos si es necesario */
+    /* Ajusta el margen de los íconos */
+    margin: 5px 0;
   }
 
-  .nav-icon .icon-link {
-    margin: 10px 0; /* Espacio alrededor de los iconos */
+  .nav-icon .icon-link,
+  .nav-menu .nav-item:last-child {
+    /* Ajusta el margen de los últimos elementos */
+    margin-right: 0;
   }
 
   .code-btn {
-    width: 80%; /* Botones más pequeños en dispositivos móviles */
-    margin: 10px auto; /* Centra los botones y agrega margen */
+    /* Asegúrate de que el botón de código no sea demasiado ancho */
+    width: auto;
+    margin: 10px;
   }
 }
 
