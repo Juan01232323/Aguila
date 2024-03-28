@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LuxuryMuebles</title>
+<link rel="stylesheet" href="estilos.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="navbar-container">
+    <!-- Enlace del logo actualizado para mostrar una imagen -->
+    <a href="#" class="nav-logo">
+      <img src="img/logo.png" alt="Logo" style="height: auto; width: 100px;" />
+    </a>
+    <ul class="nav-menu">
+      <li class="nav-item"><a href="#" class="nav-link">Inicio</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Servicios</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Nosotros</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Galería</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Productos</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Contacto</a></li>
+    </ul>
+    <div class="nav-icon">
+      <a href="#" class="icon-link"><i class="fas fa-shopping-cart"></i></a>
+    </div>
+    <button class="code-btn">¿Tienes un código?</button>
+  </div>
+</nav>
+
+<section class="services-section">
+  <h2 class="services-title">Servicios</h2>
+  <div class="services-container">
+    <div class="service-item">
+      <img src="img/1.jpg" alt="Depilación láser" class="service-image">
+      <span class="service-description">Depilación láser trípodo soprano ice</span>
+    </div>
+    <div class="service-item">
+      <img src="img/2.png" alt="Micropuntura" class="service-image">
+      <span class="service-description">Micropuntura en estrías</span>
+    </div>
+    <div class="service-item">
+      <img src="img/3.jpg" alt="Angel Lips" class="service-image">
+      <span class="service-description">Angel Lips</span>
+    </div>
+  </div>
+  <div class="services-navigation">
+    <button class="services-prev">&lt;</button>
+    <button class="services-all">VER TODOS</button>
+    <button class="services-next">&gt;</button>
+  </div>
+</section>
+
+<section class="products-section">
+  <h2 class="products-title">Productos</h2>
+  <div class="products-container">
+    <!-- Repite este bloque para cada producto -->
+    <div class="product-item" data-rating="3">
+      <img src="img/facial.jpg" alt="Crema facial TOTAL" class="product-image">
+      <div class="product-info">
+        <h3 class="product-name">Crema facial: TOTAL</h3>
+        <div class="product-rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+
+        </div>
+        <p class="product-price">$200</p>
+        <button class="product-add">Agregar al carrito</button>
+      </div>
+    </div>
+
+    <div class="product-item" data-rating="5">
+      <img src="img/brow.png" alt="Bushy Brow" class="product-image">
+      <div class="product-info">
+        <h3 class="product-name">Bushy Brow</h3>
+        <div class="product-rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <p class="product-price">$490</p>
+        <button class="product-add">Agregar al carrito</button>
+      </div>
+    </div>
+  </div>
+    <div class="products-navigation">
+      <button class="products-prev">&lt;</button>
+      <button class="products-next">&gt;</button>
+    </div>
+</section>
+
+
+<section class="contact-section">
+  <h2 class="contact-title">¡Agenda tu cita!</h2>
+  <div class="contact-icons">
+    <!-- Contenedor agregado alrededor de cada ícono -->
+    <div class="contact-icon-container">
+      <a href="tu_enlace_whatsapp" class="contact-icon-link" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+    <div class="contact-icon-container">
+      <a href="tu_enlace_facebook" class="contact-icon-link" aria-label="Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </div>
+    <div class="contact-icon-container">
+      <a href="tu_enlace_instagram" class="contact-icon-link" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="gallery-section">
+  <h2 class="gallery-title">Galería</h2>
+  <div class="gallery-container">
+    <!-- Imagen de la galería -->
+    <img src="img/brow.png" alt="Descripción de la imagen 1" class="gallery-image">
+    <img src="img/facial.jpg" alt="Descripción de la imagen 2" class="gallery-image">
+    <img src="img/3.jpg" alt="Descripción de la imagen 3" class="gallery-image">
+    <!-- Añade más imágenes según sea necesario -->
+  </div>
+  <div class="gallery-navigation">
+    <button class="gallery-view-more">VER MÁS...</button>
+  </div>
+</section>
+
+<section class="visit-section">
+  <div class="visit-map">
+    <!-- Replace with your actual Google Maps embed iframe -->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3740.4275570569566!2d-102.78656792601242!3d20.3652538811232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842ed926ae7f1789%3A0x600eecee1e2dbd6c!2sLuxury%20muebles!5e0!3m2!1ses-419!2smx!4v1711532750546!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+  <div class="visit-info">
+    <h2 class="visit-title">Visítanos</h2>
+    <p class="visit-address">Av. Fidel Velázquez Sánchez 895.Plaza Velaz, segundo piso. Col. Santa Elena Alcalde 44220, Guadalajara, Jalisco.</p>
+    <p class="visit-hours">Horario: Lunes a viernes de 9am. a 7pm. Sábados de 9am. a 6pm.</p>
+    <div class="visit-contacts">
+      <p class="visit-phone"><i class="fas fa-phone"></i> 33 3824 1653</p>
+      <p class="visit-alt-phone"><i class="fas fa-phone"></i> 33 2089 4034</p>
+    </div>
+    <div class="visit-socials">
+      <!-- Add your social links here -->
+      <a href="tu_enlace_facebook" class="social-link"><i class="fab fa-facebook-f"></i></a>
+      <a href="tu_enlace_instagram" class="social-link"><i class="fab fa-instagram"></i></a>
+    </i>@michel_makeup</a>
+    </div>
+
+  </div>
+
+  
+</section>
+
+
+<!-- Footer Section -->
+<footer class="footer-section">
+  <div class="container">
+    <div class="footer-logo">
+      <img src="img/logo.png" alt="Logo" /> <!-- Reemplaza con la ruta a tu logo -->
+    </div>
+    <div class="footer-links">
+      <div class="link-column">
+        <h4>Servicios</h4>
+        <ul>
+          <li><a href="#">Microblading</a></li>
+          <li><a href="#">Micropuntura</a></li>
+          <li><a href="#">Más...</a></li>
+        </ul>
+      </div>
+      <div class="link-column">
+        <h4>Nosotros</h4>
+        <ul>
+          <li><a href="#">Michel Alvarez</a></li>
+          <li><a href="#">Galería</a></li>
+          <li><a href="#">Aviso de Privacidad</a></li>
+        </ul>
+      </div>
+      <div class="link-column">
+        <h4>Productos</h4>
+        <ul>
+          <li><a href="#">Crema facial</a></li>
+          <li><a href="#">Bushy Brow</a></li>
+          <li><a href="#">Crema regeneradora de estrías</a></li>
+        </ul>
+      </div>
+      <div class="link-column">
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="#">Instalaciones</a></li>
+          <li><a href="#">Teléfono</a></li>
+          <li><a href="#">Redes Sociales</a></li>
+        </ul>
+      </div>
+    </div>
+</footer>
+
+<!-- Sección de derechos de autor -->
+<div class="footer-bottom">
+  <div class="container">
+    <p>Copyright Michel Alvarez Studio 2024. Todos los derechos reservados.</p>
+  </div>
+</div>
+
+</body>
+</html>
