@@ -732,21 +732,55 @@ body {
   color: #583063; /* Social icon hover color */
 }
 
-/* Responsiveness */
 @media (max-width: 768px) {
   .visit-section {
-    flex-direction: column;
+    flex-direction: column; /* Apila los elementos verticalmente */
+    padding: 30px 5%; /* Ajusta el padding para dispositivos más pequeños */
   }
 
-  .visit-map, .visit-info {
-    flex-basis: 100%;
-    margin-right: 0;
-    margin-bottom: 20px;
+  .visit-map,
+  .visit-info {
+    flex-basis: auto; /* Permite que cada elemento tome el tamaño necesario */
+    width: 100%; /* Los elementos toman el ancho completo */
+    margin: 0 0 20px; /* Agrega margen inferior entre los elementos */
   }
 
+  .visit-map {
+    margin-bottom: 10px; /* Espacio después del mapa antes de la información */
+  }
 
+  .visit-info {
+    padding: 15px; /* Ajusta el padding dentro del contenedor de información */
+  }
 
-  
+  .visit-title {
+    font-size: 1.8rem; /* Reduce el tamaño de la fuente del título */
+    margin-bottom: 10px; /* Reduce el margen inferior del título */
+  }
+
+  .visit-text {
+    font-size: 0.9rem; /* Reduce el tamaño de la fuente del texto */
+  }
+
+  .visit-socials {
+    justify-content: center; /* Centra los íconos sociales */
+    margin-top: 10px; /* Agrega margen superior para separar de texto */
+  }
+
+  .social-link {
+    margin: 0 10px; /* Ajusta el margen entre íconos sociales */
+  }
+}
+
+@media (max-width: 480px) {
+  .visit-title {
+    font-size: 1.5rem; /* Reduce aún más para teléfonos móviles */
+  }
+
+  .visit-text,
+  .social-link {
+    font-size: 0.8rem; /* Reduce el tamaño de la fuente para el texto y los enlaces sociales */
+  }
 }
 
 
