@@ -12,7 +12,6 @@ body {
 .nav-menu,
 .nav-icon,
 .nav-logo img {
-  /* Asegúrate de que los márgenes no empujen el botón fuera del viewport en pantallas pequeñas */
   margin-bottom: 10px; /* Espacio adicional al final de cada elemento */
 }
 
@@ -290,7 +289,7 @@ body {
   .services-prev,
   .services-next,
   .services-all {
-    width: 100%; /* Full width buttons */
+    width: 50%; /* Full width buttons */
     margin: 10px 0; /* Adds margin between the buttons when stacked */
   }
 }
@@ -426,6 +425,7 @@ body {
 
   .products-prev,
   .products-next {
+    width: 50%; /* Full width buttons */
     padding: 10px; /* Adjust padding */
     margin: 10px 0; /* Add space between buttons */
   }
