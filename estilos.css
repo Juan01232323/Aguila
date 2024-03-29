@@ -138,40 +138,30 @@ body {
 @media (max-width: 768px) {
   .navbar {
     /* Disminuye el padding para dar más espacio en pantallas pequeñas */
-    padding: 5px 10px;
+    padding: 5px 15px; /* Más adecuado para pantallas pequeñas */
   }
 
   .navbar-container {
-    /* Cambia la dirección de los items a columna en pantallas pequeñas */
     flex-direction: column;
-    align-items: center;
+    align-items: stretch; /* Asegura que los elementos ocupen todo el ancho */
   }
 
-  .nav-logo,
-  .nav-menu,
-  .nav-icon {
-    /* Centra todos los elementos */
-    justify-content: center;
-    width: 100%;
+  .nav-logo, .nav-menu, .nav-icon {
+    text-align: center; /* Centra todos los elementos */
   }
+
 
   .nav-menu {
-    /* Apila los elementos del menú verticalmente */
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column; /* Apila los elementos del menú */
   }
 
-  .nav-item {
-    /* Elimina el margen izquierdo y agrega margen superior e inferior para espaciar los elementos */
-    margin-left: 0;
-    margin-top: 5px;
-    margin-bottom: 5px;
+ .nav-item + .nav-item {
+    margin-top: 5px; /* Añade espacio entre elementos del menú */
   }
 
   .nav-link {
-    /* Ajusta el tamaño del texto para que se vea bien en pantallas pequeñas */
-    font-size: 16px;
-    padding: 8px 15px;
+    font-size: 16px; /* Reduce el tamaño para mejorar la legibilidad */
+    padding: 8px; /* Ajusta el padding para que sea más táctil */
   }
 
   .nav-icon {
@@ -284,13 +274,12 @@ body {
   }
 
   .services-container {
-    gap: 20px; /* Reduce space between service items */
+    flex-direction: column; /* Coloca los servicios uno encima del otro */
   }
 
   .service-item {
-    width: 100%; /* Make service items take full width */
-    margin-bottom: 15px; /* Reduce space between service items */
-    /* You may want to adjust positioning for service-description or remove the absolute positioning on smaller screens if it causes overlap */
+    width: auto; /* Permite que los elementos se ajusten al contenedor */
+    margin: 10px 0; /* Añade un margen para separar cada servicio */
   }
 
   .services-navigation {
@@ -566,17 +555,19 @@ body {
   }
 
   .contact-icons {
-    flex-direction: column; /* Cambiar la disposición de los íconos a vertical */
-    gap: 15px; /* Ajustar el espacio entre íconos */
+    flex-direction: column; /* Apila los íconos de contacto */
+    gap: 10px; /* Espacio entre íconos */
   }
 
   .contact-icon-link {
     font-size: 20px; /* Reducir el tamaño de los íconos para dispositivos más pequeños */
   }
 
-  .contact-icon-container {
-    margin: 0 auto; /* Centrar los contenedores de íconos */
+   .contact-icon-container {
+    display: block; /* Ocupa el ancho completo */
+    margin-bottom: 10px; /* Espacio entre íconos */
   }
+
 }
 
 @media (max-width: 480px) {
@@ -668,13 +659,16 @@ body {
   }
 
   .gallery-container {
-    grid-template-columns: repeat(2, 1fr); /* Cambiar a 2 columnas para vistas más estrechas */
-    gap: 15px; /* Reducir el espacio entre imágenes */
-    padding: 0 20px; /* Reducir el espacio a los lados */
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas en vez de tres */
   }
 
+
   .gallery-image {
-    /* Las imágenes pueden mantenerse sin cambios si se ajustan bien */
+    width: 100%;
+    display: block;
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Sombra para dar profundidad */
+    object-fit: cover; /* Asegura que las imágenes cubran el espacio sin perder su aspecto */
   }
 
   .gallery-view-more {
@@ -688,7 +682,11 @@ body {
 
 @media (max-width: 480px) {
   .gallery-container {
-    grid-template-columns: 1fr; /* Cambiar a 1 columna para teléfonos móviles */
+    grid-template-columns: 1fr; /* Una columna para teléfonos móviles */
+  }
+
+  .gallery-image {
+    margin-bottom: 15px; /* Espacio entre imágenes */
   }
 
   .gallery-navigation {
@@ -900,9 +898,8 @@ body {
 
 /* Media Queries para ajustes en dispositivos móviles */
 @media (max-width: 768px) {
-  .footer-links, .container {
-    flex-direction: column;
-    text-align: center;
+  .footer-links {
+    flex-direction: column; /* Apila los enlaces del pie de página */
   }
 
   /* Estilo para la sección general del pie de página */
@@ -913,12 +910,9 @@ body {
 
 }
 
-
-  .link-column {
-    flex-basis: auto;
-    width: 100%;
-    margin-bottom: 20px;
-  }
+.link-column {
+  margin-bottom: 15px; /* Espacio entre columnas de enlaces */
+}
 
   .footer-logo img {
     margin: 0 auto; /* Centra el logo en dispositivos móviles */
