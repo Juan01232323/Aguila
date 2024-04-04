@@ -13,52 +13,61 @@
   <div class="navbar-container">
     <!-- Enlace del logo actualizado para mostrar una imagen -->
     <a href="#" class="nav-logo">
-      <img src="img/logo.png" alt="Logo" style="height: auto; width: 100px;" />
+      <img src="img/logo.jpg" alt="Logo" style="height: auto; width: 100px;" />
     </a>
     <ul class="nav-menu">
       <li class="nav-item"><a href="#" class="nav-link">Inicio</a></li>
-      <li class="nav-item"><a href="#" class="nav-link">Servicios</a></li>
       <li class="nav-item"><a href="#" class="nav-link">Nosotros</a></li>
-      <li class="nav-item"><a href="#" class="nav-link">Galería</a></li>
       <li class="nav-item"><a href="#" class="nav-link">Productos</a></li>
       <li class="nav-item"><a href="#" class="nav-link">Contacto</a></li>
     </ul>
     <div class="nav-icon">
       <a href="#" class="icon-link"><i class="fas fa-shopping-cart"></i></a>
     </div>
-    <button class="code-btn">¿Tienes un código?</button>
   </div>
 </nav>
 
-<section class="services-section">
-  <h2 class="services-title">Servicios</h2>
-  <div class="services-container">
-    <div class="service-item">
-      <img src="img/1.jpg" alt="Depilación láser" class="service-image">
-      <span class="service-description">Depilación láser trípodo soprano ice</span>
+
+<section class="hero-section">
+  <div class="hero-container">
+    <div class="hero-content">
+      <h1 class="hero-title">Alonso Aguila</h1>
+      <p class="hero-text">
+        ENVIOS A TODA LA REPÚBLICA MEXICANA🛬🚚 Sueña, imagina y nosotros lo creamos🗽 LUXURY MUEBLES TU MEJOR OPCIÓN 🪑🛌🪟
+        <br>
+        <i class="fas fa-check-circle check-icon"></i>
+      </p>
     </div>
-    <div class="service-item">
-      <img src="img/2.png" alt="Micropuntura" class="service-image">
-      <span class="service-description">Micropuntura en estrías</span>
-    </div>
-    <div class="service-item">
-      <img src="img/3.jpg" alt="Angel Lips" class="service-image">
-      <span class="service-description">Angel Lips</span>
-    </div>
-  </div>
-  <div class="services-navigation">
-    <button class="services-prev">&lt;</button>
-    <button class="services-all">VER TODOS</button>
-    <button class="services-next">&gt;</button>
-  </div>
+    <div class="hero-image">
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="img/presentacion.jpg" alt="Especialista en Micropuntura" />
+          </div>
+          <div class="flip-card-back">
+            <!-- Reemplaza 'img/imagen_trasera.jpg' con la ruta de tu imagen que quieres mostrar al voltear -->
+            <img src="img/logo.jpg" alt="Imagen trasera" />
+          </div>
+        </div>
+      </div>
+      
 </section>
+
+<!-- Video Section -->
+<section class="video-section">
+  <video controls>
+    <source src="img/video.mp4" type="video/mp4">
+    Tu navegador no soporta el elemento de video.
+  </video>
+</section>
+
 
 <section class="products-section">
   <h2 class="products-title">Productos</h2>
   <div class="products-container">
     <!-- Repite este bloque para cada producto -->
-    <div class="product-item" data-rating="3">
-      <img src="img/facial.jpg" alt="Crema facial TOTAL" class="product-image">
+    <div class="product-item" data-rating="5">
+      <img src="img/camilla1.jpg" alt="Crema facial TOTAL" class="product-image">
       <div class="product-info">
         <h3 class="product-name">Crema facial: TOTAL</h3>
         <div class="product-rating">
@@ -70,12 +79,12 @@
 
         </div>
         <p class="product-price">$200</p>
-        <button class="product-add">Agregar al carrito</button>
+        <button class="product-add">Agregar al carrito <i class="fas fa-shopping-cart"></i></button>
       </div>
     </div>
 
     <div class="product-item" data-rating="5">
-      <img src="img/brow.png" alt="Bushy Brow" class="product-image">
+      <img src="img/camilla2.jpg" alt="Bushy Brow" class="product-image">
       <div class="product-info">
         <h3 class="product-name">Bushy Brow</h3>
         <div class="product-rating">
@@ -86,7 +95,7 @@
           <i class="fas fa-star"></i>
         </div>
         <p class="product-price">$490</p>
-        <button class="product-add">Agregar al carrito</button>
+        <button class="product-add">Agregar al carrito <i class="fas fa-shopping-cart"></i></button>
       </div>
     </div>
   </div>
@@ -119,20 +128,6 @@
   </div>
 </section>
 
-<section class="gallery-section">
-  <h2 class="gallery-title">Galería</h2>
-  <div class="gallery-container">
-    <!-- Imagen de la galería -->
-    <img src="img/brow.png" alt="Descripción de la imagen 1" class="gallery-image">
-    <img src="img/facial.jpg" alt="Descripción de la imagen 2" class="gallery-image">
-    <img src="img/3.jpg" alt="Descripción de la imagen 3" class="gallery-image">
-    <!-- Añade más imágenes según sea necesario -->
-  </div>
-  <div class="gallery-navigation">
-    <button class="gallery-view-more">VER MÁS...</button>
-  </div>
-</section>
-
 <section class="visit-section">
   <div class="visit-map">
     <!-- Replace with your actual Google Maps embed iframe -->
@@ -160,20 +155,13 @@
 
 
 <!-- Footer Section -->
+<!-- Footer Section -->
 <footer class="footer-section">
   <div class="container">
     <div class="footer-logo">
-      <img src="img/logo.png" alt="Logo" /> <!-- Reemplaza con la ruta a tu logo -->
+      <img src="img/logo.jpg" alt="Logo" /> <!-- Reemplaza con la ruta a tu logo -->
     </div>
     <div class="footer-links">
-      <div class="link-column">
-        <h4>Servicios</h4>
-        <ul>
-          <li><a href="#">Microblading</a></li>
-          <li><a href="#">Micropuntura</a></li>
-          <li><a href="#">Más...</a></li>
-        </ul>
-      </div>
       <div class="link-column">
         <h4>Nosotros</h4>
         <ul>
@@ -182,14 +170,7 @@
           <li><a href="#">Aviso de Privacidad</a></li>
         </ul>
       </div>
-      <div class="link-column">
-        <h4>Productos</h4>
-        <ul>
-          <li><a href="#">Crema facial</a></li>
-          <li><a href="#">Bushy Brow</a></li>
-          <li><a href="#">Crema regeneradora de estrías</a></li>
-        </ul>
-      </div>
+      <!-- Asegúrate de que "Contacto" sea el último elemento aquí para que pueda ser movido al extremo derecho con CSS -->
       <div class="link-column">
         <h4>Contacto</h4>
         <ul>
@@ -199,7 +180,9 @@
         </ul>
       </div>
     </div>
+  </div>
 </footer>
+
 
 <!-- Sección de derechos de autor -->
 <div class="footer-bottom">
