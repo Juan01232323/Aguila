@@ -208,7 +208,7 @@ body {
   align-items: center; /* Alinea verticalmente */
   justify-content: center; /* Alinea horizontalmente */
   text-align: center; /* Asegura que el texto dentro de hero-content esté centrado */
-  padding: 120px 20px; /* Espaciado superior e inferior aumentado */
+  padding: 10px 20px; /* Espaciado superior e inferior aumentado */
   background-color: #f7f7f7; /* Color de fondo (cambiar si es necesario) */
   min-height: 80vh; /* Establece una altura mínima basada en el alto de la ventana */
   overflow: hidden; /* Evita el desbordamiento */
@@ -254,7 +254,7 @@ body {
   font-size: 90px; /* O el tamaño que prefieras */
   display: block; /* Hace que el ícono se muestre en su propia línea */
   text-align: center; /* Centra el ícono si está en un bloque display */
-  margin: 40px auto; /* Añade un poco de margen para dar espacio alrededor del ícono */
+  margin: 60px auto; /* Añade un poco de margen para dar espacio alrededor del ícono */
 }
 
 
@@ -284,10 +284,11 @@ body {
   max-width: 100%; /* Utiliza todo el ancho disponible */
   display: block; /* Trata la imagen como bloque para centrarla */
   margin: 0 auto; /* Centra la imagen horizontalmente */
+
 }
 
 .hero-image img {
-  max-width: 500px; /* Ajusta este valor según el tamaño de tu imagen */
+  max-width: 370px; /* Ajusta este valor según el tamaño de tu imagen */
   height: auto;
 }
 
@@ -399,19 +400,17 @@ body {
 }
 
 
-
-
 .video-section {
   text-align: center;
-  max-width: 640px; /* Establece la anchura máxima del contenedor del video */
-  margin: 20px auto; /* Centra la sección de video y añade un poco de margen arriba y abajo */
+  max-width: 850px; /* Establece la anchura máxima del contenedor del video */
+  margin: 80px auto; /* Centra la sección de video y añade un poco de margen arriba y abajo */
   background: #000; /* Fondo negro para que las barras vacías no sean tan notorias */
 }
 
 .video-section video {
   width: 100%; /* El ancho es el 100% del contenedor */
-  height: 800px; /* La altura es fija para mantener la forma cuadrada */
-  object-fit:initial; /* Asegura que todo el video se muestre completamente */
+  height: 500px; /* La altura es fija para mantener la forma cuadrada */
+  object-fit:contain; /* Asegura que todo el video se muestre completamente */
 }
 
 
@@ -1058,3 +1057,4 @@ body {
     font-size: 0.9em; /* Reduce el tamaño de la fuente de los derechos de autor para dispositivos muy pequeños */
   }
 }
+
