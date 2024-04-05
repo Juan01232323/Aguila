@@ -276,6 +276,8 @@ body {
   background-color: #ffb813; /* Color al pasar el ratón */
 }
 
+
+
 /* Asegúrate de que hero-image ocupe el espacio adecuado */
 .hero-image {
   max-width: 100%; /* Utiliza todo el ancho disponible */
@@ -295,7 +297,6 @@ body {
   width: 500px; /* O el ancho que prefieras */
   height: 300px; /* O la altura que prefieras */
   perspective: 1000px; /* Profundidad de efecto 3D */
-  display:block
 }
 
 
@@ -306,7 +307,6 @@ body {
   text-align: center;
   transition: transform 0.6s;
   transform-style: preserve-3d;
-  display:block
 }
 
 .flip-card:hover .flip-card-inner {
@@ -319,8 +319,6 @@ body {
   height: 100%;
   -webkit-backface-visibility: hidden; /* Oculta el reverso al girar */
   backface-visibility: hidden;
-  display:block
-
 }
 .flip-card-front {
   z-index: 2;
@@ -328,8 +326,6 @@ body {
 
 .flip-card-back {
   transform: rotateY(180deg); /* Rota la parte de atrás para que quede frente a la vista al girar */
-  display:block
-
 }
 
 
@@ -341,110 +337,28 @@ body {
 }
 
 
+
 @media (max-width: 768px) {
   .hero-section {
-    padding: 40px 20px; /* Espaciado superior e inferior reducido */
-    min-height: 50vh; /* Altura mínima reducida para dispositivos móviles */
+    flex-direction: column;
+    padding: 40px; /* Padding más pequeño para dispositivos móviles */
   }
 
   .hero-container {
-    flex-direction: column; /* Elementos apilados verticalmente */
+    flex-direction: column-reverse; /* Coloca la imagen sobre el texto en móviles */
   }
 
-  .hero-content {
+  .hero-content,
+  .hero-image {
     text-align: center;
-    padding: 0; /* Sin padding para maximizar el espacio disponible */
+    padding: 0;
   }
 
-  .hero-title {
-    font-size: 32px; /* Tamaño de fuente reducido para el título */
-    margin-bottom: 10px; /* Menor espacio debajo del título */
-  }
-
-  .hero-text {
-    font-size: 16px; /* Tamaño de fuente reducido para el texto */
-    margin-bottom: 20px; /* Menor espacio debajo del texto */
-  }
-
-  .hero-text .fas,
-  .hero-text .check-icon {
-    font-size: 60px; /* Tamaño del icono reducido */
-    margin: 20px auto; /* Espaciado ajustado alrededor del ícono */
-  }
-
-  .hero-button {
-    padding: 8px 20px; /* Padding reducido para los botones */
-    font-size: 16px; /* Tamaño de fuente reducido para el texto del botón */
-  }
 
   .hero-image img {
-    max-width: 80%; /* La imagen usa hasta el 80% del ancho disponible */
-    margin: 20px auto; /* Espacio arriba y abajo de la imagen */
-  }
-
-  .flip-card {
-    width: 80%; /* Ancho del flip-card ajustado */
-    height: auto; /* Altura automática para mantener proporciones */
-  }
-
-  .flip-card-inner {
-    width: 100%;
-    height: auto;
-  }
-
-  .flip-card-front img,
-  .flip-card-back img {
-    width: 100%;
-    height: auto;
+    max-width: 100%; /* Ajusta la imagen para que sea responsive */
   }
 }
-
-@media (max-width: 480px) {
-  .hero-section {
-    padding: 20px; /* Espaciado más reducido para pantallas pequeñas */
-    min-height: 50vh;
-  }
-
-  .hero-title {
-    font-size: 24px; /* Tamaño de fuente más pequeño para el título */
-  }
-
-  .hero-text {
-    font-size: 14px; /* Tamaño de fuente más pequeño para el texto */
-    margin-bottom: 15px; /* Menor espacio debajo del texto */
-  }
-
-  .hero-text .fas,
-  .hero-text .check-icon {
-    font-size: 40px; /* Tamaño del icono más pequeño */
-    margin: 15px auto; /* Espaciado ajustado */
-  }
-
-  .hero-button {
-    padding: 8px 16px; /* Padding más pequeño para botones */
-    font-size: 14px; /* Tamaño de fuente más pequeño para el botón */
-  }
-
-  .hero-image img {
-    max-width: 100%; /* La imagen utiliza el ancho completo */
-  }
-
-  .flip-card {
-    width: 100%; /* El flip-card utiliza el ancho completo */
-    margin: 15px 0; /* Espacio adicional arriba y abajo para separación */
-  }
-
-  .flip-card-inner {
-    height: auto; /* Altura automática para mantener la proporción */
-  }
-
-  .flip-card-front img,
-  .flip-card-back img {
-    width: 100%; /* La imagen cubre el espacio disponible */
-    height: auto; /* Altura automática para mantener la proporción */
-  }
-}
-
 
 
 .video-section {
@@ -456,8 +370,8 @@ body {
 
 .video-section video {
   width: 100%; /* El ancho es el 100% del contenedor */
-  height: 640px; /* La altura es fija para mantener la forma cuadrada */
-  object-fit: contain; /* Asegura que todo el video se muestre completamente */
+  height: 800px; /* La altura es fija para mantener la forma cuadrada */
+  object-fit:initial; /* Asegura que todo el video se muestre completamente */
 }
 
 
@@ -1104,4 +1018,3 @@ body {
     font-size: 0.9em; /* Reduce el tamaño de la fuente de los derechos de autor para dispositivos muy pequeños */
   }
 }
-
