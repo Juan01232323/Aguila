@@ -893,22 +893,7 @@ body {
   margin-bottom: 10px; /* Space below each text element */
 }
 
-.visit-socials {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-}
 
-.social-link {
-  color: #ff0000; /* Social icon color */
-  font-size: 1.5rem; /* Social icon size */
-  margin-right: 15px; /* Space between social icons */
-  transition: color 0.3s ease;
-}
-
-.social-link:hover {
-  color: #ff0000; /* Social icon hover color */
-}
 
 @media (max-width: 768px) {
   .visit-section {
@@ -941,14 +926,7 @@ body {
     font-size: 0.9rem; /* Reduce el tamaño de la fuente del texto */
   }
 
-  .visit-socials {
-    justify-content: center; /* Centra los íconos sociales */
-    margin-top: 10px; /* Agrega margen superior para separar de texto */
-  }
-
-  .social-link {
-    margin: 0 10px; /* Ajusta el margen entre íconos sociales */
-  }
+  
 }
 
 @media (max-width: 480px) {
@@ -960,8 +938,7 @@ body {
     height: 200px; /* Reduce aún más la altura del mapa para dispositivos muy pequeños */
   }
 
-  .visit-text,
-  .social-link {
+  .visit-text{
     font-size: 0.8rem; /* Reduce el tamaño de la fuente para el texto y los enlaces sociales */
   }
 }
