@@ -337,33 +337,110 @@ body {
 }
 
 
-
 @media (max-width: 768px) {
   .hero-section {
-    flex-direction: column;
-    padding: 40px; /* Padding más pequeño para dispositivos móviles */
+    padding: 40px 20px; /* Espaciado superior e inferior reducido */
+    min-height: 50vh; /* Altura mínima reducida para dispositivos móviles */
   }
 
   .hero-container {
-    flex-direction: column-reverse; /* Coloca la imagen sobre el texto en móviles */
+    flex-direction: column; /* Elementos apilados verticalmente */
   }
 
-  .hero-content,
-  .hero-image {
+  .hero-content {
     text-align: center;
-    padding: 0;
+    padding: 0; /* Sin padding para maximizar el espacio disponible */
   }
 
-    /* Ajusta el tamaño de la tarjeta para dispositivos móviles si es necesario */
-    .flip-card {
-      width: 100%; /* Usa todo el ancho disponible */
-      height: auto; /* Ajusta la altura automáticamente */
-    }
+  .hero-title {
+    font-size: 32px; /* Tamaño de fuente reducido para el título */
+    margin-bottom: 10px; /* Menor espacio debajo del título */
+  }
+
+  .hero-text {
+    font-size: 16px; /* Tamaño de fuente reducido para el texto */
+    margin-bottom: 20px; /* Menor espacio debajo del texto */
+  }
+
+  .hero-text .fas,
+  .hero-text .check-icon {
+    font-size: 60px; /* Tamaño del icono reducido */
+    margin: 20px auto; /* Espaciado ajustado alrededor del ícono */
+  }
+
+  .hero-button {
+    padding: 8px 20px; /* Padding reducido para los botones */
+    font-size: 16px; /* Tamaño de fuente reducido para el texto del botón */
+  }
 
   .hero-image img {
-    max-width: 100%; /* Ajusta la imagen para que sea responsive */
+    max-width: 80%; /* La imagen usa hasta el 80% del ancho disponible */
+    margin: 20px auto; /* Espacio arriba y abajo de la imagen */
+  }
+
+  .flip-card {
+    width: 80%; /* Ancho del flip-card ajustado */
+    height: auto; /* Altura automática para mantener proporciones */
+  }
+
+  .flip-card-inner {
+    width: 100%;
+    height: auto;
+  }
+
+  .flip-card-front img,
+  .flip-card-back img {
+    width: 100%;
+    height: auto;
   }
 }
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 20px; /* Espaciado más reducido para pantallas pequeñas */
+    min-height: 50vh;
+  }
+
+  .hero-title {
+    font-size: 24px; /* Tamaño de fuente más pequeño para el título */
+  }
+
+  .hero-text {
+    font-size: 14px; /* Tamaño de fuente más pequeño para el texto */
+    margin-bottom: 15px; /* Menor espacio debajo del texto */
+  }
+
+  .hero-text .fas,
+  .hero-text .check-icon {
+    font-size: 40px; /* Tamaño del icono más pequeño */
+    margin: 15px auto; /* Espaciado ajustado */
+  }
+
+  .hero-button {
+    padding: 8px 16px; /* Padding más pequeño para botones */
+    font-size: 14px; /* Tamaño de fuente más pequeño para el botón */
+  }
+
+  .hero-image img {
+    max-width: 100%; /* La imagen utiliza el ancho completo */
+  }
+
+  .flip-card {
+    width: 100%; /* El flip-card utiliza el ancho completo */
+    margin: 15px 0; /* Espacio adicional arriba y abajo para separación */
+  }
+
+  .flip-card-inner {
+    height: auto; /* Altura automática para mantener la proporción */
+  }
+
+  .flip-card-front img,
+  .flip-card-back img {
+    width: 100%; /* La imagen cubre el espacio disponible */
+    height: auto; /* Altura automática para mantener la proporción */
+  }
+}
+
 
 
 .video-section {
@@ -1002,14 +1079,12 @@ body {
     margin-bottom: 15px; /* Espacio entre columnas de enlaces */
   }
 
-  /* No se necesita 'margin-left: auto;' aquí porque queremos que 'Contacto' esté centrado junto con los otros elementos */
-
   .footer-logo img {
     margin: 0 auto 20px; /* Centra el logo y añade un margen inferior */
   }
 
   .footer-section {
-    background-color: #8C5E99; /* El color de fondo general del footer */
+    background-color: #000000; /* El color de fondo general del footer */
     padding: 2em 0;
     color: white; /* El color del texto para todos los elementos del footer */
   }
