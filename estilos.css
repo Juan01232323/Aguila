@@ -338,27 +338,98 @@ body {
 
 
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .hero-section {
-    flex-direction: column;
-    padding: 40px; /* Padding más pequeño para dispositivos móviles */
+    padding: 20px; /* Espaciado más reducido para pantallas pequeñas */
+    min-height: 50vh;
   }
 
-  .hero-container {
-    flex-direction: column-reverse; /* Coloca la imagen sobre el texto en móviles */
+  .hero-title {
+    font-size: 24px; /* Tamaño de fuente más pequeño para el título */
   }
 
-  .hero-content,
-  .hero-image {
-    text-align: center;
-    padding: 0;
+  .hero-text {
+    font-size: 14px; /* Tamaño de fuente más pequeño para el texto */
+    margin-bottom: 15px; /* Menor espacio debajo del texto */
   }
 
+  .hero-text .fas,
+  .hero-text .check-icon {
+    font-size: 40px; /* Tamaño del icono más pequeño */
+    margin: 15px auto; /* Espaciado ajustado */
+  }
+
+  .hero-button {
+    padding: 8px 16px; /* Padding más pequeño para botones */
+    font-size: 14px; /* Tamaño de fuente más pequeño para el botón */
+  }
 
   .hero-image img {
-    max-width: 100%; /* Ajusta la imagen para que sea responsive */
+    max-width: 100%; /* La imagen utiliza el ancho completo */
+  }
+
+  .flip-card {
+    width: 100%; /* El flip-card utiliza el ancho completo */
+    margin: 15px 0; /* Espacio adicional arriba y abajo para separación */
+  }
+
+  .flip-card-inner {
+    height: auto; /* Altura automática para mantener la proporción */
+  }
+
+  .flip-card-front img,
+  .flip-card-back img {
+    width: 100%; /* La imagen cubre el espacio disponible */
+    height: auto; /* Altura automática para mantener la proporción */
   }
 }
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 20px; /* Espaciado más reducido para pantallas pequeñas */
+    min-height: 50vh;
+  }
+
+  .hero-title {
+    font-size: 24px; /* Tamaño de fuente más pequeño para el título */
+  }
+
+  .hero-text {
+    font-size: 14px; /* Tamaño de fuente más pequeño para el texto */
+    margin-bottom: 15px; /* Menor espacio debajo del texto */
+  }
+
+  .hero-text .fas,
+  .hero-text .check-icon {
+    font-size: 40px; /* Tamaño del icono más pequeño */
+    margin: 15px auto; /* Espaciado ajustado */
+  }
+
+  .hero-button {
+    padding: 8px 16px; /* Padding más pequeño para botones */
+    font-size: 14px; /* Tamaño de fuente más pequeño para el botón */
+  }
+
+  .hero-image img {
+    max-width: 100%; /* La imagen utiliza el ancho completo */
+  }
+
+  .flip-card {
+    width: 100%; /* El flip-card utiliza el ancho completo */
+    margin: 15px 0; /* Espacio adicional arriba y abajo para separación */
+  }
+
+  .flip-card-inner {
+    height: auto; /* Altura automática para mantener la proporción */
+  }
+
+  .flip-card-front img,
+  .flip-card-back img {
+    width: 100%; /* La imagen cubre el espacio disponible */
+    height: auto; /* Altura automática para mantener la proporción */
+  }
+}
+
 
 
 .video-section {
