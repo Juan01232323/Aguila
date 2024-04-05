@@ -21,6 +21,7 @@ body {
   margin-right: 0; /* Quita el margen derecho del último ícono y elemento de navegación */
 }
 
+
 /* Si hay otros elementos antes de .hero-section que empujan hacia abajo, ajusta sus márgenes también */
 .navbar,
 .navbar-container,
