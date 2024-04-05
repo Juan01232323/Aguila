@@ -276,8 +276,6 @@ body {
   background-color: #ffb813; /* Color al pasar el ratón */
 }
 
-
-
 /* Asegúrate de que hero-image ocupe el espacio adecuado */
 .hero-image {
   max-width: 100%; /* Utiliza todo el ancho disponible */
@@ -297,6 +295,7 @@ body {
   width: 500px; /* O el ancho que prefieras */
   height: 300px; /* O la altura que prefieras */
   perspective: 1000px; /* Profundidad de efecto 3D */
+  display:block
 }
 
 
@@ -307,6 +306,7 @@ body {
   text-align: center;
   transition: transform 0.6s;
   transform-style: preserve-3d;
+  display:block
 }
 
 .flip-card:hover .flip-card-inner {
@@ -319,6 +319,8 @@ body {
   height: 100%;
   -webkit-backface-visibility: hidden; /* Oculta el reverso al girar */
   backface-visibility: hidden;
+  display:block
+
 }
 .flip-card-front {
   z-index: 2;
@@ -326,6 +328,8 @@ body {
 
 .flip-card-back {
   transform: rotateY(180deg); /* Rota la parte de atrás para que quede frente a la vista al girar */
+  display:block
+
 }
 
 
@@ -1100,3 +1104,4 @@ body {
     font-size: 0.9em; /* Reduce el tamaño de la fuente de los derechos de autor para dispositivos muy pequeños */
   }
 }
+
