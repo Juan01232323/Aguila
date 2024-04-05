@@ -416,17 +416,27 @@ body {
 
 /* Ajustes para tablets */
 @media (max-width: 768px) {
+  .video-section {
+    padding: 10px; /* Reducir el padding para más espacio alrededor del video */
+    background: #333; /* Un fondo más oscuro para mejorar la visibilidad */
+  }
   .video-section video {
-    height: 640px; /* Ajusta la altura para dispositivos medianos */
+    height: auto; /* Altura auto para mantener la proporción */
+    aspect-ratio: 16 / 9; /* Mantiene una relación de aspecto */
   }
 }
 
 /* Ajustes para teléfonos móviles */
 @media (max-width: 480px) {
+  .video-section {
+    padding: 5px; /* Ajuste del padding para maximizar el espacio */
+    background: #444; /* Fondo ligeramente diferente para contrastar */
+  }
   .video-section video {
-    height: 200px; /* Reduce significativamente la altura para dispositivos pequeños */
+    aspect-ratio: 16 / 9; /* Consistente con el ajuste de tablet */
   }
 }
+
 
 
 
