@@ -414,6 +414,20 @@ body {
 }
 
 
+/* Ajustes para tablets */
+@media (max-width: 768px) {
+  .video-section video {
+    height: 400px; /* Ajusta la altura para dispositivos medianos */
+  }
+}
+
+/* Ajustes para teléfonos móviles */
+@media (max-width: 480px) {
+  .video-section video {
+    height: 200px; /* Reduce significativamente la altura para dispositivos pequeños */
+  }
+}
+
 
 
 .services-section {
