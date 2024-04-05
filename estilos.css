@@ -416,27 +416,17 @@ body {
 
 /* Ajustes para tablets */
 @media (max-width: 768px) {
-  .video-section {
-    padding: 10px; /* Reducir el padding para más espacio alrededor del video */
-    background: #333; /* Un fondo más oscuro para mejorar la visibilidad */
-  }
   .video-section video {
-    height: auto; /* Altura auto para mantener la proporción */
-    aspect-ratio: 16 / 9; /* Mantiene una relación de aspecto */
+    height: 400px; /* Ajusta la altura para dispositivos medianos */
   }
 }
 
 /* Ajustes para teléfonos móviles */
 @media (max-width: 480px) {
-  .video-section {
-    padding: 5px; /* Ajuste del padding para maximizar el espacio */
-    background: #444; /* Fondo ligeramente diferente para contrastar */
-  }
   .video-section video {
-    aspect-ratio: 16 / 9; /* Consistente con el ajuste de tablet */
+    height: 200px; /* Reduce significativamente la altura para dispositivos pequeños */
   }
 }
-
 
 
 
@@ -675,6 +665,8 @@ body {
 @media (max-width: 768px) {
   .products-section {
     padding: 30px 10px; /* Reduces padding for smaller screens */
+    display: none;
+
   }
 
   .products-title {
@@ -701,6 +693,13 @@ body {
   .products-next {
     padding: 10px; /* Adjust padding */
     margin: 10px 0; /* Add space between buttons */
+  }
+}
+
+/* Ocultar productos solo en teléfonos móviles, manteniéndolos visibles en tablets */
+@media (max-width: 480px) {
+  .products-section {
+    display: none;
   }
 }
 
