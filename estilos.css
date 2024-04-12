@@ -137,7 +137,7 @@ body {
 
 
 .navbar {
-  background-color: #000000;
+  background-color:rgba(16, 15, 15, 0.5);
   color: white;
   padding: 10px 20px;
 }
@@ -423,55 +423,48 @@ body {
 }
 
 @media (max-width: 214px) {
-  body, .navbar, .footer-section {
-    padding: 2px;
+  body {
     font-size: 8px; /* Reduce el tamaño de la fuente */
   }
 
-  .navbar-container, .footer-links, .link-column, .nav-menu, .contact-icons {
-    display: block; /* Cambia la disposición a vertical */
+  .navbar, .footer-section {
+    padding: 0.5rem; /* Usa rem para el padding */
   }
 
   .nav-logo img, .footer-logo img {
-    width: 40px; /* Reduce el tamaño del logo */
-    margin: 0 auto; /* Centra el logo */
+    max-width: 40px; /* Reduce el tamaño del logo */
+    height: auto; /* Asegura que la altura se ajuste automáticamente */
   }
 
-  .nav-link, .code-btn, .product-add, .services-prev, .services-next, .services-all {
-    font-size: 6px; /* Reduce el tamaño de la fuente */
-    padding: 2px; /* Reduce el padding */
+  .nav-menu, .footer-links {
+    display: block; /* Apila los enlaces de forma vertical */
   }
 
-  .nav-icon, .contact-icon-link, .social-media-icons {
-    font-size: 10px; /* Reduce el tamaño de los iconos */
-    margin: 2px; /* Reduce los márgenes */
+  .nav-link, .code-btn {
+    font-size: 1.5rem; /* Aumenta el tamaño de la fuente */
+    padding: 0.5rem; /* Aumenta el padding */
+  }
+
+  .nav-icon, .contact-icon-link {
+    font-size: 3rem; /* Aumenta el tamaño de los iconos */
   }
 
   .hero-section, .video-section, .services-section, .products-section, .contact-section, .visit-section {
-    padding: 4px; /* Reduce el padding */
+    padding: 1rem; /* Aumenta el padding */
   }
 
-  .hero-title, .services-title, .products-title, .contact-title, .visit-title {
-    font-size: 10px; /* Reduce el tamaño del título */
-  }
-
-  .hero-text, .service-description, .product-info, .visit-text, .footer-bottom p {
-    font-size: 6px; /* Reduce el tamaño de la fuente del texto */
-  }
-
-  .hero-image img, .service-image, .product-image, .visit-map {
-    width: 100%; /* Ajusta las imágenes para que ocupen el ancho disponible */
-  }
-
-  .flip-card, .product-item, .service-item {
-    width: 100%; /* Ajusta el ancho de estos elementos */
-  }
-
-  /* Para elementos que puedan ocultarse en resoluciones extremadamente bajas */
-  .some-non-critical-element {
+  /* Oculta elementos que no se pueden adaptar bien a pantallas tan pequeñas */
+  .some-element-to-hide {
     display: none;
   }
+
+  /* Asegúrate de que todas las imágenes sean responsivas */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 }
+
 
 
 /* Sección hero mejorada con un tema de color negro y amarillo oro */
@@ -1475,3 +1468,4 @@ body {
     font-size: 0.9em; /* Reduce el tamaño de la fuente de los derechos de autor para dispositivos muy pequeños */
   }
 }
+
