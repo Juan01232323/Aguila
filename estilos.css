@@ -420,7 +420,7 @@ body {
 
 .video-section {
   text-align: center;
-  max-width: 450px; /* Amplía la anchura máxima para dar más presencia al video */
+  max-width: 300px; /* Amplía la anchura máxima para dar más presencia al video */
   margin: 50px auto; /* Ajusta el margen para centrar la sección y darle espacio */
   padding: 20px; /* Añade un poco de padding para espacio alrededor del video */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Añade una sombra más pronunciada para profundidad */
