@@ -789,6 +789,7 @@ body {
 @media (max-width: 768px) {
   .products-section {
     padding: 30px 10px;
+    display:none;
   }
 
   .products-title {
@@ -824,6 +825,8 @@ body {
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
   .products-section, .product-item {
     /* Consideraciones especiales para el notch, como ajustes en el margen superior de la sección */
+    display:none;
+
   }
 }
 
@@ -831,6 +834,7 @@ body {
 @media only screen and (orientation: landscape) {
   .products-section {
     padding: 20px 5px; /* Menos padding vertical en paisaje */
+    display:none;
   }
 
   .product-item {
@@ -842,6 +846,7 @@ body {
 @media (max-width: 480px) {
   .products-section {
     padding: 20px 0; /* Ajuste del padding para una mejor visualización */
+    display:none;
   }
 
   .products-title {
@@ -1663,8 +1668,6 @@ body {
     padding: 1.6em 0; /* Padding incrementado para aprovechar el espacio */
   }
 }
-
-
 
 .whatsapp-icon {
   position: fixed;
