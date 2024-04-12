@@ -35,14 +35,17 @@ document.addEventListener('DOMContentLoaded', () => {
       saveCart();
     }
   });
-  
 
 
   const cart = JSON.parse(localStorage.getItem('cart')) || [];
 
   function saveCart() {
     localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartCount(); // Actualizar el contador cada vez que se guarde el carrito
+
   }
+
+  updateCartCount();
 
   document.body.addEventListener('click', (event) => {
     if (event.target.classList.contains('product-add')) {
@@ -58,14 +61,21 @@ document.addEventListener('DOMContentLoaded', () => {
         cart.push({ name: productName, price: productPrice, imageSrc: productImageSrc, quantity: 1 });
       }
 
-      alert(`${productName} ha sido agregado al carrito.`);
       saveCart();
+      updateCartCount();
+      alert(`${productName} ha sido agregado al carrito.`);
     }
   });
 
   function calcularTotal() {
     return cart.reduce((total, product) => total + product.price * product.quantity, 0).toFixed(2);
   }
+
+  function updateCartCount() {
+    const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
+    document.querySelector('.cart-count').textContent = cartCount;
+  }
+  
 
   document.querySelector('.nav-icon .icon-link').addEventListener('click', (event) => {
     event.preventDefault();
@@ -110,6 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const index = parseInt(this.getAttribute('data-index'));
         cart.splice(index, 1);
         saveCart();
+        updateCartCount(); // Actualizar el contador del carrito
         showCart();
       });
     });
@@ -117,9 +128,15 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.quantity-input').forEach(input => {
       input.addEventListener('change', function() {
         const index = parseInt(this.getAttribute('data-index'));
-        cart[index].quantity = parseInt(this.value);
+        if (this.value <= 0) {
+          cart.splice(index, 1); // Eliminar el producto si la cantidad es 0 o menos
+        } else {
+          cart[index].quantity = parseInt(this.value);
+        }
         saveCart();
+        updateCartCount(); // Actualizar el contador del carrito
         document.getElementById('total-price').textContent = calcularTotal();
+        showCart();
       });
     });
   }
