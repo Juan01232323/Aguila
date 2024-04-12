@@ -424,62 +424,52 @@ body {
 
 @media (max-width: 214px) {
   body, .navbar, .footer-section {
-    padding: 4px;
-    font-size: 10px; /* Reduce el tamaño de la fuente para ahorrar espacio */
+    padding: 2px;
+    font-size: 8px; /* Reduce el tamaño de la fuente */
   }
 
   .navbar-container, .footer-links, .link-column, .nav-menu, .contact-icons {
-    display: block; /* Cambia la disposición a vertical para aprovechar mejor el espacio vertical */
+    display: block; /* Cambia la disposición a vertical */
   }
 
   .nav-logo img, .footer-logo img {
-    width: 40px; /* Reduce el tamaño del logo para que encaje en pantallas pequeñas */
+    width: 40px; /* Reduce el tamaño del logo */
     margin: 0 auto; /* Centra el logo */
   }
 
   .nav-link, .code-btn, .product-add, .services-prev, .services-next, .services-all {
-    font-size: 8px; /* Reduce el tamaño de la fuente para los botones y enlaces */
-    padding: 2px 4px; /* Reduce el padding para ahorrar espacio */
-    display: inline-block; /* Asegura que los elementos sean compactos y lineales */
+    font-size: 6px; /* Reduce el tamaño de la fuente */
+    padding: 2px; /* Reduce el padding */
   }
 
   .nav-icon, .contact-icon-link, .social-media-icons {
-    font-size: 12px; /* Reduce el tamaño de los iconos */
-    margin: 2px; /* Reduce los márgenes para ahorrar espacio */
+    font-size: 10px; /* Reduce el tamaño de los iconos */
+    margin: 2px; /* Reduce los márgenes */
   }
 
   .hero-section, .video-section, .services-section, .products-section, .contact-section, .visit-section {
-    padding: 8px; /* Reduce el padding general de las secciones para maximizar el espacio de contenido */
+    padding: 4px; /* Reduce el padding */
   }
 
   .hero-title, .services-title, .products-title, .contact-title, .visit-title {
-    font-size: 12px; /* Reduce el tamaño del título para conservar espacio */
+    font-size: 10px; /* Reduce el tamaño del título */
   }
 
   .hero-text, .service-description, .product-info, .visit-text, .footer-bottom p {
-    font-size: 8px; /* Ajusta el tamaño de la fuente del texto para mejorar la legibilidad */
+    font-size: 6px; /* Reduce el tamaño de la fuente del texto */
   }
 
-  /* Ajustes específicos para imágenes y elementos interactivos */
   .hero-image img, .service-image, .product-image, .visit-map {
     width: 100%; /* Ajusta las imágenes para que ocupen el ancho disponible */
-    height: auto; /* Mantiene la proporción */
   }
 
   .flip-card, .product-item, .service-item {
-    width: 100%; /* Hace que estos elementos ocupen el ancho disponible */
-    font-size: 8px; /* Ajusta el tamaño de la fuente dentro de tarjetas y artículos */
+    width: 100%; /* Ajusta el ancho de estos elementos */
   }
 
-  /* Reducción de elementos decorativos y espacios innecesarios */
-  .navbar, .footer-section {
-    border: none; /* Elimina bordes que puedan consumir espacio visual */
-  }
-
-  /* Simplifica la navegación y pie de página */
-  .nav-menu, .footer-links {
-    justify-content: center; /* Centra los elementos para una presentación más limpia */
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan si es necesario */
+  /* Para elementos que puedan ocultarse en resoluciones extremadamente bajas */
+  .some-non-critical-element {
+    display: none;
   }
 }
 
