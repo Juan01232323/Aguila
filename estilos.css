@@ -1002,180 +1002,85 @@ body {
 }
 
 
+/* Ajustes generales para dispositivos móviles */
 @media (max-width: 768px) {
+  .cart-items,
+  .total-price,
   .cart-item {
-    flex-direction: row;
-    padding: 15px;
+    padding: 10px;
+    margin: 0;
+  }
+
+  .cart-item {
+    flex-direction: column;
     align-items: center;
   }
 
   .cart-item-image {
-    width: 80px;
-    height: 80px;
-    margin-right: 20px;
+    width: 100%; /* Imagenes se adaptan al ancho completo */
+    height: auto;
+    margin-bottom: 10px;
   }
 
   .cart-item-info {
-    flex-grow: 1;
-    padding-left: 15px;
+    width: 100%; /* Información se expande al ancho completo */
   }
 
-  .quantity-input {
-    margin-left: 15px;
-  }
-
+  .quantity-input,
   .total-price {
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 15px;
+    width: 100%;
+    margin-top: 10px;
   }
 
   .back-to-products {
-    padding: 12px 20px;
+    width: 100%; /* Botón ocupa el ancho completo */
     margin-top: 20px;
   }
 }
 
-
-/* Media queries para ajustes en dispositivos móviles */
+/* Ajustes específicos para tamaños de pantalla de iPhone */
 @media (max-width: 480px) {
-  .cart-items {
-    /* Ajustes para el contenedor de ítems para mejorar el flujo en pantallas pequeñas */
-    padding: 5px;
-  }
-
   .cart-item {
-    /* Rediseño del layout de ítems para optimizar el espacio */
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px;
-    border-bottom: 1px solid #cccccc; /* Borde más sutil */
+    padding: 8px; /* Menos padding para más espacio */
+    border-bottom: 1px solid #ccc; /* Borde sutil para separar los elementos */
   }
 
   .cart-item:last-child {
-    border-bottom: none;
+    border-bottom: none; /* Elimina el borde del último elemento */
   }
 
-  .cart-item-image {
-    /* Ajuste del tamaño de la imagen para consistencia visual */
-    width: 100%;
-    margin-right: 0;
-    margin-bottom: 10px; /* Espacio entre la imagen y la información */
-  }
-
-  .cart-item-info {
-    /* Ajustes para mejorar la visualización de la información del producto */
-    width: 100%;
-  }
-
-  .cart-item-name, .cart-item-price {
-    /* Tamaño de fuente optimizado para legibilidad en pantallas pequeñas */
-    font-size: 16px;
-  }
-
-  .quantity-input {
-    /* Ajuste del tamaño del input de cantidad para facilitar la interacción */
-    width: 100%;
-    margin-top: 10px; /* Espacio entre la información y el input de cantidad */
-  }
-
-  .total-price {
-    /* Mejoras en la visualización del precio total para pantallas pequeñas */
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 15px;
-  }
-
-  .total-price span {
-    /* Ajustes para destacar el total */
-    font-size: 18px;
+  .cart-item-name,
+  .cart-item-price {
+    font-size: 14px; /* Fuente más pequeña para adaptarse a la pantalla */
   }
 
   .back-to-products {
-    /* Mejoras en el botón de volver a los productos para facilitar la interacción */
-    width: 100%;
-    padding: 12px;
-    text-align: center; /* Asegura que el texto está centrado dentro del botón */
-    margin-top: 15px; /* Espacio adicional encima del botón */
+    padding: 12px 20px; /* Ajuste en el padding para un toque más grande y fácil de pulsar */
   }
 }
 
-
-@media (max-width: 320px) {
+/* Media queries para cada tipo de iPhone especificado en su requerimiento */
+@media (max-width: 320px), /* iPhone 5/SE */
+       (max-width: 375px), /* iPhone 6/7/8 y X/XS/11 Pro */
+       (max-width: 414px), /* iPhone 6/7/8 Plus y iPhone XR/11 y 12/13 */
+       (max-width: 428px) { /* iPhone 12/13 Pro Max */
   .cart-item {
+    /* Centrado y column layout para todos los iPhones */
     flex-direction: column;
+    align-items: center;
     text-align: center;
   }
 
-  .cart-item-image,
+  .cart-item-image {
+    margin-right: 0; /* No hay margen derecho */
+  }
+
   .cart-item-info {
-    width: 100%;
-    margin: 5px 0;
+    text-align: center; /* Texto centrado */
   }
 
-  .quantity-input,
-  .total-price {
-    width: 100%;
-    margin-top: 10px;
-  }
-}
-
-
-@media (max-width: 375px) {
-  .cart-item {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .cart-item-image,
-  .cart-item-info {
-    width: 100%;
-    margin: 5px 0;
-  }
-
-  .quantity-input,
-  .total-price {
-    width: 100%;
-    margin-top: 10px;
-  }
-}
-
-@media (max-width: 414px) {
-  .cart-item {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .cart-item-image,
-  .cart-item-info {
-    width: 100%;
-    margin: 5px 0;
-  }
-
-  .quantity-input,
-  .total-price {
-    width: 100%;
-    margin-top: 10px;
-  }
-}
-
-
-@media (max-width: 428px) {
-  .cart-item {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .cart-item-image,
-  .cart-item-info {
-    width: 100%;
-    margin: 5px 0;
-  }
-
-  .quantity-input,
-  .total-price {
-    width: 100%;
-    margin-top: 10px;
+  .quantity-input {
+    margin-top: 5px; /* Espacio superior añadido */
   }
 }
 
