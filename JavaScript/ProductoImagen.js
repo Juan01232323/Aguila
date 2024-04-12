@@ -4,13 +4,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const productImagesByColor = {
     'Crema facial: TOTAL': {
       'Negro': 'img/camilla1.jpg',
-      'Rojo': 'img/camilla1_verde.jpg',
       'Azul': 'img/camilla1_azul.jpg',
       'Verde': 'img/camilla1_verde.jpg',
     },
     'Bushy Brow': {
       'Negro': 'img/camilla2_rojo.jpg',
-      'Rojo': 'img/camilla1_verde.jpg',
       'Azul': 'img/camilla2_azul.jpg',
       'Verde': 'img/camilla2_verde.jpg',
     }
@@ -89,7 +87,6 @@ document.addEventListener('DOMContentLoaded', () => {
           <p class="cart-item-price">$${product.price.toFixed(2)}</p>
           <select class="color-select" data-index="${index}">
             <option value="Negro">Negro</option>
-            <option value="Rojo">Rojo</option>
             <option value="Azul">Azul</option>
             <option value="Verde">Verde</option>
           </select>
