@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <p class="cart-item-price">$${product.price.toFixed(2)}</p>
           <select class="color-select" data-index="${index}">
             <option value="Negro">Negro</option>
-            <option value="Rojo">Negro</option>
+            <option value="Rojo">Rojo</option>
             <option value="Azul">Azul</option>
             <option value="Verde">Verde</option>
           </select>
