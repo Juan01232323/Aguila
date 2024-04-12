@@ -799,8 +799,12 @@ body {
   .products-container {
     flex-direction: column; /* Los elementos se apilan verticalmente */
     gap: 10px;
-    display:none
   }
+
+  .products-prev, .products-next {
+   display:none
+  }
+  
 
   .product-item {
     width: auto; /* Ocupa el ancho disponible */
@@ -818,6 +822,10 @@ body {
     height: 180px; /* Altura fija para imágenes */
   }
 
+  .products-prev, .products-next {
+    display:none
+   }
+
   .product-name,
   .product-price {
     font-size: 14px; /* Tamaño de fuente más pequeño para ajustar el texto */
@@ -833,6 +841,9 @@ body {
   .product-image {
     height: 200px; /* Ajuste de altura para imágenes más grandes */
   }
+  .products-prev, .products-next {
+    display:none
+   }
 
   .product-name,
   .product-price {
@@ -848,6 +859,10 @@ body {
     padding-bottom: env(safe-area-inset-bottom); /* Espacio adicional en la parte inferior para la barra de navegación */
   }
 
+  .products-prev, .products-next {
+    display:none
+   }
+
   .product-item {
     padding: 15px; /* Aumentar el espacio interior para cada producto */
   }
@@ -859,6 +874,10 @@ body {
   .products-section {
     padding: 20px 5px; /* Menos padding vertical en paisaje */
   }
+
+  .products-prev, .products-next {
+    display:none
+   }
 
   .product-item {
     /* Puedes querer ajustar el layout de los productos para que se muestren en fila o con menos espacio */
@@ -876,10 +895,13 @@ body {
     margin-bottom: 25px; /* Ajuste del espacio debajo del título para mantener una jerarquía visual clara */
   }
 
+  .products-prev, .products-next {
+    display:none
+   }
+
   .products-container {
     flex-direction: column; /* Los elementos de producto se apilan verticalmente para facilitar la navegación */
     gap: 15px; /* Reducción del espacio entre productos para un flujo más compacto */
-    display:none
   }
 
   .product-item {
