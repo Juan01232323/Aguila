@@ -6,9 +6,11 @@
 <title>LuxuryMuebles</title>
 <link rel="stylesheet" href="estilos.css">
 
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>
 <body>
+
 
 <nav class="navbar">
   <div class="navbar-container">
@@ -29,10 +31,10 @@
 </nav>
 
 
-<section class="hero-section">
+<section class="hero-section"id="hero-section">
   <div class="hero-container">
     <div class="hero-content">
-      <h1 class="hero-title">Alonso Aguila</h1>
+      <h1 class="hero-title">Alonso Aguila🦅</h1>
       <p class="hero-text">
         ENVIOS A TODA LA REPÚBLICA MEXICANA🛬🚚 Sueña, imagina y nosotros lo creamos🗽 LUXURY MUEBLES TU MEJOR OPCIÓN 🪑🛌🪟
         <br>
@@ -58,7 +60,6 @@
 <section class="video-section">
   <video controls>
     <source src="img/video.mp4" type="video/mp4">
-    Tu navegador no soporta el elemento de video.
   </video>
 </section>
 
@@ -136,11 +137,17 @@
   </div>
   <div class="visit-info">
     <h2 class="visit-title">Visítanos</h2>
-    <p class="visit-address">Av. Fidel Velázquez Sánchez 895.Plaza Velaz, segundo piso. Col. Santa Elena Alcalde 44220, Guadalajara, Jalisco.</p>
-    <p class="visit-hours">Horario: Lunes a viernes de 9am. a 7pm. Sábados de 9am. a 6pm.</p>
+    <p class="visit-address">Olivo 214, La Primavera, 47829 Ocotlán, Jal</p>
+    <p class="visit-hours">Horario: jueves	10:30 a.m.–5 p.m.
+      viernes	10 a.m.–5 p.m.
+      sábado	10:30 a.m.–3 p.m.
+      domingo	Cerrado
+      lunes	Abierto las 24 horas
+      martes	10 a.m.–5 p.m.
+      miércoles	10 a.m.–5 p.m.</p>
     <div class="visit-contacts">
-      <p class="visit-phone"><i class="fas fa-phone"></i> 33 3824 1653</p>
-      <p class="visit-alt-phone"><i class="fas fa-phone"></i> 33 2089 4034</p>
+      <p class="visit-phone"><i class="fas fa-phone"></i> 392 131 1381</p>
+      <p class="visit-alt-phone"><i class="fas fa-phone"></i> 392 103 5708</p>
     </div>
     </div>
 
@@ -148,6 +155,31 @@
 
   
 </section>
+
+<section id="product-detail" class="product-detail-section" style="display: none;">
+  <div class="container">
+      <div class="product-detail-header">
+          <h2 id="product-name">Carrito de Compras</h2>
+      </div>
+      <div class="product-detail-body">
+          <!-- Los productos del carrito se insertarán aquí -->
+          <div id="cart-items" class="cart-items">
+              <!-- Ejemplo de un item del carrito -->
+              <div class="cart-item">
+                  <img class="cart-item-image" src="img/producto.jpg" alt="Producto">
+                  <div class="cart-item-info">
+                      <h3 class="cart-item-name">Nombre del Producto</h3>
+                      <p class="cart-item-price">$Precio</p>
+                  </div>
+              </div> 
+          </div>
+          <p class="total-price">Total: $<span id="total-price">0.00</span></p>
+          <button class="back-to-products">Comprar</button>
+      </div>
+  </div>
+</section>
+
+
 
 <section class="products-section" id="products-section" style="display: none;">
     <h2 class="products-title">Productos</h2>
@@ -190,7 +222,6 @@
       </div>
   </section>
 
-
 <!-- Footer Section -->
 <footer class="footer-section">
   <div class="container">
@@ -201,8 +232,7 @@
       <div class="link-column">
         <h4>Nosotros</h4>
         <ul>
-          <li><a href="#">Michel Alvarez</a></li>
-          <li><a href="#">Galería</a></li>
+          <li><a href="#hero-section">Alonso Aguila</a></li>
           <li><a href="#">Aviso de Privacidad</a></li>
         </ul>
       </div>
@@ -227,6 +257,10 @@
   </div>
 </div>
 <script src="JavaScript/Productos.js"></script>
+<script src="JavaScript/ProductoImagen.js"></script>
 
 </body>
+
+
 </html>
+
