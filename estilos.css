@@ -149,7 +149,14 @@ body {
       flex-direction: column;
       text-align: center;
   }
-
+  .cart-count {
+    top: -8px;
+    right: -8px;
+    min-width: 18px;
+    height: 18px;
+    font-size: 11px;
+    line-height: 18px;
+  }
   .nav-menu {
       flex-direction: column;
       align-items: center;
@@ -213,6 +220,8 @@ body {
       margin: 5px 0; /* Reduce el espacio entre elementos de navegación */
   }
 
+  
+
   .nav-link, .contact-title, .products-title {
       font-size: 14px; /* Reduce el tamaño de fuente para adaptarse al espacio disponible */
   }
@@ -229,11 +238,28 @@ body {
 /* iPhone 6/7/8, iPhone X y iPhone 11 */
 @media only screen and (max-width: 375px) {
   /* Ajustes para 375px */
+  .cart-count {
+    top: -7px;
+    right: -7px;
+    min-width: 17px;
+    height: 17px;
+    font-size: 11px;
+    line-height: 17px;
+  }
 }
 
 @media only screen and (max-width: 414px) {
   .nav-item {
       margin: 8px 0; /* Espacio ligeramente mayor entre elementos de navegación */
+  }
+
+  .cart-count {
+    top: -8px;
+    right: -8px;
+    min-width: 18px;
+    height: 18px;
+    font-size: 11px;
+    line-height: 18px;
   }
 
   .nav-link, .contact-title, .products-title {
@@ -254,6 +280,15 @@ body {
 @media only screen and (max-width: 428px) {
   .nav-link, .contact-title, .products-title {
       font-size: 18px; /* Aprovecha el espacio adicional para aumentar el tamaño de fuente */
+  }
+
+  .cart-count {
+    top: -9px;
+    right: -9px;
+    min-width: 19px;
+    height: 19px;
+    font-size: 12px;
+    line-height: 19px;
   }
 
   .hero-section, .video-section {
@@ -1632,6 +1667,9 @@ body {
     padding: 1.6em 0; /* Padding incrementado para aprovechar el espacio */
   }
 }
+
+
+
 .whatsapp-icon {
   position: fixed;
   bottom: 20px; /* Ajusta la distancia desde el fondo */
