@@ -373,6 +373,117 @@ body {
   }
 }
 
+@media (max-width: 1024px) {
+  /* Ajustes para mejorar la legibilidad y la interacción en tabletas */
+  .navbar {
+    padding: 14px 28px;
+  }
+
+  .nav-menu {
+    gap: 25px;
+  }
+
+  .nav-link {
+    font-size: 22px;
+    padding: 15px 30px;
+  }
+
+  .code-btn {
+    max-width: 220px;
+  }
+
+  .footer-logo img {
+    width: 120px;
+  }
+}
+
+@media (max-width: 320px) {
+  /* Ajustes para teléfonos con pantallas muy pequeñas */
+  .navbar {
+    padding: 8px 16px;
+  }
+
+  .nav-logo img {
+    width: 50px;
+  }
+
+  .nav-link {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+
+  .code-btn {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  .footer-logo img {
+    width: 40px;
+  }
+}
+
+@media (max-width: 214px) {
+  body, .navbar, .footer-section {
+    padding: 4px;
+    font-size: 10px; /* Reduce el tamaño de la fuente para ahorrar espacio */
+  }
+
+  .navbar-container, .footer-links, .link-column, .nav-menu, .contact-icons {
+    display: block; /* Cambia la disposición a vertical para aprovechar mejor el espacio vertical */
+  }
+
+  .nav-logo img, .footer-logo img {
+    width: 40px; /* Reduce el tamaño del logo para que encaje en pantallas pequeñas */
+    margin: 0 auto; /* Centra el logo */
+  }
+
+  .nav-link, .code-btn, .product-add, .services-prev, .services-next, .services-all {
+    font-size: 8px; /* Reduce el tamaño de la fuente para los botones y enlaces */
+    padding: 2px 4px; /* Reduce el padding para ahorrar espacio */
+    display: inline-block; /* Asegura que los elementos sean compactos y lineales */
+  }
+
+  .nav-icon, .contact-icon-link, .social-media-icons {
+    font-size: 12px; /* Reduce el tamaño de los iconos */
+    margin: 2px; /* Reduce los márgenes para ahorrar espacio */
+  }
+
+  .hero-section, .video-section, .services-section, .products-section, .contact-section, .visit-section {
+    padding: 8px; /* Reduce el padding general de las secciones para maximizar el espacio de contenido */
+  }
+
+  .hero-title, .services-title, .products-title, .contact-title, .visit-title {
+    font-size: 12px; /* Reduce el tamaño del título para conservar espacio */
+  }
+
+  .hero-text, .service-description, .product-info, .visit-text, .footer-bottom p {
+    font-size: 8px; /* Ajusta el tamaño de la fuente del texto para mejorar la legibilidad */
+  }
+
+  /* Ajustes específicos para imágenes y elementos interactivos */
+  .hero-image img, .service-image, .product-image, .visit-map {
+    width: 100%; /* Ajusta las imágenes para que ocupen el ancho disponible */
+    height: auto; /* Mantiene la proporción */
+  }
+
+  .flip-card, .product-item, .service-item {
+    width: 100%; /* Hace que estos elementos ocupen el ancho disponible */
+    font-size: 8px; /* Ajusta el tamaño de la fuente dentro de tarjetas y artículos */
+  }
+
+  /* Reducción de elementos decorativos y espacios innecesarios */
+  .navbar, .footer-section {
+    border: none; /* Elimina bordes que puedan consumir espacio visual */
+  }
+
+  /* Simplifica la navegación y pie de página */
+  .nav-menu, .footer-links {
+    justify-content: center; /* Centra los elementos para una presentación más limpia */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan si es necesario */
+  }
+}
+
+
 /* Sección hero mejorada con un tema de color negro y amarillo oro */
 .hero-section {
   display: flex;
