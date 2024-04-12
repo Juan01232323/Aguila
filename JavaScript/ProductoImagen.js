@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Supongamos que tienes esta estructura de datos para mapear los productos y sus imágenes por color
   const productImagesByColor = {
     'Crema facial: TOTAL': {
-      'Rojo': 'img/camilla1_rojo.jpg',
+      'Negro': 'img/camilla1.jpg',
       'Azul': 'img/camilla1_azul.jpg',
       'Verde': 'img/camilla1_verde.jpg',
     },
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <h3 class="cart-item-name">${product.name}</h3>
           <p class="cart-item-price">$${product.price.toFixed(2)}</p>
           <select class="color-select" data-index="${index}">
-            <option value="Rojo">Rojo</option>
+            <option value="Negro">Negro</option>
             <option value="Azul">Azul</option>
             <option value="Verde">Verde</option>
           </select>
