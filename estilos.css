@@ -13,128 +13,6 @@ body {
   background-color: rgba(255, 255, 255, 0.5); /* Blanco semitransparente */
 }
 
-/* Para iPhone 5/SE (primera generación) */
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 568px) 
-  and (-webkit-min-device-pixel-ratio: 2) {
-    body {
-      font-size: 14px;
-    }
-    .navbar {
-      padding: 5px 10px; /* Reduce el padding para un mejor manejo con una sola mano */
-    }
-    .nav-link {
-      font-size: 16px; /* Ajusta el tamaño para facilitar la lectura */
-      padding: 5px 10px; /* Reduce el padding para maximizar el espacio disponible */
-    }
-    .hero-title {
-      font-size: 24px; /* Ajusta el tamaño para mejorar la visibilidad en pantallas más pequeñas */
-    }
-    .hero-text {
-      font-size: 14px; /* Adecua el tamaño del texto para una lectura cómoda */
-    }
-    .product-item {
-      width: 100%; /* Adapta el ancho de los productos para una visualización óptima */
-    }
-    .footer-section {
-      padding: 1em; /* Reduce el padding para un diseño más compacto */
-    }
-    .footer-logo img {
-      width: 80px; /* Ajusta el tamaño del logo para mantener la proporción visual */
-    }
-}
-
-/* Para iPhone 6/7/8, iPhone SE (segunda generación) */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 667px) 
-  and (-webkit-min-device-pixel-ratio: 2) {
-    .hero-section {
-      padding: 40px 15px; /* Ajusta el padding para un enfoque más centrado */
-    }
-    .hero-title {
-      font-size: 26px; /* Aumenta ligeramente el tamaño del título para destacar */
-    }
-    .video-section video {
-      height: 250px; /* Ajusta la altura del video para una mejor integración */
-    }
-}
-
-/* Para iPhone 6+/7+/8+ */
-@media only screen 
-  and (min-device-width: 414px) 
-  and (max-device-width: 736px) 
-  and (-webkit-min-device-pixel-ratio: 3) {
-    .contact-icon-link {
-      font-size: 24px; /* Aumenta el tamaño de los íconos para mejorar la interacción */
-    }
-    .contact-icons {
-      gap: 20px; /* Aumenta el espacio entre íconos para una navegación más fluida */
-    }
-}
-
-/* Para iPhone X, XS, 11 Pro, 12 mini, 13 mini */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3) {
-    .visit-section {
-      flex-direction: column; /* Reorganiza la sección para una mejor visualización */
-    }
-    .visit-map {
-      order: 2; /* Reordena los elementos para una experiencia coherente */
-      margin-top: 20px; /* Añade un espacio para separar el mapa de la información */
-    }
-}
-
-/* Para iPhone XR, 11, XS Max, 11 Pro Max, 12, 12 Pro, 13, 13 Pro */
-@media only screen 
-  and (min-device-width: 414px) 
-  and (max-device-width: 896px) 
-  and (-webkit-min-device-pixel-ratio: 2) {
-    .products-section {
-      padding: 60px 0; /* Aumenta el padding para destacar la sección de productos */
-    }
-    .product-item {
-      margin: 0 auto 30px; /* Mejora el espaciado y alineación de los productos */
-      width: 90%; /* Ajusta el ancho para una mejor presentación */
-    }
-}
-
-/* Para iPhone 12 Pro Max, 13 Pro Max */
-@media only screen 
-  and (min-device-width: 428px) 
-  and (max-device-width: 926px) 
-  and (-webkit-min-device-pixel-ratio: 3) {
-    .footer-logo img {
-      width: 120px; /* Aumenta el tamaño del logo en el footer para mejor visibilidad */
-    }
-    .footer-links {
-      justify-content: center; /* Centra los enlaces para una mejor estética */
-    }
-}
-
-
-.whatsapp-icon {
-  position: fixed;
-  bottom: 20px; /* Ajusta la distancia desde el fondo */
-  right: 20px; /* Ajusta la distancia desde la derecha */
-  font-size: 30px; /* Tamaño del icono */
-  color: #fff; /* Color del icono */
-  background-color: #25D366; /* Color de fondo de WhatsApp */
-  padding: 15px; /* Espacio alrededor del icono */
-  border-radius: 50%; /* Hace el botón circular */
-  box-shadow: 0 2px 5px rgba(0,0,0,.3); /* Sombra para darle profundidad */
-  z-index: 1000; /* Asegura que el icono esté por encima de otros elementos */
-}
-
-.whatsapp-icon:hover {
-  color: #fff; /* Mantiene el icono blanco al pasar el mouse */
-  background-color: #128C7E; /* Oscurece el fondo al pasar el mouse */
-  text-decoration: none; /* Elimina cualquier subrayado del enlace */
-}
-
 
 .navbar {
   background-color:rgba(16, 15, 15, 0.5);
@@ -248,223 +126,116 @@ body {
   color: #E0D4ED; /* Este será el nuevo color al hacer hover */
 }
 
-.code-btn {
-  background-color: #6A3E72;
-  border: none;
-  color: white;
-  padding: 10px 30px; /* Aumento el padding horizontal para dar más espacio al texto */
-  font-size: 16px; /* Ajuste el tamaño de la fuente si es necesario */
-  font-weight: bold; /* Hacer la fuente más pesada para destacar */
-  letter-spacing: 1px; /* Espaciado entre letras para mejorar la legibilidad */
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  border-radius: 20px; /* Bordes más redondeados para un look moderno */
-  margin-left: 20px; /* Espacio adicional a la izquierda del botón, si es necesario */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil para crear profundidad */
-  display: inline-block; /* Asegúrate de que puedes usar padding y bordes redondeados */
-  margin-top: 10px; /* Add some top margin if the button wraps to the next line */
-  margin-right: auto; /* Centra el botón automáticamente a la derecha */
-  margin-left: auto; /* Centra el botón automáticamente a la izquierda */
-  margin-top: 10px; /* Espacio adicional arriba del botón para evitar que se pegue a los elementos de navegación */
-  display: block; /* Esto hará que el botón tome su propia línea */
-
-}
-
-.code-btn:hover {
-  background-color: #583063;
-  transform: translateY(-2px); /* Ligero movimiento hacia arriba para dar sensación de elevación */
-}
-
-
+/* Media Query para tablets y dispositivos con pantalla menor a 768px */
 @media (max-width: 768px) {
-  .navbar {
-    padding: 12px 24px; /* Aumento del padding para una apariencia más espaciosa */
-    background-color: rgba(0, 0, 0, 0.8); /* Transparencia para una sensación de profundidad */
-  }
-
   .navbar-container {
-    margin-bottom: 30px; /* Mayor separación visual con el contenido siguiente */
-    flex-direction: column; /* Organización vertical para mayor claridad */
-  }
-
-  .nav-logo img {
-    width: 90px; /* Ajuste de tamaño para equilibrar con elementos adyacentes */
-    transition: transform 0.3s ease; /* Transición suave para interacción */
-  }
-
-  .nav-logo img:hover {
-    transform: scale(1.1); /* Efecto de aumento al pasar el mouse */
+      flex-direction: column;
+      text-align: center;
   }
 
   .nav-menu {
-    gap: 20px; /* Mayor espaciado entre ítems para facilitar la interacción táctil */
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .nav-item {
+      margin: 10px 0; /* Espacio vertical entre elementos */
   }
 
   .nav-link {
-    font-size: 20px; /* Incremento del tamaño de fuente para mejorar la legibilidad */
-    padding: 12px 15px; /* Ajuste del padding para un mejor tacto */
-    background-color: #222; /* Fondo sutil para cada enlace */
-    border-radius: 5px; /* Bordes redondeados para una estética moderna */
+      padding: 10px 15px; /* Padding reducido para adaptarse a pantallas más pequeñas */
   }
 
-  .nav-icon {
-    margin: 20px 0; /* Aumento del espacio alrededor de los íconos para claridad */
+  .nav-logo img {
+      margin-bottom: 15px; /* Espacio después del logo */
   }
 
-  .code-btn {
-    max-width: 200px; /* Ajuste del ancho máximo para una mejor proporción */
-    background-color: #4CAF50; /* Color de fondo más vibrante para atraer atención */
-    color: #fff; /* Contraste de color para mayor legibilidad */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Sombra para resaltar el botón */
-  }
-
-  .footer-links, .link-column {
-    margin-bottom: 30px; /* Aumento de margen para evitar sensación de aglomeración */
-  }
-
-  .footer-logo img {
-    width: 100px; /* Ligero aumento para mantener presencia visual */
+  .nav-icon .icon-link {
+      margin: 20px 0; /* Ajuste para el espacio alrededor del icono del carrito */
   }
 }
 
+/* Media Query para teléfonos móviles con pantalla menor a 480px */
+@media (max-width: 480px) {
+  .nav-link {
+      font-size: 16px; /* Tamaño de fuente más pequeño para ahorrar espacio */
+  }
+}
 
+/* Ajustes generales para mejorar la visualización en dispositivos móviles */
+@media (max-width: 768px) {
+  body {
+      background-attachment: scroll; /* Evita problemas de rendimiento con el fondo fijo */
+  }
+
+  .seccion-sobre-el-fondo {
+      padding: 20px; /* Aumenta el padding para mejorar la legibilidad */
+  }
+}
 
 @media (max-width: 480px) {
-  .navbar {
-    padding: 10px 15px; /* Ligeramente reducido para maximizar el espacio usable */
-    background-color: rgba(0, 0, 0, 0.9); /* Mayor opacidad para enfocar en navegación */
-  }
-
-  .navbar-container {
-    margin-bottom: 20px; /* Optimización del espacio */
-  }
-
-  .nav-logo img {
-    width: 60px; /* Reducción para adaptarse a tamaños de pantalla más pequeños */
-    transform: scale(0.9); /* Reducción inicial para interacción */
-  }
-
-  .nav-menu {
-    gap: 10px; /* Ajuste de espaciado adecuado para pantallas más pequeñas */
-  }
-
-  .nav-link {
-    font-size: 16px; /* Reducción de tamaño para adaptarse al espacio disponible */
-    padding: 10px 12px; /* Reducción del padding para coherencia */
-    border-radius: 3px; /* Reducción de bordes redondeados para un diseño más compacto */
-  }
-
-  .nav-icon {
-    margin: 15px 0; /* Ajuste de margen para coherencia visual */
-  }
-
-  .code-btn {
-    max-width: 180px; /* Reducción para adaptación a pantallas pequeñas */
-    padding: 8px 16px; /* Ajuste de padding para mantener accesibilidad */
-    font-size: 14px; /* Ajuste de tamaño de fuente para coherencia */
-  }
-
-  .footer-links, .link-column {
-    margin-bottom: 20px; /* Ajuste para claridad visual y evitación del apilamiento */
-  }
-
-  .footer-logo img {
-    width: 50px; /* Ajuste para consistencia visual en dispositivos pequeños */
+  .seccion-sobre-el-fondo {
+      background-color: rgba(255, 255, 255, 0.75); /* Aumenta la opacidad para mejorar la legibilidad en pantallas pequeñas */
   }
 }
 
-@media (max-width: 1024px) {
-  /* Ajustes para mejorar la legibilidad y la interacción en tabletas */
-  .navbar {
-    padding: 14px 28px;
+/* iPhone SE y dispositivos con anchos hasta 320px */
+@media only screen and (max-width: 320px) {
+  .nav-item {
+      margin: 5px 0; /* Reduce el espacio entre elementos de navegación */
   }
 
-  .nav-menu {
-    gap: 25px;
+  .nav-link, .contact-title, .products-title {
+      font-size: 14px; /* Reduce el tamaño de fuente para adaptarse al espacio disponible */
   }
 
-  .nav-link {
-    font-size: 22px;
-    padding: 15px 30px;
+  .hero-section {
+      padding: 20px 10px; /* Ajusta el padding para mayor espacio */
   }
 
-  .code-btn {
-    max-width: 220px;
-  }
-
-  .footer-logo img {
-    width: 120px;
+  .product-item, .service-item {
+      width: 90%; /* Ajusta el ancho de los ítems de productos y servicios para un mejor ajuste */
   }
 }
 
-@media (max-width: 320px) {
-  /* Ajustes para teléfonos con pantallas muy pequeñas */
-  .navbar {
-    padding: 8px 16px;
+/* iPhone 6/7/8, iPhone X y iPhone 11 */
+@media only screen and (max-width: 375px) {
+  /* Ajustes para 375px */
+}
+
+@media only screen and (max-width: 414px) {
+  .nav-item {
+      margin: 8px 0; /* Espacio ligeramente mayor entre elementos de navegación */
   }
 
-  .nav-logo img {
-    width: 50px;
+  .nav-link, .contact-title, .products-title {
+      font-size: 16px; /* Ajuste del tamaño de fuente */
   }
 
-  .nav-link {
-    font-size: 14px;
-    padding: 8px 10px;
+  .hero-title {
+      font-size: 28px; /* Reducción para el título principal */
   }
 
-  .code-btn {
-    padding: 6px 12px;
-    font-size: 12px;
-  }
-
-  .footer-logo img {
-    width: 40px;
+  .product-item, .service-item {
+      width: 100%; /* Ocupa todo el ancho disponible */
   }
 }
 
-@media (max-width: 214px) {
-  body {
-    font-size: 8px; /* Reduce el tamaño de la fuente */
+
+/* iPhone 12 Pro Max */
+@media only screen and (max-width: 428px) {
+  .nav-link, .contact-title, .products-title {
+      font-size: 18px; /* Aprovecha el espacio adicional para aumentar el tamaño de fuente */
   }
 
-  .navbar, .footer-section {
-    padding: 0.5rem; /* Usa rem para el padding */
+  .hero-section, .video-section {
+      padding: 50px 20px; /* Mayor padding para aprovechar el espacio extra */
   }
 
-  .nav-logo img, .footer-logo img {
-    max-width: 40px; /* Reduce el tamaño del logo */
-    height: auto; /* Asegura que la altura se ajuste automáticamente */
-  }
-
-  .nav-menu, .footer-links {
-    display: block; /* Apila los enlaces de forma vertical */
-  }
-
-  .nav-link, .code-btn {
-    font-size: 1.5rem; /* Aumenta el tamaño de la fuente */
-    padding: 0.5rem; /* Aumenta el padding */
-  }
-
-  .nav-icon, .contact-icon-link {
-    font-size: 3rem; /* Aumenta el tamaño de los iconos */
-  }
-
-  .hero-section, .video-section, .services-section, .products-section, .contact-section, .visit-section {
-    padding: 1rem; /* Aumenta el padding */
-  }
-
-  /* Oculta elementos que no se pueden adaptar bien a pantallas tan pequeñas */
-  .some-element-to-hide {
-    display: none;
-  }
-
-  /* Asegúrate de que todas las imágenes sean responsivas */
-  img {
-    max-width: 100%;
-    height: auto;
+  .hero-title {
+      font-size: 32px; /* Título principal más grande */
   }
 }
-
 
 
 /* Sección hero mejorada con un tema de color negro y amarillo oro */
@@ -636,103 +407,159 @@ body {
   border-radius: 20px; /* Bordes redondeados para las imágenes */
 }
 
-/* Ajustes para dispositivos con pantalla hasta 768px de ancho (tablets y dispositivos grandes) */
+/* Media queries para dispositivos móviles en general */
 @media (max-width: 768px) {
   .hero-section {
-    padding: 50px 20px; /* Proporciona más espacio alrededor del contenido para respirar */
-    background-size: auto 100%; /* Ajusta el tamaño del fondo para mantener proporciones adecuadas */
+    padding: 30px 15px;
+    min-height: 70vh;
+  }
+
+  .hero-section::before {
+    background: radial-gradient(circle, #FFD700 0%, #000 80%);
   }
 
   .hero-container {
-    flex-direction: column; /* Cambia la disposición de los elementos a vertical */
-    align-items: center; /* Centra los elementos horizontalmente */
+    flex-direction: column;
+    text-align: center;
   }
 
+  .hero-content,
   .hero-image {
-    width: 80%; /* Ajusta el ancho de la imagen para que no ocupe todo el ancho de la pantalla */
-    margin-top: 30px; /* Añade un espacio adicional arriba para separar del texto */
+    max-width: 100%;
+  }
+
+  .hero-title {
+    font-size: 32px;
+  }
+
+  .hero-text {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .hero-button {
+    font-size: 16px;
+    padding: 8px 20px;
+  }
+
+  .hero-image img {
+    max-width: 280px;
   }
 
   .flip-card {
-    width: 100%; /* Hace que la tarjeta ocupe todo el ancho disponible */
-    margin: auto; /* Centra la tarjeta en la pantalla */
+    width: 100%;
+    height: auto;
   }
 }
 
-/* Ajustes para teléfonos móviles (hasta 480px de ancho) */
+/* Específico para iPhone SE */
+@media (max-width: 320px) {
+  .hero-title {
+    font-size: 28px;
+  }
+
+  .hero-text {
+    font-size: 14px;
+  }
+
+  .hero-button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .hero-image img {
+    max-width: 250px;
+  }
+}
+
+/* Específico para iPhone 6/7/8/X/11 */
+@media (max-width: 375px) {
+  .hero-title {
+    font-size: 30px;
+  }
+
+  .hero-image img {
+    max-width: 300px;
+  }
+}
+
+/* Específico para iPhone 12/13 Pro Max */
+@media (max-width: 428px) {
+  .hero-title {
+    font-size: 34px;
+  }
+
+  .hero-button {
+    font-size: 16px;
+    padding: 10px 24px;
+  }
+}
+
+/* Media Queries para dispositivos con pantallas hasta 480px de ancho */
 @media (max-width: 480px) {
+  .hero-section {
+    padding: 20px 10px; /* Reducir el padding para pantallas pequeñas */
+    min-height: 60vh; /* Ajustar la altura mínima para mantener proporción */
+  }
+
   .hero-title {
-    font-size: 24px; /* Reduce el tamaño del título para mejorar la legibilidad */
-    padding: 0 10px; /* Añade padding lateral para evitar que el texto toque los bordes de la pantalla */
+    font-size: 30px; /* Ajustar el tamaño de fuente para mejorar la legibilidad */
   }
 
   .hero-text {
-    font-size: 14px; /* Reduce el tamaño del texto para una mejor adaptación */
-    padding: 0 10px; /* Similar al título, evita que el texto toque los bordes */
+    font-size: 14px; /* Reducir el tamaño de fuente del texto para adecuarse al espacio disponible */
   }
 
-  .hero-text .check-icon,
-  .hero-text .fas {
-    font-size: 35px; /* Ligeramente más pequeño para una mejor proporción */
-    margin: 20px 0; /* Añade más espacio alrededor del ícono para separarlo del texto */
+  .hero-button {
+    font-size: 14px; /* Ajustar el tamaño de fuente del botón para coherencia */
+    padding: 8px 16px; /* Reducir el padding del botón para evitar que ocupe demasiado espacio */
   }
 
-  .hero-image {
-    width: 100%; /* Permite que la imagen ocupe todo el ancho disponible */
+  .hero-image img {
+    max-width: 90%; /* Permitir que la imagen se ajuste dentro del contenedor */
   }
 
   .flip-card {
-    height: auto; /* Asegura que la tarjeta mantenga su proporción sin especificar una altura fija */
-    overflow: hidden; /* Oculta cualquier desbordamiento */
+    width: 90%; /* Ajustar la anchura de la tarjeta giratoria para que se adapte mejor */
+    height: auto; /* Permitir que la altura se ajuste automáticamente */
+  }
+
+  /* Ajustes adicionales para los elementos dentro de hero-content */
+  .hero-content {
+    padding: 0 5%; /* Añadir un poco de padding a los lados para no pegar el texto a los bordes */
+  }
+
+  /* Ajustes para el elemento .check-icon dentro de hero-text */
+  .hero-text .check-icon {
+    font-size: 60px; /* Reducir el tamaño del icono para que no domine visualmente */
+    margin: 40px auto; /* Ajustar el margen para mantener el espaciado */
   }
 }
 
-/* Ajustes base para dispositivos muy pequeños */
-@media (max-width: 214px) {
-  body, html {
-    font-size: 10px; /* Reducimos la base del tamaño de fuente */
-  }
-
-  /* Ajustamos los elementos del hero para que sean más pequeños y se ajusten al nuevo tamaño de la pantalla */
+/* Media Queries para dispositivos en modo paisaje */
+@media (max-width: 480px) and (orientation: landscape) {
   .hero-section {
-    padding: 2px; /* Espaciado reducido */
-    background-size: cover; /* Aseguramos que el fondo cubra el espacio disponible */
-  }
-
-  .hero-container {
-    flex-direction: column; /* Apilamos los elementos verticalmente */
-    align-items: center; /* Centramos los elementos */
+    padding: 20px; /* Ajustar el padding en modo paisaje */
+    min-height: 50vh; /* Reducir la altura mínima en modo paisaje para mejor visualización */
   }
 
   .hero-title {
-    font-size: 1.6rem; /* Reducimos el tamaño del título */
-    padding: 1rem 0; /* Espaciado adecuado arriba y abajo del título */
+    font-size: 28px; /* Reducir ligeramente el tamaño de fuente del título */
   }
 
-  .hero-text {
-    font-size: 1.2rem; /* Reducimos el tamaño del texto */
-    padding: 0.5rem; /* Reducimos el padding */
-  }
-
-  .hero-text .check-icon,
-  .hero-text .fas {
-    font-size: 2rem; /* Reducimos el tamaño de los íconos */
-    margin-bottom: 1rem; /* Añadimos margen inferior */
-  }
-
+  .hero-content,
   .hero-image {
-    max-width: 100%; /* Aseguramos que la imagen no sea más ancha que la pantalla */
-    height: auto; /* Mantenemos la proporción de la imagen */
-    margin-top: 1rem; /* Espacio arriba de la imagen */
+    flex-direction: row; /* Cambiar la dirección a fila para acomodar el texto y la imagen lado a lado */
+    justify-content: space-around; /* Espaciar adecuadamente el contenido y la imagen */
   }
 
-  /* Adaptamos las tarjetas para una visualización adecuada */
-  .flip-card {
-    width: 100%; /* La tarjeta ocupa todo el ancho disponible */
-    margin-bottom: 1rem; /* Espacio debajo de la tarjeta */
+  .hero-content {
+    max-width: 50%; /* Limitar el ancho del contenido para equilibrar con la imagen */
   }
 
-  /* Para otros elementos que necesiten ajustarse, sigue un patrón similar de reducción y reorganización */
+  .hero-image img {
+    max-width: 40%; /* Ajustar el tamaño de la imagen para que no sobrepase el contenido */
+  }
 }
 
 
@@ -755,140 +582,84 @@ body {
   border-radius: 15px; /* Bordes redondeados para el video */
 }
 
-
-
-
-/* Ajustes para tablets */
-@media (max-width: 768px) {
-  .video-section video {
-    height: 400px; /* Ajusta la altura para dispositivos medianos */
-  }
-}
-
-/* Ajustes para teléfonos móviles */
+/* Media Queries para pantallas muy pequeñas, como dispositivos móviles en modo retrato */
 @media (max-width: 480px) {
+  .video-section {
+    max-width: 95%; /* Usa aún más espacio disponible */
+    margin: 20px auto; /* Reducción del margen */
+    padding: 10px; /* Padding reducido */
+  }
+
   .video-section video {
-    height: 200px; /* Reduce significativamente la altura para dispositivos pequeños */
+    border-radius: 10px; /* Bordes redondeados más sutiles */
+    border: 2px solid #FFD700; /* Borde aún más delgado para maximizar el espacio de visualización */
+  }
+}
+
+/* Consideraciones adicionales para orientación paisaje en móviles */
+@media (max-width: 480px) and (orientation: landscape) {
+  .video-section {
+    padding: 5px; /* Menos padding para evitar apretar el contenido */
+    margin-top: 10px; /* Ajustar el margen superior para una mejor visualización */
+    margin-bottom: 10px; /* Ajustar el margen inferior */
+  }
+
+  .video-section video {
+    /* Puede considerarse reducir aún más el borde o ajustar la relación de aspecto del video */
   }
 }
 
 
-
-.services-section {
-  text-align: center;
-  padding: 50px 0;
-  background-color: #fafafa; /* Un fondo claro pero no completamente blanco */
+/* iPhone 5/SE */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .video-section {
+      max-width: 280px; /* Slightly smaller to fit screen */
+    }
 }
 
-.services-title {
-  font-size: 48px; /* Tamaño de fuente más grande para el título */
-  color: #4A4A4A; /* Un color de texto más oscuro para contraste */
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente moderna */
-  margin-bottom: 50px; /* Más espacio debajo del título */
-  text-transform: uppercase; /* Estilo de título en mayúsculas */
-  letter-spacing: 1px; /* Espaciado entre letras para un look premium */
+/* iPhone 6/7/8 Plus */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3) {
+    .video-section {
+      max-width: 380px; /* Larger width for bigger screens */
+    }
 }
 
-.services-container {
-  display: flex;
-  justify-content: center;
-  gap: 30px; /* Más espacio entre los elementos */
-  flex-wrap: wrap; /* Acomoda los elementos en varias filas según el ancho */
+/* iPhone X */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) {
+    .video-section {
+      max-width: 345px; /* Adjusted for screen size */
+      padding: 15px; /* Adjust padding */
+    }
 }
 
-.service-item {
-  position: relative;
-  width: 300px; /* Tamaño controlado */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para profundidad */
-  margin-bottom: 20px; /* Espacio debajo de cada servicio */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+/* iPhone 11 and newer models */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 896px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .video-section {
+      max-width: 394px; /* Utilize more width on newer models */
+      padding: 18px; /* Balanced padding */
+    }
 }
 
-.service-item:hover {
-  transform: translateY(-5px); /* Eleva el item al pasar el ratón */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra más prominente al pasar el ratón */
+/* Considerations for Landscape Orientation */
+@media only screen 
+  and (max-height: 414px) { /* This applies for landscape orientation */
+    .video-section {
+      margin: 20px auto; /* Reduced margin in landscape */
+    }
+    /* Adjustments specific to landscape orientation can be added here */
 }
-
-.service-image {
-  width: 100%;
-  height: auto;
-  border-radius: 10px; /* Bordes redondeados */
-}
-
-.service-description {
-  position: absolute;
-  bottom: 15px; /* Ajuste de posición */
-  left: 15px; /* Ajuste de posición */
-  background-color: rgba(255, 255, 255, 0.85); /* Mayor opacidad para mejorar la lectura */
-  padding: 8px 15px; /* Más padding para mejor visualización */
-  border-radius: 5px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente moderna */
-  color: #333; /* Color de texto más oscuro para mejor contraste */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave para el texto */
-}
-
-.services-navigation {
-  display: flex;
-  justify-content: center; /* Botones centrados */
-  align-items: center;
-  padding: 20px 0; /* Espaciado vertical */
-}
-
-.services-prev, .services-next, .services-all {
-  background-color: #ffffff;
-  color: #4A4A4A; /* Color de texto armonizado con el título */
-  padding: 12px 24px; /* Padding más generoso */
-  border: 2px solid #cccccc; /* Borde más grueso */
-  border-radius: 25px; /* Bordes altamente redondeados para un aspecto moderno */
-  margin: 0 15px; /* Espacio entre botones */
-  font-weight: 600; /* Texto más grueso */
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Consistencia en la fuente */
-  letter-spacing: 0.5px; /* Ligero espaciado entre letras */
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Transiciones para múltiples propiedades */
-}
-
-.services-prev:hover, .services-next:hover, .services-all:hover {
-  background-color: #ececec; /* Fondo ligeramente diferente al pasar el ratón */
-  color: #333; /* Color de texto más oscuro al pasar el ratón */
-  border-color: #999999; /* Borde más oscuro al pasar el ratón */
-}
-
-
-/* Estilos para pantallas de hasta 768px de ancho */
-@media (max-width: 768px) {
-  .services-section {
-    padding: 30px 10px; /* Reduces padding for smaller screens */
-  }
-
-  .services-title {
-    font-size: 32px; /* Reduce the font size for smaller screens */
-    margin-bottom: 30px; /* Reduce bottom margin */
-  }
-
-  .services-container {
-    flex-direction: column; /* Coloca los servicios uno encima del otro */
-  }
-
-  .service-item {
-    width: auto; /* Permite que los elementos se ajusten al contenedor */
-    margin: 10px 0; /* Añade un margen para separar cada servicio */
-  }
-
-  .services-navigation {
-    flex-direction: column; /* Stack navigation buttons vertically */
-    gap: 10px; /* Adds a gap between stacked items */
-  }
-
-  .services-prev,
-  .services-next,
-  .services-all {
-    width: 100%; /* Full width buttons */
-    margin: 10px 0; /* Adds margin between the buttons when stacked */
-  }
-}
-
-/* Media queries para responsividad no incluidos, pero recomendados */
-
 
 .products-section {
   text-align: center;
@@ -1014,6 +785,98 @@ body {
   margin-bottom: 20px;
 }
 
+/* Ajustes para dispositivos móviles en general */
+@media (max-width: 768px) {
+  .products-section {
+    padding: 30px 10px;
+  }
+
+  .products-title {
+    font-size: 32px; /* Tamaño más pequeño para pantallas estrechas */
+    margin-bottom: 30px;
+  }
+
+  .products-container {
+    flex-direction: column; /* Los elementos se apilan verticalmente */
+    gap: 10px;
+  }
+
+  .product-item {
+    width: auto; /* Ocupa el ancho disponible */
+  }
+}
+
+/* Ajustes específicos para iPhone 5/SE y similares */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
+  .product-item {
+    /* Es posible que desees ajustar el padding o el margin específicamente para estos tamaños */
+  }
+}
+
+/* Ajustes específicos para iPhone 6/7/8 Plus */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) {
+  .product-item {
+    /* Ajustes específicos para estos modelos, como el tamaño de la imagen o el espacio entre productos */
+  }
+}
+
+/* Ajustes específicos para iPhone X y modelos recientes con notch */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
+  .products-section, .product-item {
+    /* Consideraciones especiales para el notch, como ajustes en el margen superior de la sección */
+  }
+}
+
+/* Considerando la orientación de paisaje */
+@media only screen and (orientation: landscape) {
+  .products-section {
+    padding: 20px 5px; /* Menos padding vertical en paisaje */
+  }
+
+  .product-item {
+    /* Puedes querer ajustar el layout de los productos para que se muestren en fila o con menos espacio */
+  }
+}
+
+/* Ajustes generales para dispositivos con pantallas de hasta 480px de ancho */
+@media (max-width: 480px) {
+  .products-section {
+    padding: 20px 0; /* Ajuste del padding para una mejor visualización */
+  }
+
+  .products-title {
+    font-size: 28px; /* Reducción del tamaño de fuente para acomodar espacio más limitado */
+    margin-bottom: 25px; /* Ajuste del espacio debajo del título para mantener una jerarquía visual clara */
+  }
+
+  .products-container {
+    flex-direction: column; /* Los elementos de producto se apilan verticalmente para facilitar la navegación */
+    gap: 15px; /* Reducción del espacio entre productos para un flujo más compacto */
+  }
+
+  .product-item {
+    padding: 15px; /* Ajuste del padding interno para destacar más cada producto */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25); /* Sombra más suave para evitar distracciones */
+  }
+
+  .product-image {
+    width: 100%; /* La imagen del producto ocupa todo el ancho disponible */
+    height: auto; /* La altura se ajusta automáticamente para mantener la proporción */
+  }
+
+  .product-info {
+    padding-top: 10px; /* Espacio adicional sobre la información del producto para una mejor separación */
+  }
+
+  .product-name, .product-price {
+    font-size: 16px; /* Ajuste del tamaño de fuente para mejorar la legibilidad en pantallas pequeñas */
+  }
+
+  .product-add {
+    font-size: 14px; /* Reducción del tamaño de fuente del botón para adaptarse al tamaño más pequeño del dispositivo */
+    padding: 8px 15px; /* Ajuste del padding del botón para mantenerlo accesible pero no abrumador */
+  }
+}
 
 /* Estilos específicos para el carrito de compras */
 .cart-items {
@@ -1096,73 +959,189 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra para profundidad */
 }
 
+
+
 .back-to-products:hover {
   background-color: #af8754; /* Oscurece al pasar el ratón para interacción */
 }
 
 
-
-
-/* Media queries para responsividad */
 @media (max-width: 768px) {
-  .product-detail-body {
+  .cart-item {
+    flex-direction: row;
+    padding: 15px;
+    align-items: center;
+  }
+
+  .cart-item-image {
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+  }
+
+  .cart-item-info {
+    flex-grow: 1;
+    padding-left: 15px;
+  }
+
+  .quantity-input {
+    margin-left: 15px;
+  }
+
+  .total-price {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px;
+  }
+
+  .back-to-products {
+    padding: 12px 20px;
+    margin-top: 20px;
+  }
+}
+
+
+/* Media queries para ajustes en dispositivos móviles */
+@media (max-width: 480px) {
+  .cart-items {
+    /* Ajustes para el contenedor de ítems para mejorar el flujo en pantallas pequeñas */
+    padding: 5px;
+  }
+
+  .cart-item {
+    /* Rediseño del layout de ítems para optimizar el espacio */
     flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    border-bottom: 1px solid #cccccc; /* Borde más sutil */
   }
 
-  .product-detail-image {
-    max-width: 100%;
-    margin-bottom: 20px;
+  .cart-item:last-child {
+    border-bottom: none;
   }
 
-  .product-detail-info {
+  .cart-item-image {
+    /* Ajuste del tamaño de la imagen para consistencia visual */
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px; /* Espacio entre la imagen y la información */
+  }
+
+  .cart-item-info {
+    /* Ajustes para mejorar la visualización de la información del producto */
     width: 100%;
   }
-}
 
-
-/* Estilos para pantallas de hasta 768px de ancho */
-@media (max-width: 768px) {
-  .products-section {
-    padding: 30px 10px; /* Reduces padding for smaller screens */
-    display: none;
-
+  .cart-item-name, .cart-item-price {
+    /* Tamaño de fuente optimizado para legibilidad en pantallas pequeñas */
+    font-size: 16px;
   }
 
-  .products-title {
-    font-size: 32px; /* Reduce the font size for smaller screens */
-    margin-bottom: 30px; /* Reduce bottom margin */
+  .quantity-input {
+    /* Ajuste del tamaño del input de cantidad para facilitar la interacción */
+    width: 100%;
+    margin-top: 10px; /* Espacio entre la información y el input de cantidad */
   }
 
-  .products-container {
-    flex-direction: column; /* Stack product items vertically */
-    align-items: center; /* Center items when they stack */
+  .total-price {
+    /* Mejoras en la visualización del precio total para pantallas pequeñas */
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
   }
 
-  .product-item {
-    width: 100%; /* Make product items take full width */
-    margin-bottom: 15px; /* Reduce space between product items */
+  .total-price span {
+    /* Ajustes para destacar el total */
+    font-size: 18px;
   }
 
-  .products-navigation {
-    flex-direction: column; /* Stack navigation buttons vertically */
-    margin-top: 15px;
-  }
-
-  .products-prev,
-  .products-next {
-    padding: 10px; /* Adjust padding */
-    margin: 10px 0; /* Add space between buttons */
-  }
-}
-
-/* Ocultar productos solo en teléfonos móviles, manteniéndolos visibles en tablets */
-@media (max-width: 480px) {
-  .products-section {
-    display: none;
+  .back-to-products {
+    /* Mejoras en el botón de volver a los productos para facilitar la interacción */
+    width: 100%;
+    padding: 12px;
+    text-align: center; /* Asegura que el texto está centrado dentro del botón */
+    margin-top: 15px; /* Espacio adicional encima del botón */
   }
 }
 
 
+@media (max-width: 320px) {
+  .cart-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cart-item-image,
+  .cart-item-info {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .quantity-input,
+  .total-price {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+
+@media (max-width: 375px) {
+  .cart-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cart-item-image,
+  .cart-item-info {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .quantity-input,
+  .total-price {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 414px) {
+  .cart-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cart-item-image,
+  .cart-item-info {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .quantity-input,
+  .total-price {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+
+@media (max-width: 428px) {
+  .cart-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cart-item-image,
+  .cart-item-info {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .quantity-input,
+  .total-price {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
 
 .product-rating {
   color: #ffd700; /* Color dorado para las estrellas */
@@ -1213,7 +1192,6 @@ body {
 .product-item[data-rating="5"] .product-rating .fas:nth-child(n+6) {
   color: #e4e5e9; /* Desactiva las estrellas restantes */
 }
-
 
 .contact-section {
   text-align: center;
@@ -1271,59 +1249,96 @@ body {
   transform: scale(1.1); /* Efecto de escala al pasar el mouse */
 }
 
-
-/* Media Queries para ajustes en dispositivos móviles */
-@media (max-width: 768px) {
+/* Base para dispositivos móviles pequeños */
+@media (max-width: 480px) {
   .contact-section {
-    padding: 20px; /* Un poco más de padding para mejorar la legibilidad */
+    padding: 30px 10px;
   }
 
   .contact-title {
-    font-size: 22px; /* Un tamaño óptimo que mantiene la legibilidad sin ser demasiado grande */
-    margin-bottom: 20px; /* Un poco más de espacio debajo del título para una separación clara */
+    font-size: 24px; /* Reducción del tamaño para pantallas pequeñas */
+    margin-bottom: 20px;
   }
 
   .contact-icons {
-    flex-direction: column; /* Mantenemos la columna para una mejor disposición */
-    gap: 15px; /* Un poco más de espacio entre íconos para facilitar la interacción táctil */
-    align-items: center; /* Centra los íconos horizontalmente */
+    gap: 20px; /* Reducción del espaciado para ajustar a pantallas estrechas */
   }
 
-  .contact-icon-link {
-    font-size: 24px; /* Incrementamos ligeramente el tamaño para facilitar la interacción */
+  .contact-icon-link, .contact-icons i {
+    font-size: 24px; /* Ajuste del tamaño de los íconos */
   }
 
   .contact-icon-container {
-    width: 50px; /* Un tamaño fijo para contener el ícono */
-    height: 50px; /* Altura igual al ancho para mantener la proporción */
-    display: flex; /* Usamos flex para centrar el ícono dentro del círculo */
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
-    margin: 0 auto 10px; /* Automáticamente centra el contenedor en la pantalla y añade margen inferior */
-    border-radius: 50%; /* Redondea completamente para formar un círculo */
-    background-color: rgba(0,0,0,0.1); /* Un ligero fondo oscuro para contrastar con el ícono */
+    padding: 10px; /* Reducción del padding para un look más compacto */
   }
 }
 
-@media (max-width: 480px) {
+/* Ajustes para dispositivos móviles de tamaño medio (como algunos tablets y teléfonos grandes) */
+@media (min-width: 481px) and (max-width: 768px) {
   .contact-section {
-    padding: 15px; /* Reducimos el padding para maximizar el espacio disponible */
+    padding: 40px 20px;
   }
 
-  .contact-icons i {
-    font-size: 22px; /* Ajustamos el tamaño del ícono para asegurar que siga siendo fácil de interactuar */
+  .contact-title {
+    font-size: 28px; /* Ajuste intermedio del tamaño para pantallas medianas */
   }
 
-  /* Ajustes adicionales para los íconos y enlaces para garantizar que sean fácilmente clicables */
-  .contact-icon-link {
-    padding: 10px; /* Añade padding para aumentar el área de clic */
-    border-radius: 50%; /* Asegura que el enlace mantenga una forma circular */
-    display: inline-flex; /* Mantiene el ícono centrado dentro del enlace */
-    justify-content: center;
-    align-items: center;
+  .contact-icons {
+    gap: 25px; /* Espaciado intermedio */
   }
 }
 
+/* Ajustes para dispositivos móviles grandes y desktops pequeños */
+@media (min-width: 769px) {
+  .contact-section {
+    padding: 50px 30px;
+  }
+
+  .contact-title {
+    font-size: 32px; /* Incremento del tamaño para pantallas más grandes */
+  }
+
+  .contact-icons {
+    gap: 30px; /* Restauración del espaciado original para pantallas amplias */
+  }
+
+  .contact-icon-link, .contact-icons i {
+    font-size: 30px; /* Restauración del tamaño original de los íconos */
+  }
+}
+
+
+/* iPhone 5/SE - 320px */
+@media only screen and (min-device-width : 320px) and (max-device-width : 320px) {
+  .contact-icon-link, .contact-icons i {
+    font-size: 22px; /* Ligeramente más pequeño para ajustarse al espacio limitado */
+  }
+
+  .contact-icon-container {
+    padding: 8px; /* Reducción del padding para conservar espacio */
+  }
+}
+
+/* iPhone 6/7/8/X/XS/11 Pro - 375px */
+@media only screen and (min-device-width : 375px) and (max-device-width : 375px) {
+  .contact-icon-link, .contact-icons i {
+    font-size: 24px; /* Ajuste adecuado para estas resoluciones */
+  }
+}
+
+/* iPhone 6/7/8 Plus, iPhone XR/11, iPhone 12/13 y 12/13 Pro - 414px */
+@media only screen and (min-device-width : 414px) and (max-device-width : 414px) {
+  .contact-icon-link, .contact-icons i {
+    font-size: 26px; /* Un poco más grande para aprovechar el espacio adicional */
+  }
+}
+
+/* iPhone 12/13 Pro Max - 428px */
+@media only screen and (min-device-width : 428px) and (max-device-width : 428px) {
+  .contact-icon-link, .contact-icons i {
+    font-size: 28px; /* Ideal para la pantalla más grande del iPhone 12/13 Pro Max */
+  }
+}
 
 .visit-section {
   display: flex;
@@ -1369,38 +1384,83 @@ body {
   margin-bottom: 15px;
 }
 
-/* Media Queries para ajustar el layout en pantallas más pequeñas */
+/* Ajustes generales para dispositivos móviles */
 @media (max-width: 768px) {
   .visit-section {
     flex-direction: column;
     padding: 30px 5%;
   }
 
-  .visit-map {
-    flex-basis: auto;
-    width: 100%;
+  .visit-map, .visit-info {
+    flex-basis: 100%;
     margin-right: 0;
     margin-bottom: 20px;
   }
 
   .visit-info {
-    flex-basis: auto;
-    width: 100%;
+    padding: 20px;
+  }
+
+  .visit-title, .visit-text {
+    font-size: 1.5rem;
+  }
+}
+
+/* Media Queries específicas para iPhone */
+/* iPhone 5/SE */
+@media only screen and (max-width: 320px) {
+  .visit-title, .visit-text {
+    font-size: 1.2rem;
+  }
+}
+
+/* iPhone 6/7/8/X/XS/11 Pro */
+@media only screen and (max-width: 375px) {
+  .visit-title, .visit-text {
+    font-size: 1.3rem;
+  }
+}
+
+/* iPhone 6/7/8 Plus, iPhone XR/11, iPhone 12/13 y 12/13 Pro */
+@media only screen and (max-width: 414px) {
+  .visit-title, .visit-text {
+    font-size: 1.4rem;
+  }
+}
+
+/* iPhone 12/13 Pro Max */
+@media only screen and (max-width: 428px) {
+  .visit-title, .visit-text {
+    font-size: 1.5rem;
   }
 }
 
 
-@media (max-width: 480px) {
+/* Media queries para dispositivos con pantallas hasta de 480px */
+@media only screen and (max-width: 480px) {
+  .visit-section {
+    padding: 25px 5%; /* Reduce el padding para maximizar el espacio disponible */
+  }
+
+  .visit-map, .visit-info {
+    /* Asegura que el mapa y la info ocupen todo el ancho disponible */
+    flex-basis: 100%;
+    width: 100%; /* Hace que estos elementos ocupen todo el ancho */
+    margin-bottom: 15px; /* Reduce el margen para una transición suave entre elementos */
+  }
+
+  .visit-info {
+    padding: 15px; /* Reduce el padding interno para más espacio de texto */
+  }
+
   .visit-title {
-    font-size: 1.5rem; /* Reduce aún más para teléfonos móviles */
+    font-size: 1.4rem; /* Reduce el tamaño del título para adaptarse a pantallas más pequeñas */
+    margin-bottom: 10px; /* Reduce el espacio debajo del título */
   }
 
-  .visit-map {
-    height: 200px; /* Reduce aún más la altura del mapa para dispositivos muy pequeños */
-  }
-
-  .visit-text{
-    font-size: 0.8rem; /* Reduce el tamaño de la fuente para el texto y los enlaces sociales */
+  .visit-text {
+    font-size: 0.9rem; /* Reduce el tamaño de la fuente para mejorar la legibilidad */
+    line-height: 1.4; /* Ajusta el espaciado de línea para el texto más pequeño */
   }
 }
 
@@ -1481,42 +1541,146 @@ body {
   font-size: 1.1em;
 }
 
-
-/* Media Queries para ajustes en dispositivos móviles */
-@media (max-width: 768px) {
-  .footer-links {
-    /* Alinea los elementos de .link-column uno debajo del otro */
-    flex-direction: column;
-    align-items: center; /* Centra los elementos para dispositivos móviles */
+/* Media queries para dispositivos móviles */
+@media only screen and (max-width: 768px) {
+  .footer-section {
+    padding: 1em 0; /* Reduce el padding vertical para conservar espacio */
   }
 
-  .link-column {
-    /* Establece cada .link-column a 100% del ancho del .footer-links para que ocupe toda la línea */
-    width: 100%;
-    text-align: center; /* Centra el texto dentro de cada .link-column */
-    margin-bottom: 15px; /* Espacio entre columnas de enlaces */
+  .container {
+    padding: 0 10px; /* Ajusta el padding lateral para compensar pantallas más estrechas */
   }
 
   .footer-logo img {
-    margin: 0 auto 20px; /* Centra el logo y añade un margen inferior */
+    width: 80px; /* Reduce el tamaño del logo para adaptarse a pantallas más pequeñas */
   }
 
-  .footer-section {
-    background-color: #000000; /* El color de fondo general del footer */
-    padding: 2em 0;
-    color: white; /* El color del texto para todos los elementos del footer */
+  .footer-links {
+    justify-content: center; /* Centra los enlaces para mejorar la estética en pantallas estrechas */
+    padding-top: 20px; /* Añade espacio arriba para separar del logo */
   }
 
-  .footer-bottom {
-    margin-top: 20px; /* Ajusta el margen superior del área de derechos de autor */
-    text-align: center; /* Centra el texto de los derechos de autor */
+  .link-column {
+    width: 100%; /* Hace que cada columna de enlaces ocupe el ancho completo */
+    margin-bottom: 15px; /* Añade espacio entre columnas de enlaces */
   }
-}
 
-@media (max-width: 480px) {
+  .link-column h4 {
+    text-align: center; /* Centra el título de cada columna de enlaces */
+  }
+
+  .link-column ul {
+    padding: 0;
+    text-align: center; /* Centra los enlaces dentro de su columna */
+  }
+
   .footer-bottom p {
-    font-size: 0.9em; /* Reduce el tamaño de la fuente de los derechos de autor para dispositivos muy pequeños */
+    font-size: 0.9em; /* Reduce el tamaño de la fuente para adaptarse a pantallas más pequeñas */
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .footer-section {
+    padding: 0.5em 0; /* Reduce aún más el padding para pantallas muy pequeñas */
+  }
+
+  .footer-logo img {
+    width: 60px; /* Reduce más el tamaño del logo */
+  }
+
+  .footer-links {
+    padding-top: 10px; /* Menos espacio arriba para estar más compacto */
+  }
+
+  .footer-bottom p {
+    font-size: 0.8em; /* Reduce más el tamaño de la fuente para mejor ajuste */
+  }
+}
+
+/* Estilos base para .footer-section y otros elementos comunes */
+
+/* Ajustes para iPhone SE (primera generación) y dispositivos de 320px de ancho */
+@media only screen and (max-width: 320px) {
+  .footer-section,
+  .container,
+  .footer-logo img,
+  .link-column h4,
+  .footer-bottom p {
+    /* Ajustes para mejorar la legibilidad y el espacio */
+    font-size: 0.8em; /* Reducir el tamaño de fuente para ajustar el contenido */
+    padding: 1em 0; /* Reducir el padding para maximizar el espacio disponible */
+  }
+}
+
+/* Ajustes para iPhone 6/7/8/X/XS/11 Pro y dispositivos de 375px de ancho */
+@media only screen and (max-width: 375px) {
+  .footer-section,
+  .container,
+  .footer-logo img,
+  .link-column h4,
+  .footer-bottom p {
+    /* Similar a los de 320px pero con ligeras modificaciones */
+    font-size: 0.85em; /* Ajuste del tamaño de fuente según el contenido */
+    padding: 1.2em 0; /* Ajustar el padding para el balance visual */
+  }
+}
+
+/* Ajustes para iPhone 6+/7+/8+ y dispositivos de 414px de ancho */
+@media only screen and (max-width: 414px) {
+  .footer-section,
+  .container,
+  .footer-logo img,
+  .link-column h4,
+  .footer-bottom p {
+    /* Ajustes para pantallas un poco más grandes */
+    font-size: 0.9em; /* Aumento ligeramente el tamaño de la fuente */
+    padding: 1.5em 0; /* Más espacio para elementos debido a pantalla más grande */
+  }
+}
+
+/* Ajustes para iPhone 12 mini y dispositivos de 360px de ancho */
+@media only screen and (max-width: 360px) {
+  .footer-section,
+  .container,
+  .footer-logo img,
+  .link-column h4,
+  .footer-bottom p {
+    /* Ajustes específicos para esta resolución */
+    font-size: 0.88em; /* Tamaño de fuente intermedio */
+    padding: 1.4em 0; /* Padding ajustado para este tamaño de pantalla */
+  }
+}
+
+/* Ajustes para iPhone 12/13 Pro Max y dispositivos de 428px de ancho */
+@media only screen and (max-width: 428px) {
+  .footer-section,
+  .container,
+  .footer-logo img,
+  .link-column h4,
+  .footer-bottom p {
+    /* Ajustes para la pantalla más grande */
+    font-size: 0.95em; /* Ajustar el tamaño de la fuente para equilibrar */
+    padding: 1.6em 0; /* Padding incrementado para aprovechar el espacio */
   }
 }
 
 
+
+.whatsapp-icon {
+  position: fixed;
+  bottom: 20px; /* Ajusta la distancia desde el fondo */
+  right: 20px; /* Ajusta la distancia desde la derecha */
+  font-size: 30px; /* Tamaño del icono */
+  color: #fff; /* Color del icono */
+  background-color: #25D366; /* Color de fondo de WhatsApp */
+  padding: 15px; /* Espacio alrededor del icono */
+  border-radius: 50%; /* Hace el botón circular */
+  box-shadow: 0 2px 5px rgba(0,0,0,.3); /* Sombra para darle profundidad */
+  z-index: 1000; /* Asegura que el icono esté por encima de otros elementos */
+}
+
+.whatsapp-icon:hover {
+  color: #fff; /* Mantiene el icono blanco al pasar el mouse */
+  background-color: #128C7E; /* Oscurece el fondo al pasar el mouse */
+  text-decoration: none; /* Elimina cualquier subrayado del enlace */
+}
