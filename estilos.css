@@ -13,6 +13,86 @@ body {
   background-color: rgba(255, 255, 255, 0.5); /* Blanco semitransparente */
 }
 
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+  body {
+    font-size: 14px;
+  }
+  .navbar {
+    padding: 5px 10px;
+  }
+  .nav-link {
+    font-size: 16px;
+    padding: 5px 10px;
+  }
+  .hero-title {
+    font-size: 24px;
+  }
+  .hero-text {
+    font-size: 14px;
+  }
+  .product-item {
+    width: 100%;
+  }
+  .footer-section {
+    padding: 1em;
+  }
+  .footer-logo img {
+    width: 80px;
+  }
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+  .hero-section {
+    padding: 40px 15px;
+  }
+  .hero-title {
+    font-size: 26px;
+  }
+  .video-section video {
+    height: 250px;
+  }
+}
+
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
+  .contact-icon-link {
+    font-size: 24px;
+  }
+  .contact-icons {
+    gap: 20px;
+  }
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+  .visit-section {
+    flex-direction: column;
+  }
+  .visit-map {
+    order: 2; /* Coloca el mapa después de la información */
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 896px) and (-webkit-min-device-pixel-ratio: 2) {
+  .products-section {
+    padding: 60px 0;
+  }
+  .product-item {
+    margin: 0 auto 30px; /* Centra y aumenta el margen inferior */
+    width: 90%;
+  }
+}
+
+@media only screen and (min-device-width: 428px) and (max-device-width: 926px) and (-webkit-min-device-pixel-ratio: 3) {
+  .footer-logo img {
+    width: 120px; /* Aumenta el tamaño del logo */
+  }
+  .footer-links {
+    justify-content: center; /* Centra los enlaces en el footer */
+  }
+}
+
+
 .whatsapp-icon {
   position: fixed;
   bottom: 20px; /* Ajusta la distancia desde el fondo */
@@ -175,61 +255,121 @@ body {
 
 @media (max-width: 768px) {
   .navbar {
-    padding: 5px 15px; /* Optimiza el espacio disponible en pantallas pequeñas */
+    padding: 10px 20px; /* Un poco más de padding para un mejor manejo */
   }
 
   .navbar-container {
-    flex-direction: column;
-    align-items: stretch; /* Los elementos se estiran para ocupar todo el ancho disponible */
+    /* Añade un poco de margen inferior para separar visualmente los elementos de la barra de navegación del contenido */
+    margin-bottom: 20px;
   }
 
-  .nav-logo, .nav-menu, .nav-icon {
-    text-align: center; /* Centraliza todos los elementos para una apariencia ordenada */
+  .nav-logo img {
+    /* Reducir ligeramente el tamaño del logo para adaptarse a pantallas más pequeñas */
+    width: 80px;
+    margin-bottom: 15px; /* Reduce el espacio para mantener la compactación */
   }
 
   .nav-menu {
-    flex-direction: column; /* Los ítems del menú se organizan verticalmente */
-  }
-
-  .nav-item + .nav-item {
-    margin-top: 5px; /* Añade un espacio vertical entre los ítems del menú para mejorar la accesibilidad */
+    /* Aumentar el espaciado entre ítems de menú para una mejor accesibilidad */
+    gap: 10px;
   }
 
   .nav-link {
-    font-size: 16px; /* Un tamaño de fuente más adecuado para pantallas pequeñas */
-    padding: 8px; /* Un padding táctil para facilitar la interacción */
+    font-size: 18px; /* Aumenta el tamaño de la fuente para mejorar la legibilidad */
+    padding: 12px 24px; /* Mayor área de toque para una mejor accesibilidad */
+    margin: 5px 0; /* Espaciado vertical para evitar el apilamiento */
   }
 
   .nav-icon {
-    margin: 5px 0; /* Ajusta el espacio alrededor de los iconos para evitar el apilamiento */
-  }
-
-  .nav-icon .icon-link,
-  .nav-menu .nav-item:last-child {
-    margin-right: 0; /* Remueve el margen derecho del último ícono y elemento del menú para alinear correctamente */
+    /* Agrega margen superior e inferior para separarlo del menú y el contenido */
+    margin: 15px 0;
   }
 
   .code-btn {
-    width: auto; /* Permite que el botón se ajuste al contenido */
-    margin: 10px; /* Proporciona un margen uniforme para evitar la superposición con otros elementos */
+    /* Asegura que el botón no sea demasiado grande ocupando toda la pantalla */
+    max-width: 250px; /* Establece un máximo */
+    margin: 15px auto; /* Mayor margen y auto para centrar */
+    display: block;
   }
 
-  /* Ajustes adicionales recomendados para mejorar la coherencia y la accesibilidad */
   .footer-links, .link-column {
-    flex-direction: column; /* Mejora la presentación de los enlaces en el pie de página */
-    text-align: center; /* Centraliza el texto para mantener la coherencia con otros elementos */
+    /* Asegura un espaciado adecuado entre elementos del pie de página */
+    margin-bottom: 15px;
   }
 
-  .footer-logo img, .nav-logo img {
-    margin: 0 auto 20px; /* Centra los logos y añade espacio debajo para separar de otros elementos */
+  .footer-logo img {
+    /* Ajusta el tamaño del logo en el pie de página si es necesario */
+    width: 90px;
   }
 
-  /* Mejoras en la visibilidad de los botones y enlaces para una mejor interacción */
+  /* Resalta los elementos interactivos al pasar sobre ellos para mejorar la retroalimentación visual */
   .nav-link:hover, .hero-button:hover, .product-add:hover {
-    transform: scale(1.05); /* Un sutil aumento al interactuar mejora la retroalimentación visual */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Añade profundidad y destaca elementos interactivos */
+    background-color: #f5f5f5; /* Cambia el color de fondo en lugar de solo escalar */
+    color: #333; /* Cambia el color del texto para contrastar con el nuevo fondo */
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3); /* Sombra más notoria */
   }
 }
+
+
+@media (max-width: 480px) {
+  .navbar {
+    /* Ajuste adicional de padding para compensar la reducción del tamaño de la pantalla */
+    padding: 8px 16px;
+  }
+
+  .navbar-container {
+    /* Incrementar el espaciado vertical para mejorar la separación visual */
+    margin-bottom: 25px;
+  }
+
+  .nav-logo img {
+    /* Reducción del tamaño del logo para adaptarse mejor a pantallas estrechas */
+    width: 70px;
+  }
+
+  .nav-menu {
+    /* Aumento del espaciado vertical entre los elementos del menú para evitar toques accidentales */
+    gap: 15px;
+    margin-top: 10px; /* Espacio adicional encima para separar del logo */
+  }
+
+  .nav-link {
+    /* Reducción del tamaño de la fuente para adaptarse al espacio limitado */
+    font-size: 16px;
+    padding: 10px 20px; /* Ajuste del padding para mantener la proporcionalidad */
+  }
+
+  .nav-icon {
+    /* Ajuste del margen para evitar la sensación de apretujamiento */
+    margin: 10px 0 20px; /* Espaciado adicional al final para separación del contenido */
+  }
+
+  .code-btn {
+    /* Reducción del tamaño máximo para evitar que el botón se vea demasiado grande */
+    max-width: 220px;
+    padding: 8px 16px; /* Reducción del padding para ajustar el tamaño general del botón */
+    font-size: 15px; /* Reducción del tamaño de la fuente para adaptarse al tamaño del botón */
+    margin: 20px auto; /* Incremento del margen superior para más espacio */
+  }
+
+  .footer-links, .link-column {
+    /* Ajustes para una mejor presentación de los enlaces en el pie de página */
+    margin-bottom: 20px;
+  }
+
+  .footer-logo img {
+    /* Ajuste del logo en el pie de página para dispositivos pequeños */
+    width: 60px;
+  }
+
+  /* Mejora de los estilos de hover para dispositivos que admiten hover */
+  .nav-link:hover, .hero-button:hover, .product-add:hover {
+    background-color: #eaeaea; /* Un cambio sutil de color de fondo */
+    color: #000; /* Cambio a un color de texto más oscuro para contraste */
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2); /* Sombra más ligera para no sobrecargar el diseño */
+  }
+}
+
 
 
 /* Sección hero mejorada con un tema de color negro y amarillo oro */
@@ -401,42 +541,56 @@ body {
   border-radius: 20px; /* Bordes redondeados para las imágenes */
 }
 
-/* Ajustes para la responsividad */
+/* Ajustes para dispositivos con pantalla hasta 768px de ancho (tablets y dispositivos grandes) */
 @media (max-width: 768px) {
   .hero-section {
-    padding: 30px 10px;
+    padding: 50px 20px; /* Proporciona más espacio alrededor del contenido para respirar */
+    background-size: auto 100%; /* Ajusta el tamaño del fondo para mantener proporciones adecuadas */
   }
 
   .hero-container {
-    flex-direction: column;
+    flex-direction: column; /* Cambia la disposición de los elementos a vertical */
+    align-items: center; /* Centra los elementos horizontalmente */
   }
 
   .hero-image {
-    margin-top: 20px;
+    width: 80%; /* Ajusta el ancho de la imagen para que no ocupe todo el ancho de la pantalla */
+    margin-top: 30px; /* Añade un espacio adicional arriba para separar del texto */
   }
 
   .flip-card {
-    width: 90%; /* Más pequeño en dispositivos móviles */
-    height: auto;
+    width: 100%; /* Hace que la tarjeta ocupe todo el ancho disponible */
+    margin: auto; /* Centra la tarjeta en la pantalla */
   }
 }
 
-/* Ajustes para teléfonos móviles */
+/* Ajustes para teléfonos móviles (hasta 480px de ancho) */
 @media (max-width: 480px) {
   .hero-title {
-    font-size: 28px; /* Ajusta el tamaño del título para pantallas más pequeñas */
+    font-size: 24px; /* Reduce el tamaño del título para mejorar la legibilidad */
+    padding: 0 10px; /* Añade padding lateral para evitar que el texto toque los bordes de la pantalla */
   }
 
   .hero-text {
-    font-size: 16px; /* Ajusta el tamaño de la fuente del texto */
+    font-size: 14px; /* Reduce el tamaño del texto para una mejor adaptación */
+    padding: 0 10px; /* Similar al título, evita que el texto toque los bordes */
   }
 
   .hero-text .check-icon,
   .hero-text .fas {
-    font-size: 40px; /* Ajusta el tamaño del ícono */
+    font-size: 35px; /* Ligeramente más pequeño para una mejor proporción */
+    margin: 20px 0; /* Añade más espacio alrededor del ícono para separarlo del texto */
+  }
+
+  .hero-image {
+    width: 100%; /* Permite que la imagen ocupe todo el ancho disponible */
+  }
+
+  .flip-card {
+    height: auto; /* Asegura que la tarjeta mantenga su proporción sin especificar una altura fija */
+    overflow: hidden; /* Oculta cualquier desbordamiento */
   }
 }
-
 
 .video-section {
   text-align: center;
@@ -975,36 +1129,56 @@ body {
 
 /* Media Queries para ajustes en dispositivos móviles */
 @media (max-width: 768px) {
+  .contact-section {
+    padding: 20px; /* Un poco más de padding para mejorar la legibilidad */
+  }
+
   .contact-title {
-    font-size: 24px; /* Reducir el tamaño de la fuente del título para dispositivos más pequeños */
-    margin-bottom: 15px;
+    font-size: 22px; /* Un tamaño óptimo que mantiene la legibilidad sin ser demasiado grande */
+    margin-bottom: 20px; /* Un poco más de espacio debajo del título para una separación clara */
   }
 
   .contact-icons {
-    flex-direction: column; /* Apila los íconos de contacto */
-    gap: 10px; /* Espacio entre íconos */
+    flex-direction: column; /* Mantenemos la columna para una mejor disposición */
+    gap: 15px; /* Un poco más de espacio entre íconos para facilitar la interacción táctil */
+    align-items: center; /* Centra los íconos horizontalmente */
   }
 
   .contact-icon-link {
-    font-size: 20px; /* Reducir el tamaño de los íconos para dispositivos más pequeños */
+    font-size: 24px; /* Incrementamos ligeramente el tamaño para facilitar la interacción */
   }
 
-   .contact-icon-container {
-    display: block; /* Ocupa el ancho completo */
-    margin-bottom: 10px; /* Espacio entre íconos */
+  .contact-icon-container {
+    width: 50px; /* Un tamaño fijo para contener el ícono */
+    height: 50px; /* Altura igual al ancho para mantener la proporción */
+    display: flex; /* Usamos flex para centrar el ícono dentro del círculo */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    margin: 0 auto 10px; /* Automáticamente centra el contenedor en la pantalla y añade margen inferior */
+    border-radius: 50%; /* Redondea completamente para formar un círculo */
+    background-color: rgba(0,0,0,0.1); /* Un ligero fondo oscuro para contrastar con el ícono */
   }
-
 }
 
 @media (max-width: 480px) {
   .contact-section {
-    padding: 30px 10px; /* Reducir el padding para pantallas muy pequeñas */
+    padding: 15px; /* Reducimos el padding para maximizar el espacio disponible */
   }
 
   .contact-icons i {
-    font-size: 1.5rem; /* Ajustar el tamaño de los íconos para pantallas muy pequeñas */
+    font-size: 22px; /* Ajustamos el tamaño del ícono para asegurar que siga siendo fácil de interactuar */
+  }
+
+  /* Ajustes adicionales para los íconos y enlaces para garantizar que sean fácilmente clicables */
+  .contact-icon-link {
+    padding: 10px; /* Añade padding para aumentar el área de clic */
+    border-radius: 50%; /* Asegura que el enlace mantenga una forma circular */
+    display: inline-flex; /* Mantiene el ícono centrado dentro del enlace */
+    justify-content: center;
+    align-items: center;
   }
 }
+
 
 .visit-section {
   display: flex;
