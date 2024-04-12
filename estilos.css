@@ -13,6 +13,26 @@ body {
   background-color: rgba(255, 255, 255, 0.5); /* Blanco semitransparente */
 }
 
+.whatsapp-icon {
+  position: fixed;
+  bottom: 20px; /* Ajusta la distancia desde el fondo */
+  right: 20px; /* Ajusta la distancia desde la derecha */
+  font-size: 30px; /* Tamaño del icono */
+  color: #fff; /* Color del icono */
+  background-color: #25D366; /* Color de fondo de WhatsApp */
+  padding: 15px; /* Espacio alrededor del icono */
+  border-radius: 50%; /* Hace el botón circular */
+  box-shadow: 0 2px 5px rgba(0,0,0,.3); /* Sombra para darle profundidad */
+  z-index: 1000; /* Asegura que el icono esté por encima de otros elementos */
+}
+
+.whatsapp-icon:hover {
+  color: #fff; /* Mantiene el icono blanco al pasar el mouse */
+  background-color: #128C7E; /* Oscurece el fondo al pasar el mouse */
+  text-decoration: none; /* Elimina cualquier subrayado del enlace */
+}
+
+
 .navbar {
   background-color: #000000;
   color: white;
