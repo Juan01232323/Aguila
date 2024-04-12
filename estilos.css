@@ -789,7 +789,6 @@ body {
 @media (max-width: 768px) {
   .products-section {
     padding: 30px 10px;
-    display:none;
   }
 
   .products-title {
@@ -800,6 +799,7 @@ body {
   .products-container {
     flex-direction: column; /* Los elementos se apilan verticalmente */
     gap: 10px;
+    display:none
   }
 
   .product-item {
@@ -810,31 +810,54 @@ body {
 /* Ajustes específicos para iPhone 5/SE y similares */
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
   .product-item {
-    /* Es posible que desees ajustar el padding o el margin específicamente para estos tamaños */
+    padding: 10px; /* Reducción del padding para más espacio */
+    margin-bottom: 15px; /* Menos espacio entre productos */
+  }
+
+  .product-image {
+    height: 180px; /* Altura fija para imágenes */
+  }
+
+  .product-name,
+  .product-price {
+    font-size: 14px; /* Tamaño de fuente más pequeño para ajustar el texto */
   }
 }
 
 /* Ajustes específicos para iPhone 6/7/8 Plus */
 @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {
   .product-item {
-    /* Ajustes específicos para estos modelos, como el tamaño de la imagen o el espacio entre productos */
+    padding: 12px; /* Un poco más de espacio alrededor de los productos */
+  }
+
+  .product-image {
+    height: 200px; /* Ajuste de altura para imágenes más grandes */
+  }
+
+  .product-name,
+  .product-price {
+    font-size: 16px; /* Tamaño de fuente ligeramente más grande para mejorar la legibilidad */
   }
 }
 
 /* Ajustes específicos para iPhone X y modelos recientes con notch */
-@media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
-  .products-section, .product-item {
-    /* Consideraciones especiales para el notch, como ajustes en el margen superior de la sección */
-    display:none;
+/* Ajustes específicos para iPhone X y modelos recientes con notch (375px por 812px) */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+  .products-section {
+    padding-top: env(safe-area-inset-top); /* Respetar el área segura del notch */
+    padding-bottom: env(safe-area-inset-bottom); /* Espacio adicional en la parte inferior para la barra de navegación */
+  }
 
+  .product-item {
+    padding: 15px; /* Aumentar el espacio interior para cada producto */
   }
 }
+
 
 /* Considerando la orientación de paisaje */
 @media only screen and (orientation: landscape) {
   .products-section {
     padding: 20px 5px; /* Menos padding vertical en paisaje */
-    display:none;
   }
 
   .product-item {
@@ -846,7 +869,6 @@ body {
 @media (max-width: 480px) {
   .products-section {
     padding: 20px 0; /* Ajuste del padding para una mejor visualización */
-    display:none;
   }
 
   .products-title {
@@ -857,6 +879,7 @@ body {
   .products-container {
     flex-direction: column; /* Los elementos de producto se apilan verticalmente para facilitar la navegación */
     gap: 15px; /* Reducción del espacio entre productos para un flujo más compacto */
+    display:none
   }
 
   .product-item {
@@ -1668,6 +1691,8 @@ body {
     padding: 1.6em 0; /* Padding incrementado para aprovechar el espacio */
   }
 }
+
+
 
 .whatsapp-icon {
   position: fixed;
