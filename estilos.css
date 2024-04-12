@@ -1,6 +1,16 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  background-image: url('img/fondo.gif'); /* Si estás en estilos.css */
+  /* O */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.seccion-sobre-el-fondo {
+  background-color: rgba(255, 255, 255, 0.5); /* Blanco semitransparente */
 }
 
 .navbar {
@@ -202,45 +212,60 @@ body {
 }
 
 
-/* Aplica estilos para centrar verticalmente el contenido en hero-section */
+/* Sección hero mejorada con un tema de color negro y amarillo oro */
 .hero-section {
   display: flex;
-  align-items: center; /* Alinea verticalmente */
-  justify-content: center; /* Alinea horizontalmente */
-  text-align: center; /* Asegura que el texto dentro de hero-content esté centrado */
-  padding: 10px 20px; /* Espaciado superior e inferior aumentado */
-  background-color: #f7f7f7; /* Color de fondo (cambiar si es necesario) */
-  min-height: 80vh; /* Establece una altura mínima basada en el alto de la ventana */
-  overflow: hidden; /* Evita el desbordamiento */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #000; /* Fondo negro */
+  color: #FFD700; /* Texto en amarillo oro */
+  min-height: 80vh;
+  overflow: hidden;
+  position: relative;
 }
 
+/* Añade un efecto de gradiente dorado sobre el fondo negro */
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle, #FFD700 0%, #000 70%);
+  opacity: 0.5;
+  z-index: 0;
+}
 /* Asegura que no hay márgenes superiores en los elementos dentro de hero-section */
 .hero-section,
 .hero-section * {
   margin-top: 0; /* Elimina el margen superior */
 }
 
-/* Establece el contenido de la sección hero en el centro vertical */
 .hero-container {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Separa el contenido y la imagen */
+  justify-content: space-between;
+  z-index: 1;
 }
 
-/* Centra el contenido de hero-content verticalmente */
 .hero-content {
-  max-width: 600px; /* O el ancho que mejor se adapte a tu contenido */
-  margin: 0 auto; /* Centra el contenido si es menos del máximo ancho */
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .hero-title {
-  font-size: 48px; /* Tamaño de fuente del título */
-  color: #ff0000; /* Color de fuente del título cambiado a dorado */
+  font-size: 48px;
+  color: #FFD700;
   margin-bottom: 20px;
 }
+
+
 
 .hero-text .fas {
   /* Si necesitas un tamaño específico para el ícono */
@@ -259,24 +284,42 @@ body {
 
 
 .hero-text {
-  font-size: 20px; /* Tamaño de fuente del texto */
-  color: #333; /* Color del texto, ajusta según tu diseño */
+  font-size: 20px;
+  line-height: 1.5; /* Mejora la legibilidad del texto */
   margin-bottom: 30px;
+  animation: fadeInUp 2s ease-in-out 0.5s; /* Animación para el texto */
+  animation-fill-mode: backwards; /* Mantiene el elemento invisible hasta que la animación comienza */
 }
 
 .hero-button {
-  background-color: #ff0808; /* Color de fondo del botón */
-  color: white; /* Color de texto del botón */
-  text-decoration: none;
+  background-color: #FFD700; /* Botón amarillo oro */
   padding: 10px 30px;
-  border-radius: 5px; /* Bordes redondeados */
-  transition: background-color 0.3s;
+  color: #000; /* Texto negro */
+  font-size: 18px; /* Tamaño de fuente más grande para el botón */
+  font-weight: bold; /* Fuente en negrita para el botón */
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  animation: fadeInUp 2s ease-in-out 1s; /* Animación para el botón */
+  animation-fill-mode: backwards;
 }
+
 
 .hero-button:hover {
-  background-color: #ffb813; /* Color al pasar el ratón */
+  background-color: #fff; /* Cambia a blanco al pasar el ratón */
+  color: #000;
 }
 
+/* Estilos para la animación de entrada */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 
 /* Asegúrate de que hero-image ocupe el espacio adecuado */
@@ -288,19 +331,19 @@ body {
 }
 
 .hero-image img {
-  max-width: 370px; /* Ajusta este valor según el tamaño de tu imagen */
+  max-width: 370px;
   height: auto;
+  border-radius: 5px; /* Añade bordes redondeados a la imagen */
 }
 
 
-/* Ajustes para el flip-card */
+/* Mejoras en las tarjetas giratorias */
 .flip-card {
   background: transparent;
-  width: 500px; /* O el ancho que prefieras */
-  height: 300px; /* O la altura que prefieras */
-  perspective: 1000px; /* Profundidad de efecto 3D */
+  width: 300px; /* Ajusta según tus necesidades */
+  height: 400px; /* Ajusta según tus necesidades */
+  perspective: 1000px;
 }
-
 
 .flip-card-inner {
   position: relative;
@@ -319,67 +362,42 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  -webkit-backface-visibility: hidden; /* Oculta el reverso al girar */
   backface-visibility: hidden;
 }
 .flip-card-front {
   z-index: 2;
 }
 
+
 .flip-card-back {
   transform: rotateY(180deg); /* Rota la parte de atrás para que quede frente a la vista al girar */
 }
 
 
-/* Asegúrate de que las imágenes cubran el espacio de la tarjeta */
 .flip-card-front img,
 .flip-card-back img {
   width: 100%;
   height: auto;
+  border-radius: 20px; /* Bordes redondeados para las imágenes */
 }
 
-/* Ajustes para tablets */
+/* Ajustes para la responsividad */
 @media (max-width: 768px) {
   .hero-section {
-    padding: 60px 10px; /* Reduce el padding */
-    min-height: 60vh; /* Altura mínima ajustada */
+    padding: 30px 10px;
   }
 
   .hero-container {
-    flex-direction: column; /* Cambia la disposición a vertical */
+    flex-direction: column;
   }
 
-  .hero-content,
   .hero-image {
-    max-width: 90%; /* Ajusta el ancho máximo para mayor coherencia */
-  }
-
-  .hero-title {
-    font-size: 36px; /* Reduce el tamaño del título */
-    margin-bottom: 15px; /* Ajusta el espacio debajo del título */
-  }
-
-  .hero-text {
-    font-size: 18px; /* Ajusta el tamaño de la fuente del texto */
-    margin-bottom: 20px; /* Ajusta el espacio debajo del texto */
-  }
-
-  .hero-text .check-icon,
-  .hero-text .fas {
-    font-size: 50px; /* Reduce el tamaño del ícono */
-  }
-
-  .hero-button {
-    padding: 8px 20px; /* Reduce el padding del botón */
-  }
-
-  .hero-image img {
-    max-width: 80%; /* Reduce el ancho máximo de la imagen */
+    margin-top: 20px;
   }
 
   .flip-card {
-    width: 100%; /* Ajusta el ancho del flip-card */
-    height: auto; /* Permite que la altura se ajuste automáticamente */
+    width: 90%; /* Más pequeño en dispositivos móviles */
+    height: auto;
   }
 }
 
@@ -402,16 +420,23 @@ body {
 
 .video-section {
   text-align: center;
-  max-width: 850px; /* Establece la anchura máxima del contenedor del video */
-  margin: 80px auto; /* Centra la sección de video y añade un poco de margen arriba y abajo */
-  background: #000; /* Fondo negro para que las barras vacías no sean tan notorias */
+  max-width: 550px; /* Amplía la anchura máxima para dar más presencia al video */
+  margin: 50px auto; /* Ajusta el margen para centrar la sección y darle espacio */
+  padding: 20px; /* Añade un poco de padding para espacio alrededor del video */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Añade una sombra más pronunciada para profundidad */
+  border-radius: 20px; /* Bordes redondeados para un look más suave */
+  background: linear-gradient(145deg, #000, #FFD700); /* Gradiente de fondo de negro a amarillo dorado */
+  overflow: hidden; /* Mantiene todo dentro de los bordes redondeados */
 }
 
 .video-section video {
-  width: 100%; /* El ancho es el 100% del contenedor */
-  height: 500px; /* La altura es fija para mantener la forma cuadrada */
-  object-fit:contain; /* Asegura que todo el video se muestre completamente */
+  width: 100%; /* Asegura que el video se ajuste al contenedor */
+  height: auto; /* Permite que la altura se ajuste automáticamente para mantener la proporción */
+  border: 5px solid #FFD700; /* Borde sólido amarillo dorado alrededor del video */
+  border-radius: 15px; /* Bordes redondeados para el video */
 }
+
+
 
 
 /* Ajustes para tablets */
@@ -549,31 +574,30 @@ body {
 .products-section {
   text-align: center;
   padding: 50px 0;
-  background-color: #fafafa; /* Un fondo claro pero no completamente blanco */
+  background-color: #000; /* Fondo oscuro para resaltar los productos */
 }
 
 .products-title {
-  font-size: 48px; /* Tamaño de fuente más grande para el título */
-  color: #4A4A4A; /* Un color de texto más oscuro para contraste */
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente moderna */
-  margin-bottom: 50px; /* Más espacio debajo del título */
-  text-transform: uppercase; /* Estilo de título en mayúsculas */
-  letter-spacing: 1px; /* Espaciado entre letras para un look premium */
+  font-size: 48px;
+  color: #FFD700; /* Amarillo dorado para el título */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .products-navigation {
-  margin-top: 20px; /* Agrega espacio sobre la navegación */
+  margin-top: 20px;
   display: flex;
-  justify-content: center; /* Centra los botones */
+  justify-content: center;
   align-items: center;
 }
 
-.products-prev, .products-next{
-  /* Reutiliza los estilos de los botones de la sección de servicios */
-  background-color: #ffffff;
-  color: #4A4A4A;
+.products-prev, .products-next {
+  background-color: #FFD700; /* Amarillo dorado para los botones */
+  color: #000; /* Texto en negro para contraste */
   padding: 10px 20px;
-  border: 1px solid #ccc;
+  border: none; /* Eliminar el borde para un look más limpio */
   border-radius: 5px;
   margin: 0 10px;
   cursor: pointer;
@@ -581,8 +605,7 @@ body {
 }
 
 .products-prev:hover, .products-next:hover {
-  background-color: #f8f8f8;
-  border-color: #888;
+  background-color: #e6c300; /* Un tono de amarillo más oscuro para el hover */
 }
 
 .products-container {
@@ -593,35 +616,32 @@ body {
 }
 
 .product-item {
-  width: 200px; /* O el tamaño que prefieras */
+  width: 200px;
   padding: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra más definida para profundidad */
   border-radius: 10px;
-  background-color: #f9f9f9; /* Fondo sutil para cada artículo */
+  background-color: #fff; /* Fondo claro para los productos */
   margin-bottom: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
 
 .product-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada en hover */
 }
 
-/* Estilos para las imágenes de los productos */
 .product-image {
-  width: 200px; /* Tamaño fijo para la anchura */
-  height: 200px; /* Tamaño fijo para la altura para mantener la proporción cuadrada */
-  object-fit: cover; /* Asegura que la imagen cubra todo el espacio disponible sin distorsionarse */
-  border-radius: 10px; /* Si quieres bordes redondeados */
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
 }
-
 
 .product-info {
-  text-align: left;
+  text-align: center; /* Centrado del texto para una presentación más limpia */
 }
 
 .product-name {
@@ -638,8 +658,8 @@ body {
 }
 
 .product-add {
-  background-color: #edda0c;
-  color: white;
+  background-color: #FFD700; /* Botón de agregar al carrito en amarillo dorado */
+  color: #000; /* Texto en negro para contraste */
   border: none;
   padding: 10px 20px;
   border-radius: 20px;
@@ -653,11 +673,131 @@ body {
 }
 
 .product-add i {
-  margin-left: 8px; /* Añade espacio a la izquierda del ícono */
+  margin-left: 8px;
 }
 
 .product-add:hover {
-  background-color: #ff0c04;
+  background-color: #e6c300; /* Un tono de amarillo más oscuro para el hover */
+}
+
+.product-detail-section .container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.product-detail-header h2 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+/* Estilos específicos para el carrito de compras */
+.cart-items {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background-color: #f2f2f2; /* Un fondo ligeramente más claro para contraste suave */
+  border-bottom: 2px solid #dcdcdc; /* Un toque más de definición en la separación */
+}
+
+.cart-item:last-child {
+  border-bottom: none;
+}
+
+.cart-item-image {
+  width: 80px; /* Un poco más grande para mayor visibilidad */
+  height: 80px;
+  margin-right: 20px;
+  object-fit: cover;
+  border-radius: 10px; /* Bordes más redondeados para suavizar la apariencia */
+}
+
+.cart-item-info {
+  flex-grow: 1;
+  padding-left: 10px; /* Añade un poco más de espacio entre la imagen y el texto */
+}
+
+.cart-item-name {
+  font-size: 18px; /* Más grande para mejor lectura */
+  color: #333; /* Texto más oscuro para mejor contraste */
+}
+
+.cart-item-price {
+  font-size: 16px;
+  color: #555; /* Un gris oscuro para diferenciar del nombre */
+}
+
+.quantity-input {
+  width: 60px; /* Un poco más grande para fácil interacción */
+  margin-left: auto; /* Asegura que se alinea a la derecha */
+  border: 2px solid #bcbcbc; /* Un borde más definido */
+  border-radius: 10px; /* Bordes redondeados */
+  padding: 5px;
+  font-size: 16px; /* Aumenta el tamaño de la fuente para facilidad de vista */
+  background-color: #ebebeb; /* Fondo ligeramente gris para destacar */
+}
+
+.total-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #e8e8e8; /* Un tono de gris más oscuro para destacar el total */
+  border-radius: 10px; /* Suaviza los bordes */
+}
+
+.total-price span {
+  font-weight: bold;
+  font-size: 20px; /* Aumenta el tamaño para enfatizar el total */
+  color: #444; /* Oscurece para importancia */
+}
+
+/* Botón de volver a los productos con un estilo coherente */
+.back-to-products {
+  background-color: #c19a6b; /* Un tono bronce para un toque de lujo */
+  color: white;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 10px; /* Bordes redondeados */
+  display: inline-block;
+  margin-top: 20px;
+  font-weight: bold; /* Texto más audaz */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra para profundidad */
+}
+
+.back-to-products:hover {
+  background-color: #af8754; /* Oscurece al pasar el ratón para interacción */
+}
+
+
+
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+  .product-detail-body {
+    flex-direction: column;
+  }
+
+  .product-detail-image {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .product-detail-info {
+    width: 100%;
+  }
 }
 
 
@@ -758,65 +898,60 @@ body {
 
 .contact-section {
   text-align: center;
-  padding: 40px 0;
-  background-color: #f7f7f7;
+  padding: 50px 0;
+  background-color: #202020; /* Cambio a fondo negro para resaltar los íconos de contacto */
 }
 
 .contact-title {
-  font-size: 32px;
-  color: #020202;
-  margin-bottom: 20px;
+  font-size: 36px; /* Aumento del tamaño para más impacto */
+  color: #FFD700; /* Cambio a color amarillo dorado para el título */
+  margin-bottom: 30px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .contact-icons {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 30px; /* Espaciado incrementado para una mejor visualización */
 }
 
 .contact-icon-link {
-  color: #000000;
-  font-size: 24px;
-  transition: color 0.3s ease;
+  color: #FFD700; /* Íconos en amarillo dorado para coherencia */
+  font-size: 30px; /* Aumento del tamaño de los íconos */
+  transition: transform 0.3s ease;
 }
 
-.contact-icon-link:hover {
-  color: #000000;
+.contact-icon-link:hover,
+.contact-icons i:hover {
+  transform: scale(1.2); /* Efecto de aumento al pasar el mouse */
+  color: #e6c300; /* Cambio a un tono de amarillo dorado más oscuro al pasar el mouse */
 }
 
 .contact-icons a {
-  display: inline-block;
-  margin: 0 10px;
-  color: #000000;
-  transition: transform 0.3s ease, color 0.3s ease;
+  color: #FFD700; /* Enlaces en amarillo dorado para coherencia */
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .contact-icons a:hover {
-  color: #000000;
-  transform: translateY(-3px);
-}
-
-.contact-icons i {
-  font-size: 2rem;
-  transition: all 0.3s ease;
-}
-
-.contact-icons i:hover {
-  color: #000000;
-  transform: scale(1.1);
+  color: #e6c300; /* Cambio a un tono de amarillo dorado más oscuro al pasar el mouse */
+  transform: translateY(-5px); /* Sutil elevación al pasar el mouse */
 }
 
 .contact-icon-container {
-  display: inline-block;
+  display: inline-flex; /* Cambio a inline-flex para centrar íconos verticalmente */
+  justify-content: center; /* Centrado horizontal de íconos */
+  align-items: center; /* Centrado vertical de íconos */
   border-radius: 50%;
-  padding: 10px;
-  transition: background-color 0.3s ease;
+  padding: 15px; /* Padding incrementado para un área de clic más grande */
+  background-color: #222; /* Fondo sutil para los círculos alrededor de los íconos */
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .contact-icon-container:hover {
-  background-color: rgba(88, 48, 99, 0.1);
+  background-color: #333; /* Oscurecimiento del fondo al pasar el mouse para efecto */
+  transform: scale(1.1); /* Efecto de escala al pasar el mouse */
 }
+
 
 /* Media Queries para ajustes en dispositivos móviles */
 @media (max-width: 768px) {
@@ -855,79 +990,66 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f0f0f0; /* Adjust the background color as needed */
+  background-color: #000; /* Cambio a negro para un look premium */
   padding: 50px 10%;
+  color: #FFD700; /* Textos en amarillo dorado */
 }
 
 .visit-map, .visit-info {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow around the elements */
-  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada para efecto 3D */
+  border-radius: 10px; /* Bordes más redondeados */
 }
 
 .visit-map {
-  flex-basis: 100%; /* Ajusta la base flexible para ocupar el ancho completo en móviles */
-  margin-right: 0; /* Elimina el margen derecho en móviles */
-  height: auto; /* Ajusta la altura automáticamente o establece una altura específica */
-  overflow: hidden; /* Mantiene todo el contenido dentro del contenedor */
+  flex-basis: 60%; /* Ajusta para proporcionar más espacio al mapa */
+  margin-right: 2%; /* Espacio entre mapa e información */
+  height: 300px; /* Altura fija para mantener la proporción */
+  overflow: hidden;
 }
 
 .visit-info {
-  flex-basis: 38%; /* Adjust the width of the info container */
-  padding: 20px;
-  background-color: #ffffff; /* Background color for the info box */
+  flex-basis: 38%; /* Ajusta el ancho del contenedor de información */
+  padding: 30px;
+  background-color: #222; /* Fondo oscuro para el contenedor de información */
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border: 2px solid #FFD700; /* Borde en amarillo dorado */
 }
 
 .visit-title {
-  color: #4a4a4a; /* Title color */
-  font-size: 2.5rem; /* Title font size */
-  margin-bottom: 15px;
+  color: #FFD700; /* Título en amarillo dorado */
+  font-size: 2rem; /* Ajusta el tamaño del título */
+  margin-bottom: 20px;
 }
 
 .visit-text {
-  color: #666; /* Regular text color */
-  font-size: 1rem; /* Regular text font size */
-  line-height: 1.6; /* Spacing between lines */
-  margin-bottom: 10px; /* Space below each text element */
+  color: #FFD700; /* Texto en amarillo dorado */
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
 }
 
-
-
+/* Media Queries para ajustar el layout en pantallas más pequeñas */
 @media (max-width: 768px) {
   .visit-section {
-    flex-direction: column; /* Apila los elementos verticalmente */
-    padding: 30px 5%; /* Ajusta el padding para dispositivos más pequeños */
-  }
-
-  .visit-map,
-  .visit-info {
-    flex-basis: auto; /* Permite que cada elemento tome el tamaño necesario */
-    width: 100%; /* Los elementos toman el ancho completo */
-    margin: 0 0 20px; /* Agrega margen inferior entre los elementos */
+    flex-direction: column;
+    padding: 30px 5%;
   }
 
   .visit-map {
-    height: 200px; /* O la altura que prefieras para que el mapa se vea bien sin ser demasiado grande */
-      order: -1; /* Coloca el mapa antes de la información en dispositivos móviles */
+    flex-basis: auto;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
   }
 
   .visit-info {
-    padding: 15px; /* Ajusta el padding dentro del contenedor de información */
+    flex-basis: auto;
+    width: 100%;
   }
-
-  .visit-title {
-    font-size: 1.8rem; /* Reduce el tamaño de la fuente del título */
-    margin-bottom: 10px; /* Reduce el margen inferior del título */
-  }
-
-  .visit-text {
-    font-size: 0.9rem; /* Reduce el tamaño de la fuente del texto */
-  }
-
-  
 }
+
 
 @media (max-width: 480px) {
   .visit-title {
@@ -946,10 +1068,9 @@ body {
 
 /* Estilo para la sección general del pie de página */
 .footer-section {
-  background-color: #000000; /* El color de fondo general del footer */
+  background-color: #202020; /* Un gris muy oscuro como base */
   padding: 2em 0;
-  color: white; /* Esto establecerá el color del texto para todos los elementos dentro del footer, excepto aquellos que se sobrescriban específicamente */
-
+  color: #E6E6E6; /* Un blanco roto para el texto, suave a la vista */
 }
 
 /* Estilo para el contenedor que incluye el logo y los enlaces */
@@ -970,6 +1091,7 @@ body {
 
 .footer-logo img {
   width: 100px; /* Ajusta esto según el tamaño de tu logo */
+  filter: grayscale(100%); /* Hace que el logo sea en blanco y negro para complementar */
 }
 
 .footer-links {
@@ -986,6 +1108,7 @@ body {
 .link-column h4 {
   font-size: 1.2em;
   margin-bottom: 0.5em;
+  color: #FFD700; /* Títulos en un tono dorado para complementar */
 }
 
 .link-column ul {
@@ -994,32 +1117,31 @@ body {
 }
 
 .link-column li a {
-  color: white;
+  color: #E6E6E6;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .link-column li a:hover {
-  color: #D3BCC0;
+  color: #B8B8B8; /* Un gris claro para el hover, proporcionando contraste */
 }
 
 /* Estilo para la sección de derechos de autor */
 .footer-bottom {
   text-align: center;
   width: 100%;
-  margin-top: 0.10px;
-  background-color: #ebc60f; /* Color de fondo diferente para el footer-bottom, cambia este valor al que corresponde */
-  color: white; /* Color del texto */
+  background-color: #333333; /* Un gris oscuro para el fondo, distinto al del footer */
+  color: #E6E6E6; /* Manteniendo el color del texto */
   padding: 1em 0;
 }
 
 .footer-bottom p {
-  text-align: center;
-  margin: 0; /* Elimina cualquier margen por defecto */
-  font-weight: bold; /* Aumenta el peso de la fuente para que resalte */
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1); /* Añade una sombra sutil para destacar el texto */
-  font-size: 1.1em; /* Aumenta un poco el tamaño de la fuente */
+  margin: 0;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); /* Sombra más marcada para resaltar el texto */
+  font-size: 1.1em;
 }
+
 
 /* Media Queries para ajustes en dispositivos móviles */
 @media (max-width: 768px) {
@@ -1057,4 +1179,3 @@ body {
     font-size: 0.9em; /* Reduce el tamaño de la fuente de los derechos de autor para dispositivos muy pequeños */
   }
 }
-
