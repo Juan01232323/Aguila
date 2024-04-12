@@ -110,8 +110,25 @@ body {
 
 
 .nav-icon .icon-link {
-  margin-left: 20px;
-  margin-right: 20px; /* Espacio adicional a la derecha del ícono del carrito de compras */
+  position: relative;
+  display: inline-block;
+  color: white;
+}
+
+/* Estilo para el contador del carrito de compras */
+.cart-count {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: #C19A6B; /* Bronce como color principal */
+  color: #000; /* Texto en negro para contrastar */
+  min-width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  font-size: 12px;
+  text-align: center;
+  line-height: 20px; /* Alineación vertical del texto */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25); /* Sombra suave para dar profundidad */
 }
 
 /* Estilo para el ícono de carrito de compras */
@@ -159,6 +176,17 @@ body {
 @media (max-width: 480px) {
   .nav-link {
       font-size: 16px; /* Tamaño de fuente más pequeño para ahorrar espacio */
+  }
+  .cart-count {
+    top: -8px;
+    right: -8px;
+    min-width: 18px;
+    height: 18px;
+    font-size: 11px;
+    line-height: 18px;
+  }
+  .fa-shopping-cart {
+    font-size: 20px; /* Reducción del tamaño del ícono para pantallas pequeñas */
   }
 }
 
@@ -1604,9 +1632,6 @@ body {
     padding: 1.6em 0; /* Padding incrementado para aprovechar el espacio */
   }
 }
-
-
-
 .whatsapp-icon {
   position: fixed;
   bottom: 20px; /* Ajusta la distancia desde el fondo */
