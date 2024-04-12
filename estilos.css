@@ -687,6 +687,56 @@ body {
   }
 }
 
+/* Ajustes base para dispositivos muy pequeños */
+@media (max-width: 214px) {
+  body, html {
+    font-size: 10px; /* Reducimos la base del tamaño de fuente */
+  }
+
+  /* Ajustamos los elementos del hero para que sean más pequeños y se ajusten al nuevo tamaño de la pantalla */
+  .hero-section {
+    padding: 2px; /* Espaciado reducido */
+    background-size: cover; /* Aseguramos que el fondo cubra el espacio disponible */
+  }
+
+  .hero-container {
+    flex-direction: column; /* Apilamos los elementos verticalmente */
+    align-items: center; /* Centramos los elementos */
+  }
+
+  .hero-title {
+    font-size: 1.6rem; /* Reducimos el tamaño del título */
+    padding: 1rem 0; /* Espaciado adecuado arriba y abajo del título */
+  }
+
+  .hero-text {
+    font-size: 1.2rem; /* Reducimos el tamaño del texto */
+    padding: 0.5rem; /* Reducimos el padding */
+  }
+
+  .hero-text .check-icon,
+  .hero-text .fas {
+    font-size: 2rem; /* Reducimos el tamaño de los íconos */
+    margin-bottom: 1rem; /* Añadimos margen inferior */
+  }
+
+  .hero-image {
+    max-width: 100%; /* Aseguramos que la imagen no sea más ancha que la pantalla */
+    height: auto; /* Mantenemos la proporción de la imagen */
+    margin-top: 1rem; /* Espacio arriba de la imagen */
+  }
+
+  /* Adaptamos las tarjetas para una visualización adecuada */
+  .flip-card {
+    width: 100%; /* La tarjeta ocupa todo el ancho disponible */
+    margin-bottom: 1rem; /* Espacio debajo de la tarjeta */
+  }
+
+  /* Para otros elementos que necesiten ajustarse, sigue un patrón similar de reducción y reorganización */
+}
+
+
+
 .video-section {
   text-align: center;
   max-width: 300px; /* Amplía la anchura máxima para dar más presencia al video */
@@ -1468,4 +1518,5 @@ body {
     font-size: 0.9em; /* Reduce el tamaño de la fuente de los derechos de autor para dispositivos muy pequeños */
   }
 }
+
 
