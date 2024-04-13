@@ -1793,3 +1793,7 @@ body {
   animation-fill-mode: backwards; /* Mantiene el elemento invisible hasta que la animación comienza */
 }
 
+.color-not-available-msg {
+  color: red;
+  font-weight: bold;
+}
