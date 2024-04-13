@@ -22,7 +22,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+// Generar un identificador único para la sesión del usuario
+const userSessionId = getSessionId();
+
+const cart = JSON.parse(localStorage.getItem(`cart-${userSessionId}`)) || [];
 
 
   document.addEventListener('change', (event) => {
@@ -58,10 +61,10 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   function saveCart() {
-    localStorage.setItem('cart', JSON.stringify(cart));
+    localStorage.setItem(`cart-${userSessionId}`, JSON.stringify(cart));
     updateCartCount(); // Actualizar el contador cada vez que se guarde el carrito
-
   }
+
 
   updateCartCount();
 
@@ -87,6 +90,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function calcularTotal() {
     return cart.reduce((total, product) => total + product.price * product.quantity, 0).toFixed(2);
+  }
+
+  function getSessionId() {
+    let sessionId = localStorage.getItem('userSessionId');
+    if (!sessionId) {
+      sessionId = generateUniqueId();
+      localStorage.setItem('userSessionId', sessionId);
+    }
+    return sessionId;
+  }
+
+  function generateUniqueId() {
+    return '_' + Math.random().toString(36).substr(2, 9);
   }
 
   function updateCartCount() {
