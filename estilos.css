@@ -89,7 +89,7 @@ body {
 
 /* Estilo mejorado para el hover de los ítems de navegación */
 .nav-link:hover {
-  background-color: #D3BCC0; /* Un color de fondo suave y más claro */
+  background-color: #FFD700;; /* Un color de fondo suave y más claro */
   color: white; /* Mantiene el texto en blanco */
   transform: translateY(-2px); /* Un ligero movimiento hacia arriba para dar sensación de elevación */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil para crear profundidad */
