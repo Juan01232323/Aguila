@@ -2,17 +2,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Supongamos que tienes esta estructura de datos para mapear los productos y sus imágenes por color
   const productImagesByColor = {
-    'Crema facial: TOTAL': {
+    'Camillas Cuadradas': {
       'Negro': 'img/camilla1.jpg',
-      'Azul': 'img/camilla1_azul.jpg',
-      'Verde': 'img/camilla1_verde.jpg',
+      'Azul': 'img/camilla3.jpg',
+      'Verde': '',
+      'Blanco': 'img/camilla4.jpg',
+      'Gris': 'img/camilla6.jpg',
+      'Rosa': '',
+
     },
-    'Bushy Brow': {
-      'Negro': 'img/camilla2_rojo.jpg',
-      'Azul': 'img/camilla2_azul.jpg',
-      'Verde': 'img/camilla2_verde.jpg',
+    'Camillas Rombo': {
+      'Negro': '',
+      'Azul': '',
+      'Verde': 'img/camilla5.jpg',
+      'Blanco': '',
+      'Gris': '',
+      'Rosa': 'img/camilla7.jpg',
+
     }
   };
+
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 
   document.addEventListener('change', (event) => {
@@ -20,24 +30,20 @@ document.addEventListener('DOMContentLoaded', () => {
       const index = event.target.getAttribute('data-index');
       const color = event.target.value;
       const product = cart[index];
-      
-      // Aquí necesitas actualizar la imagen basada en la selección de color
-      // Suponiendo que tienes una función o un mapeo de productos a sus imágenes
       const newImageSrc = productImagesByColor[product.name][color];
+
+      if (!newImageSrc) {
+        alert('Este color no está disponible para el producto seleccionado.');
+        return; // Evitar cambiar la imagen si no está disponible
+      }
+
       product.imageSrc = newImageSrc; // Actualiza la fuente de la imagen en el objeto del carrito
-      
-      // Actualiza la imagen en el DOM
       const cartItemEl = event.target.closest('.cart-item');
-      cartItemEl.querySelector('.cart-item-image').src = newImageSrc;
-      
-      // Opcionalmente, actualiza el color en el objeto del carrito y guarda los cambios
+      cartItemEl.querySelector('.cart-item-image').src = newImageSrc; // Actualiza la imagen en el DOM
       product.color = color;
       saveCart();
     }
   });
-
-
-  const cart = JSON.parse(localStorage.getItem('cart')) || [];
 
   function saveCart() {
     localStorage.setItem('cart', JSON.stringify(cart));
@@ -99,6 +105,9 @@ document.addEventListener('DOMContentLoaded', () => {
             <option value="Negro">Negro</option>
             <option value="Azul">Azul</option>
             <option value="Verde">Verde</option>
+            <option value="Blanco">Blanco</option>
+            <option value="Gris">Gris</option>
+            <option value="Rosa">Rosa</option>
           </select>
           <input type="number" class="quantity-input" value="${product.quantity}" min="1" data-index="${index}">
           <button class="remove-item" data-index="${index}">Eliminar</button>
