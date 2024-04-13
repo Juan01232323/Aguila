@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LuxuryMuebles</title>
 <link rel="stylesheet" href="estilos.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
@@ -72,31 +74,29 @@
 </section>
 
 
-<section class="products-section">
+<section class="products-section" style="display: none;">
   <h2 class="products-title">Productos</h2>
   <div class="products-container">
-    <!-- Repite este bloque para cada producto -->
+    <!-- Bloques de productos aquí -->
     <div class="product-item" data-rating="5">
-      <img src="img/camilla1.jpg" alt="Crema facial TOTAL" class="product-image">
+      <img src="img/camilla1.jpg" alt="Camillas Cuadradas" class="product-image">
       <div class="product-info">
-        <h3 class="product-name">Crema facial: TOTAL</h3>
+        <h3 class="product-name">Camillas Cuadradas</h3>
         <div class="product-rating">
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
-
         </div>
         <p class="product-price">$200</p>
         <button class="product-add">Agregar al carrito <i class="fas fa-shopping-cart"></i></button>
       </div>
     </div>
-
     <div class="product-item" data-rating="5">
-      <img src="img/camilla2.jpg" alt="Bushy Brow" class="product-image">
+      <img src="img/camilla7.jpg" alt="Camillas Rombo" class="product-image">
       <div class="product-info">
-        <h3 class="product-name">Bushy Brow</h3>
+        <h3 class="product-name">Camillas Rombo</h3>
         <div class="product-rating">
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
@@ -108,11 +108,9 @@
         <button class="product-add">Agregar al carrito <i class="fas fa-shopping-cart"></i></button>
       </div>
     </div>
-  </div>
-    <div class="products-navigation">
-      <button class="products-prev">&lt;</button>
-      <button class="products-next">&gt;</button>
+
     </div>
+
 </section>
 
 
@@ -168,10 +166,15 @@
   <div class="container">
       <div class="product-detail-header">
           <h2 id="product-name">Carrito de Compras</h2>
+
+
       </div>
       <div class="product-detail-body">
+
+
           <!-- Los productos del carrito se insertarán aquí -->
           <div id="cart-items" class="cart-items">
+
               <!-- Ejemplo de un item del carrito -->
               <div class="cart-item">
                   <img class="cart-item-image" src="img/producto.jpg" alt="Producto">
@@ -183,52 +186,16 @@
           </div>
           <p class="total-price">Total: $<span id="total-price">0.00</span></p>
           <button class="back-to-products">Comprar</button>
+          <p class="motivational-phrase">Convierte lo ordinario en extraordinario, dale vida a tu hogar oh negocio con luxury muebles hoy.😉</p> <!-- Frase motivacional -->
+
+          <i class="fas fa-shopping-cart animated-cart"></i> <!-- Ícono animado del carrito -->
+
+
+
       </div>
+
   </div>
 </section>
-
-
-
-<section class="products-section" id="products-section" style="display: none;">
-    <h2 class="products-title">Productos</h2>
-    <div class="products-container">
-      <!-- Repite este bloque para cada producto -->
-      <div class="product-item" data-rating="5">
-        <img src="img/camilla1.jpg" alt="Crema facial TOTAL" class="product-image">
-        <div class="product-info">
-          <h3 class="product-name">Crema facial: TOTAL</h3>
-          <div class="product-rating">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-  
-          </div>
-          <p class="product-price">$200</p>
-          <button class="product-add">Agregar al carrito <i class="fas fa-shopping-cart"></i></button>
-        </div>
-      </div>
-  
-      <div class="product-item" data-rating="5">
-        <img src="img/camilla2.jpg" alt="Bushy Brow" class="product-image">
-        <div class="product-info">
-          <h3 class="product-name">Bushy Brow</h3>
-          <div class="product-rating">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-          </div>
-          <p class="product-price">$490</p>
-          <button class="product-add">Agregar al carrito <i class="fas fa-shopping-cart"></i></button>
-        </div>
-      </div>
-    </div>
-  
-      </div>
-  </section>
 
 <!-- Footer Section -->
 <footer class="footer-section">
@@ -271,4 +238,3 @@
 
 
 </html>
-
