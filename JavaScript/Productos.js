@@ -7,17 +7,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const productsPrevButton = document.querySelector('.products-prev'); // Selecciona el botón Prev
     const productsNavigation = document.querySelector('.products-navigation'); // Selecciona la navegación de productos
     const productsNextButton = document.querySelector('.products-next'); // Selecciona el botón Next
-  
-    productosLink.addEventListener('click', (event) => {
-        event.preventDefault();
-        ocultarTodasLasSecciones();
-        mostrarSeccionProductos();
-        productsSection.style.display = 'block';
-        // Muestra los botones de navegación solo cuando estás en la sección de productos
-        productsPrevButton.style.display = 'block';
-        productsNextButton.style.display = 'block';
-        productsNavigation.style.display = 'none'; // Asegura que la navegación se muestre con los productos
 
+  
+    productosLink.addEventListener('click', function(event) {
+        event.preventDefault(); // Previene el comportamiento por defecto del enlace
+        if (productsSection.style.display === 'none' || !productsSection.style.display) {
+            productsSection.style.display = 'block'; // Muestra la sección
+            window.scrollTo({
+              top: productsSection.offsetTop, // Desplaza la vista hacia la sección de productos
+              behavior: 'smooth' // Hace que el desplazamiento sea suave
+            });
+        } else {
+            productsSection.style.display = 'none'; // Oculta la sección si ya está visible
+        }
     });
   
     inicioLink.addEventListener('click', (event) => {
