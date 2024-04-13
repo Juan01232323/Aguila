@@ -31,17 +31,29 @@ document.addEventListener('DOMContentLoaded', () => {
       const color = event.target.value;
       const product = cart[index];
       const newImageSrc = productImagesByColor[product.name][color];
-
-      if (!newImageSrc) {
-        alert('Este color no está disponible para el producto seleccionado.');
-        return; // Evitar cambiar la imagen si no está disponible
-      }
-
-      product.imageSrc = newImageSrc; // Actualiza la fuente de la imagen en el objeto del carrito
+  
       const cartItemEl = event.target.closest('.cart-item');
-      cartItemEl.querySelector('.cart-item-image').src = newImageSrc; // Actualiza la imagen en el DOM
-      product.color = color;
-      saveCart();
+      const colorNotAvailableMsgEl = cartItemEl.querySelector('.color-not-available-msg');
+  
+      if (!newImageSrc) {
+        if (colorNotAvailableMsgEl) {
+          colorNotAvailableMsgEl.textContent = 'Este color no está disponible para este producto.';
+        } else {
+          const msgEl = document.createElement('p');
+          msgEl.classList.add('color-not-available-msg');
+          msgEl.textContent = 'Este color no está disponible para este producto.';
+          msgEl.style.color = 'red'; // Agrega tu estilo aquí
+          cartItemEl.appendChild(msgEl);
+        }
+      } else {
+        if (colorNotAvailableMsgEl) {
+          cartItemEl.removeChild(colorNotAvailableMsgEl);
+        }
+        product.imageSrc = newImageSrc;
+        cartItemEl.querySelector('.cart-item-image').src = newImageSrc;
+        product.color = color;
+        saveCart();
+      }
     }
   });
 
@@ -176,4 +188,3 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
-
