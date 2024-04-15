@@ -7,8 +7,8 @@
 <link rel="stylesheet" href="estilos.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
-<link rel="icon" type="image/png" href="img/logo1.jpg">
 
+<link rel="icon" type="image/png" href="img/logo1.jpg">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>
@@ -137,6 +137,25 @@
   </div>
 </section>
 
+<section id="payment-options-section" style="display: none;">
+  <h2>Opciones de Pago</h2>
+  <div>
+    <button id="pay-with-stripe">Pagar con Tarjeta de Credito/Debito</button>
+    <button id="pay-with-mercadopago">Pagar con MercadoPago</button>
+  </div>
+  <!-- Aquí comienza la sección del formulario Stripe -->
+  <div id="stripe-form-section" style="display:none;">
+    <form id="payment-form">
+      <div id="card-element">
+        <!-- Un div vacío donde Stripe va a insertar el formulario de la tarjeta. -->
+      </div>
+      <div id="card-errors" role="alert"></div>
+      <button type="submit" id="submit-payment">Enviar Pago</button>
+    </form>
+  </div>
+</section>
+
+
 <section class="visit-section">
   <div class="visit-map">
     <!-- Replace with your actual Google Maps embed iframe -->
@@ -167,15 +186,16 @@
   <div class="container">
       <div class="product-detail-header">
           <h2 id="product-name">Carrito de Compras</h2>
-
+    
+          <div id="cart-empty-message" style="color: red; display: none;">
+            Tu carrito está vacío. Agrega algunos productos antes de pagar.
 
       </div>
       <div class="product-detail-body">
 
-
           <!-- Los productos del carrito se insertarán aquí -->
           <div id="cart-items" class="cart-items">
-
+     
               <!-- Ejemplo de un item del carrito -->
               <div class="cart-item">
                   <img class="cart-item-image" src="img/producto.jpg" alt="Producto">
@@ -186,17 +206,23 @@
               </div> 
           </div>
           <p class="total-price">Total: $<span id="total-price">0.00</span></p>
-          <button class="back-to-products">Comprar</button>
-          <p class="motivational-phrase">Convierte lo ordinario en extraordinario, dale vida a tu hogar oh negocio con luxury muebles hoy.😉</p> <!-- Frase motivacional -->
+          
+  
+          <button class="back-to-products" onclick="showPaymentSection()">Comprar</button>
 
+          </div>
+          <p class="motivational-phrase">Convierte lo ordinario en extraordinario, dale vida a tu hogar oh negocio con luxury muebles hoy.😉</p> <!-- Frase motivacional -->
+    
           <i class="fas fa-shopping-cart animated-cart"></i> <!-- Ícono animado del carrito -->
 
 
-
       </div>
-
+   
   </div>
+
 </section>
+
+
 
 <!-- Footer Section -->
 <footer class="footer-section">
@@ -234,8 +260,12 @@
 </div>
 <script src="JavaScript/Productos.js"></script>
 <script src="JavaScript/ProductoImagen.js"></script>
+<script src="https://js.stripe.com/v3/"></script>
+<script src="https://sdk.mercadopago.com/js/v2"></script>
+
 
 </body>
 
 
 </html>
+
