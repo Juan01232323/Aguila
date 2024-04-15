@@ -1887,11 +1887,33 @@ body {
   margin-top: 10px;
 }
 
+/* Estilo específico para el input del nombre del titular */
+#cardholder-name {
+  font-size: 16px;
+  color: #555;
+  background-color: #f8f8f8;
+  border: 2px solid #dedede;
+  padding: 10px 15px;
+  width: calc(100% - 30px); /* Ajustar ancho para el padding y borde */
+  box-sizing: border-box;
+}
+
+#cardholder-name:focus {
+  border-color: #6772E5;
+  background-color: #e7e7ff;
+  outline: none;
+}
+
 /* Media queries para dispositivos con pantalla de hasta 768px de ancho */
 @media (max-width: 768px) {
   #payment-options-section {
     width: 95%;
     padding: 15px;
+  }
+
+  #cardholder-name {
+    font-size: 15px; /* Ligeramente más pequeño en tabletas */
+    padding: 8px 12px;
   }
 
   #payment-options-section h2 {
@@ -1919,6 +1941,11 @@ body {
     width: 100%;
     padding: 10px;
     box-shadow: none; /* Puede que prefieras eliminar la sombra para pantallas más pequeñas */
+  }
+
+  #cardholder-name {
+    font-size: 14px; /* Más pequeño en móviles */
+    padding: 6px 10px;
   }
 
   #payment-options-section h2 {
@@ -1950,6 +1977,11 @@ body {
     font-size: 14px;
   }
 
+  #cardholder-name {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+
   #payment-options-section h2 {
     font-size: 20px;
   }
@@ -1964,6 +1996,11 @@ body {
 @media (max-width: 375px) {
   #payment-options-section {
     width: 85%;
+  }
+
+  #cardholder-name {
+    font-size: 14px;
+    padding: 8px 12px;
   }
 
   #payment-options-section button {
@@ -1982,6 +2019,11 @@ body {
     width: 85%;
   }
 
+  #cardholder-name {
+    font-size: 15px;
+    padding: 8px 12px;
+  }
+
   #payment-options-section h2 {
     font-size: 22px;
   }
@@ -1991,6 +2033,11 @@ body {
 @media (max-width: 428px) {
   #payment-options-section {
     width: 88%;
+  }
+
+  #cardholder-name {
+    font-size: 16px;
+    padding: 10px 15px;
   }
 
   #payment-options-section button {
