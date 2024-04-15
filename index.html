@@ -146,6 +146,10 @@
   <!-- Aquí comienza la sección del formulario Stripe -->
   <div id="stripe-form-section" style="display:none;">
     <form id="payment-form">
+      <div class="form-row">
+        <label for="cardholder-name">Nombre del Titular de la Tarjeta:</label>
+        <input id="cardholder-name" type="text" placeholder="Ej. Juan Pérez" required>
+      </div>
       <div id="card-element">
         <!-- Un div vacío donde Stripe va a insertar el formulario de la tarjeta. -->
       </div>
@@ -268,4 +272,3 @@
 
 
 </html>
-
