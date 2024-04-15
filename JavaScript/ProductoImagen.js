@@ -229,33 +229,49 @@ document.getElementById('pay-with-stripe').addEventListener('click', (event) => 
   var stripe = Stripe('pk_test_51P5LEfHJXANqOK2KYGoTDNdpcpuHSw76bNTyVepUrg0hLBkaKBsRkN4fL6Rk8vM3eZgyzBLhhd1KqRF0sdIxwZfL00MqCoEPD6');
   var elements = stripe.elements();
 
-  // Custom styling can be passed to options when creating an Element.
   var style = {
     base: {
-      // Add your base input styles here. For example:
       fontSize: '16px',
       color: '#32325d',
+      '::placeholder': {
+        color: '#aab7c4'
+      }
     },
+    invalid: {
+      color: '#fa755a',
+      iconColor: '#fa755a'
+    }
   };
 
-  // Create an instance of the card Element.
-  var card = elements.create('card', {style: style});
-
-  // Add an instance of the card Element into the `card-element` <div>.
+  var card = elements.create('card', { style: style });
   card.mount('#card-element');
 
-  // Handle form submission.
+  card.addEventListener('change', function(event) {
+    var displayError = document.getElementById('card-errors');
+    if (event.error) {
+      displayError.textContent = event.error.message;
+    } else {
+      displayError.textContent = '';
+    }
+  });
+
   var form = document.getElementById('payment-form');
   form.addEventListener('submit', function(event) {
     event.preventDefault();
 
-    stripe.createToken(card).then(function(result) {
+    var cardholderName = document.getElementById('cardholder-name').value;
+    if (!cardholderName) {
+      document.getElementById('card-errors').textContent = 'Por favor, ingrese el nombre del titular de la tarjeta.';
+      return;
+    }
+
+    stripe.createToken(card, {name: cardholderName}).then(function(result) {
       if (result.error) {
-        // Inform the user if there was an error.
+        // Informa al usuario si hubo un error.
         var errorElement = document.getElementById('card-errors');
         errorElement.textContent = result.error.message;
       } else {
-        // Send the token to your server.
+        // Envía el token a tu servidor.
         stripeTokenHandler(result.token);
       }
     });
@@ -275,7 +291,7 @@ function mostrarFormularioStripe() {
 }
 
 function stripeTokenHandler(token) {
-  // Insert the token ID into the form so it gets submitted to the server
+  // Inserta el token ID en el formulario para que se envíe al servidor
   var form = document.getElementById('payment-form');
   var hiddenInput = document.createElement('input');
   hiddenInput.setAttribute('type', 'hidden');
@@ -283,7 +299,7 @@ function stripeTokenHandler(token) {
   hiddenInput.setAttribute('value', token.id);
   form.appendChild(hiddenInput);
 
-  // Submit the form
+  // Envía el formulario
   form.submit();
 }
 
@@ -306,4 +322,5 @@ function stripeTokenHandler(token) {
       section.style.display = 'none';
     });
   }
+
 
