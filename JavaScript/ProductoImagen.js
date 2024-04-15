@@ -120,6 +120,14 @@ const cart = JSON.parse(localStorage.getItem(`cart-${userSessionId}`)) || [];
   function showCart() {
     const cartItemsContainer = document.getElementById('cart-items');
     cartItemsContainer.innerHTML = '';
+
+    
+    // Verificar si el carrito está vacío y actualizar la visibilidad del mensaje
+    if (cart.length === 0) {
+      document.getElementById('cart-empty-message').style.display = 'block';
+  } else {
+      document.getElementById('cart-empty-message').style.display = 'none';
+  }
     
     cart.forEach((product, index) => {
       const cartItemEl = document.createElement('div');
@@ -188,9 +196,104 @@ const cart = JSON.parse(localStorage.getItem(`cart-${userSessionId}`)) || [];
     mostrarSeccionInicial();
   });
 
+  document.querySelector('.back-to-products').addEventListener('click', function() {
+    // Comprobar si el carrito está vacío
+    if (cart.length === 0) {
+        // Mostrar un mensaje de error y evitar la navegación a la sección de pago
+        document.getElementById('cart-empty-message').style.display = 'block';
+    } else {
+        // Si el carrito no está vacío, ocultar el mensaje de error y mostrar la sección de pago
+        document.getElementById('cart-empty-message').style.display = 'none';
+        showPaymentSection();
+    }
+});
+
+
+
+function showPaymentSection() {
+  // Ocultar todas las secciones innecesarias
+  ocultarTodasLasSecciones();
+  // Mostrar la sección de opciones de pago
+  document.getElementById('payment-options-section').style.display = 'block';
+}
+});
+
+
+document.getElementById('pay-with-stripe').addEventListener('click', (event) => {
+  // Ocultar secciones innecesarias y mostrar el formulario de Stripe.
+  ocultarTodasLasSecciones();
+  mostrarFormularioStripe();
+
+  // Lógica para manejar la presentación del formulario Stripe y la tokenización de los datos de la tarjeta.
+  // Suponiendo que ya has inicializado Stripe con tu llave pública como stripeInstance.
+  var stripe = Stripe('pk_test_51P5LEfHJXANqOK2KYGoTDNdpcpuHSw76bNTyVepUrg0hLBkaKBsRkN4fL6Rk8vM3eZgyzBLhhd1KqRF0sdIxwZfL00MqCoEPD6');
+  var elements = stripe.elements();
+
+  // Custom styling can be passed to options when creating an Element.
+  var style = {
+    base: {
+      // Add your base input styles here. For example:
+      fontSize: '16px',
+      color: '#32325d',
+    },
+  };
+
+  // Create an instance of the card Element.
+  var card = elements.create('card', {style: style});
+
+  // Add an instance of the card Element into the `card-element` <div>.
+  card.mount('#card-element');
+
+  // Handle form submission.
+  var form = document.getElementById('payment-form');
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    stripe.createToken(card).then(function(result) {
+      if (result.error) {
+        // Inform the user if there was an error.
+        var errorElement = document.getElementById('card-errors');
+        errorElement.textContent = result.error.message;
+      } else {
+        // Send the token to your server.
+        stripeTokenHandler(result.token);
+      }
+    });
+  });
+});
+
+document.getElementById('pay-with-mercadopago').addEventListener('click', (event) => {
+  // Asegúrate de tener el ID de preferencia correcto configurado en esta URL
+  window.location.href = "https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=tu_id_de_preferencia";
+});
+
+
+function mostrarFormularioStripe() {
+  // Mostrar la sección del formulario Stripe
+  document.getElementById('payment-options-section').style.display = 'block';
+  document.getElementById('stripe-form-section').style.display = 'block';
+}
+
+function stripeTokenHandler(token) {
+  // Insert the token ID into the form so it gets submitted to the server
+  var form = document.getElementById('payment-form');
+  var hiddenInput = document.createElement('input');
+  hiddenInput.setAttribute('type', 'hidden');
+  hiddenInput.setAttribute('name', 'stripeToken');
+  hiddenInput.setAttribute('value', token.id);
+  form.appendChild(hiddenInput);
+
+  // Submit the form
+  form.submit();
+}
+
+
+  
+
   function mostrarSeccionProductos() {
     ocultarTodasLasSecciones();
     document.querySelector('.products-section').style.display = 'block';
+    
   }
 
   function mostrarSeccionInicial() {
@@ -203,4 +306,4 @@ const cart = JSON.parse(localStorage.getItem(`cart-${userSessionId}`)) || [];
       section.style.display = 'none';
     });
   }
-});
+
